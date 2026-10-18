@@ -23,7 +23,9 @@
 .carousel-btn{position:absolute;top:42%;transform:translateY(-50%);width:40px;height:40px;border-radius:999px;border:1px solid #e8e4dc;background:#fff;cursor:pointer;z-index:2}
 .carousel-btn.prev{left:0}.carousel-btn.next{right:0}
 .chip-row{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
-.link-chip{display:inline-block;padding:.45rem .85rem;border-radius:999px;border:1px solid #e8e4dc;background:#fff;font-size:.78rem;font-weight:600;text-decoration:none;color:#141414}
+.link-chip{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1rem;border-radius:999px;border:1.5px solid #e8e4dc;background:#fff;font-size:.82rem;font-weight:700;text-decoration:none;color:#141414;box-shadow:0 2px 8px rgba(20,20,20,.06)}
+.link-chip:hover{border-color:#c40000;color:#c40000}
+.link-chip .yt-dot{width:8px;height:8px;border-radius:50%;background:#c40000;flex-shrink:0}
 .output-card.is-ig{flex:0 0 min(42%,160px)!important}
 .output-card.is-ig .platform-tile{aspect-ratio:9/16!important}
 .output-card.is-ig img{aspect-ratio:9/16!important;object-fit:cover;width:100%}
@@ -60,9 +62,9 @@
     <p class="section-label">Language channels</p>
     <h2>Regional YouTube network</h2>
     <p class="chip-row">
-      <a class="link-chip" href="https://www.youtube.com/@JMMMarathishorts" target="_blank" rel="noopener noreferrer">Marathi Shorts</a>
-      <a class="link-chip" href="https://www.youtube.com/@JalanmegamartMarathi" target="_blank" rel="noopener noreferrer">Jalan Marathi</a>
-      <a class="link-chip" href="https://www.youtube.com/@JALANMEGAMARTTelugu" target="_blank" rel="noopener noreferrer">Jalan Telugu</a>
+      <a class="link-chip" href="https://www.youtube.com/@JMMMarathishorts" target="_blank" rel="noopener noreferrer"><span class="yt-dot"></span> Marathi Shorts</a>
+      <a class="link-chip" href="https://www.youtube.com/@JalanmegamartMarathi" target="_blank" rel="noopener noreferrer"><span class="yt-dot"></span> Jalan Marathi</a>
+      <a class="link-chip" href="https://www.youtube.com/@JALANMEGAMARTTelugu" target="_blank" rel="noopener noreferrer"><span class="yt-dot"></span> Jalan Telugu</a>
     </p>
   </section>
   <section class="section" id="outputs">
@@ -118,7 +120,10 @@
 <a class="primary" href="02-influencer-marketing.html">Next →</a>
 </nav>
 </main>
-<footer><p>&copy; 2026 Jalak Patel</p></footer>
+<footer>
+  <p>&copy; 2026 Jalak Patel</p>
+  <p>Designed and built by <strong>Jalak Patel</strong></p>
+</footer>
 <script>(function(){var t=document.getElementById('navToggle'),n=document.getElementById('mainNav');if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});}})();</script>
 <script src="../../media/portfolio-animate.js" defer></script>
 </body>
