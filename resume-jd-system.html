@@ -4,20 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Resume & JD System | Jalak Patel</title>
-<meta name="description" content="Share a job description. Receive an honest fit assessment and, when useful, a tailored resume using portfolio evidence only.">
+<meta name="description" content="Share a Job Description on this page and receive an honest fit assessment plus a tailored resume based on real portfolio work.">
 <link rel="canonical" href="https://jalak-patel-190.github.io/jalak-portfolio/resume-jd-system.html">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="home.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RYV1QY6VCQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RYV1QY6VCQ');
+</script>
 <style>
-.rjd-wrap{max-width:640px;margin:0 auto;padding:2rem 1.25rem 4rem}
-.rjd-wrap h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.4rem);letter-spacing:.02em;margin:0 0 .5rem}
-.rjd-wrap .lede{color:#5a5a5a;line-height:1.55;margin:0 0 1.5rem}
-.rjd-form label{display:block;font-weight:600;font-size:.85rem;margin:1rem 0 .35rem}
-.rjd-form input,.rjd-form textarea{width:100%;padding:.7rem .85rem;border:1.5px solid #e8e2d8;border-radius:10px;font-family:inherit;font-size:.95rem;background:#fff}
-.rjd-form textarea{min-height:160px;resize:vertical}
-.rjd-form button{margin-top:1.25rem;padding:.75rem 1.5rem;border:0;border-radius:999px;font-weight:700;font-size:.95rem;cursor:pointer;color:#fff;background:linear-gradient(135deg,#C2410C,#9D3A72)}
-.rjd-how{font-size:.88rem;color:#5a5a5a;line-height:1.5;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid #e8e2d8}
+.rjd-wrap{max-width:820px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.rjd-hero{margin-bottom:2rem}
+.rjd-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,5vw,3.2rem);letter-spacing:.02em;margin:0 0 .6rem;color:#141414}
+.rjd-hero p{font-size:1.05rem;line-height:1.55;color:#3a3a3a;margin:0}
+.rjd-steps{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:1.75rem 0}
+@media(max-width:640px){.rjd-steps{grid-template-columns:1fr}}
+.rjd-card{background:#fff;border:1px solid #e8e4dc;border-radius:14px;padding:1.35rem 1.4rem;box-shadow:0 6px 24px rgba(20,20,20,.04)}
+.rjd-card .step-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#8a7f6e;margin-bottom:.35rem}
+.rjd-card h2{font-size:1.15rem;margin:0 0 .5rem;color:#141414}
+.rjd-card p{font-size:.92rem;line-height:1.5;color:#4a4a4a;margin:0}
+.rjd-how{margin:1.5rem 0 1.25rem;padding:1rem 1.2rem;background:#faf8f4;border-radius:12px;border:1px solid #e8e4dc;font-size:.9rem;line-height:1.5;color:#4a4a4a}
+.rjd-form-wrap{margin:1.5rem 0 2rem;border:1px solid #e8e4dc;border-radius:14px;overflow:hidden;background:#fff;min-height:720px}
+.rjd-form-wrap iframe{display:block;width:100%;height:780px;border:0}
+.rjd-note{margin-top:2rem;padding:1.35rem 1.5rem;background:#f7f3ec;border-radius:12px;border-left:3px solid #c4b49a}
+.rjd-note p{margin:0;font-size:.92rem;line-height:1.55;color:#3a3a3a}
+.breadcrumb{font-size:.85rem;color:#6a6a6a;margin-bottom:1.5rem}
+.breadcrumb a{color:#6a6a6a;text-decoration:none}
+.breadcrumb a:hover{color:#141414}
 </style>
 </head>
 <body>
@@ -29,39 +48,60 @@
 <nav id="mainNav">
 <a href="index.html#journey">Journey</a>
 <a href="index.html#work">Case Studies</a>
-<a href="resume-jd-system.html">Resume & JD</a>
 <a href="index.html#contact" class="nav-cta">Get In Touch</a>
 </nav>
 </div>
 </header>
+
 <main class="rjd-wrap" id="main">
-<p class="ey" style="color:#C2410C;font-weight:700;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase">Resume & JD System</p>
-<h1>Match the role to the work</h1>
-<p class="lede">Share a Job Description below. You stay on this page - no need to open another site.</p>
-<form class="rjd-form" action="mailto:Pateljalak019@gmail.com" method="get" enctype="text/plain">
-<input type="hidden" name="subject" value="Resume JD fit request">
-<label for="company">Company</label>
-<input id="company" name="body" type="text" placeholder="Company name" required>
-<label for="title">Job title</label>
-<input id="title" type="text" placeholder="Role title" required>
-<label for="jd">Job description</label>
-<textarea id="jd" placeholder="Paste the JD here" required></textarea>
-<label for="email">Your email</label>
-<input id="email" type="email" placeholder="you@email.com" required>
-<button type="submit">Send for fit assessment</button>
-</form>
-<p class="rjd-how"><strong>How it works:</strong> Fill the form on this page (company, job title, JD, your email). I review fit against portfolio evidence only - no invented experience. If the fit is useful, I prepare a resume written for that Job Description using portfolio work only - no invented claims.</p>
-<p class="rjd-how">If the form does not open your mail client, email <a href="mailto:Pateljalak019@gmail.com">Pateljalak019@gmail.com</a> with the JD and role details.</p>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> · Resume & JD System</nav>
+
+<section class="rjd-hero">
+<h1>Resume & JD System</h1>
+<p>Share a Job Description below. You stay on this page - no need to open another site.</p>
+</section>
+
+<div class="rjd-steps">
+  <div class="rjd-card">
+    <div class="step-label">Step 1</div>
+    <h2>Honest Assessment</h2>
+    <p>After you submit, I review the role against my real experience and reply with a clear fit answer: interview yes/no, strengths, and gaps.</p>
+  </div>
+  <div class="rjd-card">
+    <div class="step-label">Step 2</div>
+    <h2>Tailored Resume</h2>
+    <p>If the fit is useful, I prepare a resume written for that Job Description using portfolio work only - no invented numbers.</p>
+  </div>
+</div>
+
+<p class="rjd-how"><strong>How it works:</strong> Fill the form on this page (company, job title, JD, your email). I receive it by email, then send you Step 1 and - if useful - Step 2. This is not an instant auto-score; it is a careful human review so the answer stays honest.</p>
+
+<div class="rjd-form-wrap" id="form">
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScv-orMhEaNGLoKskWOu5XIBm9gO83FwhL10jxQUTe2V17Jyw/viewform?embedded=true" title="Resume and JD System – Request Assessment" loading="lazy">Loading…</iframe>
+</div>
+
+<div class="rjd-note">
+  <p>I spent significant time building this portfolio and system so hiring decisions can be clearer for both sides. If this page or any part of my work was useful, the simplest next step is a short conversation. Even a brief message that you reviewed the work is appreciated. Thank you for your time.</p>
+</div>
+
 </main>
+
 <footer>
 <p>&copy; 2026 Jalak Patel</p>
+<p>Designed and built by <strong>Jalak Patel</strong></p>
 </footer>
-<script src="media/portfolio-animate.js" defer></script>
+
 <script>
 (function(){
 var t=document.getElementById('navToggle'),n=document.getElementById('mainNav');
-if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});}
+if(t&&n){
+  t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('open')){n.classList.remove('open');t.setAttribute('aria-expanded','false');t.focus();}});
+  document.addEventListener('click',function(e){if(n.classList.contains('open')&&!n.contains(e.target)&&!t.contains(e.target)){n.classList.remove('open');t.setAttribute('aria-expanded','false');}});
+}
 })();
 </script>
+<script src="media/portfolio-animate.js" defer></script>
 </body>
 </html>
