@@ -28,16 +28,16 @@
 </div>
 </header>
 <main class="container">
-<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a> · <a href="index.html">Swad Cooking Institute</a> · Workshop operations</nav>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a> · <a href="index.html">Swad Cooking Institute</a> · Case 06 · Workshop operations</nav>
 <section class="case-hero">
-<p class="eyebrow">Workshop operations · Swad Cooking Institute</p>
+<p class="eyebrow">Case 06 · Workshop operations · Swad Cooking Institute</p>
 <h1>Workshop operations, and the watch hours versus revenue gap</h1>
 <p class="lede">I ran the workshop back end each month, promoted paid live online masterclasses, and diagnosed why daily livestreams were not turning into revenue. Edited uploads were the fix, but leadership reversed course too early.</p>
 </section>
 <section class="section" id="context">
 <p class="section-label">Context</p>
 <h2>The workshops needed a back end</h2>
-<p>Each new month began with the workshop schedule. I managed the live workshop calendar and the operations behind every free and paid YouTube workshop.</p>
+<p>Each new month began with the workshop schedule. I managed the live workshop calendar and the operations behind every free and paid online workshop.</p>
 </section>
 <section class="section">
 <p class="section-label">Execution</p>
@@ -58,7 +58,7 @@
 <div class="flow-step">Write ad scripts for the launch</div>
 <div class="flow-step">Organic promotion across social channels</div>
 <div class="flow-step">Enrolment, payment, and join-link ops</div>
-<div class="flow-step">Live ops: camera, stream laptop, Q&A relay</div>
+<div class="flow-step">Live ops: camera, stream laptop, Q&amp;A relay</div>
 <div class="flow-step">Recording access and post-class support handoff</div>
 </div>
 <h2>How the live workshop was structured</h2>
@@ -133,17 +133,6 @@
 var t=document.getElementById('navToggle'),n=document.getElementById('mainNav');
 if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
 n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
-})();
-(function(){
-document.querySelectorAll('[data-output-carousel]').forEach(function(root){
-var track=root.querySelector('.output-carousel-track');
-var prev=root.querySelector('.carousel-btn.prev');
-var next=root.querySelector('.carousel-btn.next');
-if(!track)return;
-function step(){return Math.min(track.clientWidth*0.85,280);}
-if(prev)prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});
-if(next)next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});
-});
 })();
 </script>
 <script src="lightbox.js" defer></script>

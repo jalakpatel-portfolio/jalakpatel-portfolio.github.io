@@ -9,7 +9,13 @@
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="swad-case-shared.css">
-<style>.video-frame{position:relative;width:100%;max-width:720px;aspect-ratio:16/9;margin:1rem 0 1.5rem;border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#111}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}</style>
+<style>
+.video-frame{position:relative;width:100%;max-width:720px;aspect-ratio:16/9;margin:1rem 0 1.5rem;border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#111}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-fallback{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;height:100%;padding:1.5rem;text-align:center;color:#fff;text-decoration:none}
+.video-fallback img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:.55}
+.video-fallback span{position:relative;z-index:1;font-weight:700;font-size:.95rem;background:rgba(0,0,0,.55);padding:.55rem 1rem;border-radius:999px}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#context">Skip to content</a>
@@ -25,15 +31,15 @@
 </div>
 </header>
 <main class="container">
-<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a> · <a href="index.html">Swad Cooking Institute</a> · Audience tribute</nav>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a> · <a href="index.html">Swad Cooking Institute</a> · Case 03 · Audience tribute</nav>
 <section class="case-hero">
-<p class="eyebrow">Audience tribute · Swad Cooking Institute</p>
+<p class="eyebrow">Case 03 · Audience tribute · Swad Cooking Institute</p>
 <h1>The Farewell Diwali livestream</h1>
 <p class="lede">When I resigned, I wanted to thank the team and the audience properly. One continuous 5h 34m thank-you livestream with 20 recipes and six named participants.</p>
 <div class="metric-row">
 <span class="metric-pill"><strong>5h 34m</strong> one continuous livestream</span>
-<span class="metric-pill"><strong class="metric-count" data-count="20">0</strong> recipes</span>
-<span class="metric-pill"><strong class="metric-count" data-count="6">0</strong> named participants</span>
+<span class="metric-pill"><strong class="metric-count" data-count="20">20</strong> recipes</span>
+<span class="metric-pill"><strong class="metric-count" data-count="6">6</strong> named participants</span>
 </div>
 </section>
 <section class="section" id="context">
@@ -57,6 +63,11 @@
 <div class="video-frame">
 <iframe src="https://www.youtube.com/embed/iq4zUfLHD1I" title="Farewell Diwali livestream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
 </div>
+<p style="margin-top:.5rem"><a href="https://www.youtube.com/watch?v=iq4zUfLHD1I" target="_blank" rel="noopener noreferrer">Open the Farewell Diwali livestream on YouTube →</a></p>
+<figure class="figure" style="margin-top:1.25rem">
+<img class="zoom-trigger" src="../../media/swad/DSC02610.JPG" alt="Diwali function and studio kitchen at Swad" loading="lazy" style="width:100%;border-radius:14px;border:1px solid var(--border)">
+<figcaption>Diwali function moment used as the visual cover for this case.</figcaption>
+</figure>
 </section>
 <section class="section">
 <p class="section-label">Takeaway</p>
@@ -84,6 +95,7 @@ if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');
 n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
 })();
 </script>
+<script src="lightbox.js" defer></script>
 <script src="../../media/portfolio-animate.js" defer></script>
 </body>
 </html>
