@@ -10,14 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="jalan-case-shared.css">
 <style>
-.output-carousel{position:relative;margin:1.25rem 0 .5rem;padding:0 2.5rem}
-.output-carousel-track{display:flex;gap:.85rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:.35rem 0 .75rem}
-.output-carousel-track::-webkit-scrollbar{display:none}
-.output-card{flex:0 0 min(70%,260px);scroll-snap-align:start;border-radius:14px;overflow:hidden;background:#fff;border:1px solid #e8e4dc;text-decoration:none;color:inherit;display:flex;flex-direction:column}
-.output-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-.output-cap{display:block;padding:.55rem .75rem;font-size:.78rem;font-weight:700;color:#5a5a5a;border-top:1px solid #e8e4dc}
-.carousel-btn{position:absolute;top:42%;transform:translateY(-50%);width:40px;height:40px;border-radius:999px;border:1px solid #e8e4dc;background:#fff;cursor:pointer;z-index:2}
-.carousel-btn.prev{left:0}.carousel-btn.next{right:0}
+.community-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem;margin:1.15rem 0}
+.community-card{display:block;text-decoration:none;color:inherit;border-radius:14px;overflow:hidden;background:#fff;border:1px solid #e8e4dc;box-shadow:0 8px 24px rgba(20,20,20,.06)}
+.community-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.community-card .cap{display:block;padding:.55rem .75rem;font-size:.78rem;font-weight:700;color:#5a5a5a;border-top:1px solid #e8e4dc}
+@media(max-width:560px){.community-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -60,15 +57,11 @@
 <p class="section-label">Between uploads</p>
 <h2>YouTube community posts</h2>
 <p>When a video was not live or a new upload was not out yet, community posts kept the audience engaged, invited replies, and brought people back to the channel.</p>
-<div class="output-carousel" data-output-carousel>
-<button type="button" class="carousel-btn prev" aria-label="Previous">←</button>
-<div class="output-carousel-track">
-<a class="output-card" href="https://youtube.com/post/Ugkx0KOqK5vMz17zH7PkDnjL8PaOXsz7WGC0" target="_blank" rel="noopener noreferrer"><img src="../../media/Jalan/Jalan-yt-c-01.jpg" alt="Community post 1" loading="lazy"><span class="output-cap">Community post 1</span></a>
-<a class="output-card" href="https://youtube.com/post/UgkxS5a7_0Z3o36gMyaXuM_Hquo60QfNz4ix" target="_blank" rel="noopener noreferrer"><img src="../../media/Jalan/Jalan-yt-c-02.jpg" alt="Community post 2" loading="lazy"><span class="output-cap">Community post 2</span></a>
-<a class="output-card" href="https://youtube.com/post/UgkxCzGgpVE4IZDKIuOnBaPKsuZhWYBM-GXv" target="_blank" rel="noopener noreferrer"><img src="../../media/Jalan/Jalan-yt-c-03.jpg" alt="Community post 3" loading="lazy"><span class="output-cap">Community post 3</span></a>
-<a class="output-card" href="https://youtube.com/post/UgkxOQ6KFQheVzZ7sZpJkAf24vwILYPgul1d" target="_blank" rel="noopener noreferrer"><img src="../../media/Jalan/Jalan-yt-c-04.jpg" alt="Community post 4" loading="lazy"><span class="output-cap">Community post 4</span></a>
-</div>
-<button type="button" class="carousel-btn next" aria-label="Next">→</button>
+<div class="community-grid">
+<a class="community-card" href="https://youtube.com/post/Ugkx0KOqK5vMz17zH7PkDnjL8PaOXsz7WGC0" target="_blank" rel="noopener noreferrer"><img src="../../media/Jalan/Jalan-yt-c-01.jpg" alt="Community post 1" loading="lazy"><span class="cap">Community post 1</span></a>
+<a class="community-card" href="https://youtube.com/post/UgkxS5a7_0Z3o36gMyaXuM_Hquo60QfNz4ix" target="_blank" rel="noopener noreferrer"><img src="../../media/Jalan/Jalan-yt-c-02.jpg" alt="Community post 2" loading="lazy"><span class="cap">Community post 2</span></a>
+<a class="community-card" href="https://youtube.com/post/UgkxCzGgpVE4IZDKIuOnBaPKsuZhWYBM-GXv" target="_blank" rel="noopener noreferrer"><img src="../../media/Jalan/Jalan-yt-c-03.jpg" alt="Community post 3" loading="lazy"><span class="cap">Community post 3</span></a>
+<a class="community-card" href="https://youtube.com/post/UgkxOQ6KFQheVzZ7sZpJkAf24vwILYPgul1d" target="_blank" rel="noopener noreferrer"><img src="../../media/Jalan/Jalan-yt-c-04.jpg" alt="Community post 4" loading="lazy"><span class="cap">Community post 4</span></a>
 </div>
 </section>
 <section class="section" id="takeaway">
@@ -82,7 +75,10 @@
 <a class="primary" href="../ajmera/">Ajmera →</a>
 </nav>
 </main>
-<footer><p>&copy; 2026 Jalak Patel</p><p class="footer-credit">Designed and built by <strong>Jalak Patel</strong></p></footer>
+<footer>
+<p>&copy; 2026 Jalak Patel</p>
+<p>Designed and built by <strong>Jalak Patel</strong></p>
+</footer>
 <script>(function(){var t=document.getElementById('navToggle'),n=document.getElementById('mainNav');if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});}})();</script>
 <script src="../../media/portfolio-animate.js" defer></script>
 </body>
