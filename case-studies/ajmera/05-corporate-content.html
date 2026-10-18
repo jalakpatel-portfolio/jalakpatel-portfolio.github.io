@@ -15,10 +15,10 @@
 .output-carousel-track::-webkit-scrollbar{display:none}
 .output-card{flex:0 0 min(78%,260px);scroll-snap-align:start;border-radius:14px;overflow:hidden;background:#fff;border:1px solid #e8e4dc;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
 .output-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.08)}
-.output-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#f0ebe3}
+.output-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#f0ebe3}
 .output-cap{display:block;padding:.55rem .75rem;font-size:.78rem;font-weight:700;color:#5a5a5a;border-top:1px solid #e8e4dc}
 .ig-badge{display:inline-block;background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);color:#fff;font-size:.65rem;padding:.1rem .35rem;border-radius:4px;margin-right:.25rem}
-.platform-tile{aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;padding:1.25rem;text-align:center;color:#fff}
+.platform-tile{aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;padding:1.25rem;text-align:center;color:#fff}
 .platform-tile.ig{background:linear-gradient(145deg,#833ab4 0%,#fd1d1d 50%,#fcb045 100%)}
 .platform-tile .pt-icon{font-size:1.6rem;line-height:1}
 .platform-tile .pt-label{font-size:.85rem;font-weight:700}
@@ -84,7 +84,7 @@
 <section class="section" id="outputs">
 <p class="section-label">Work output</p>
 <h2>Selected output</h2>
-<p class="section-intro">Tap any tile to open the live Instagram post.</p>
+<p class="section-intro">Tap any tile to open the live Instagram post. Reels use 9:16; feed posts use square ratio.</p>
 <div class="output-carousel" data-output-carousel>
   <button type="button" class="carousel-btn prev" aria-label="Previous">←</button>
   <div class="output-carousel-track">
@@ -107,10 +107,10 @@
 <a class="primary" href="06-ceo-personal-brand.html">Next →</a>
 </nav>
 </main>
-<footer><p>&copy; 2026 Jalak Patel</p></footer>
+<footer><p>&copy; 2026 Jalak Patel</p><p>Designed and built by <strong>Jalak Patel</strong></p></footer>
 <script>
 (function(){var t=document.getElementById('navToggle'),n=document.getElementById('mainNav');
-if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});}
+if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
 })();
 (function(){document.querySelectorAll('[data-output-carousel]').forEach(function(root){var track=root.querySelector('.output-carousel-track');var prev=root.querySelector('.carousel-btn.prev');var next=root.querySelector('.carousel-btn.next');if(!track)return;function step(){return Math.min(track.clientWidth*0.85,280);}if(prev)prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});if(next)next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});});})();
 </script>
