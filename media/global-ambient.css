@@ -1,4 +1,4 @@
-/* Site-wide soft ambient glow + polish — phone & desktop */
+/* Site-wide soft ambient glow + polish - phone & desktop */
 :root{
   --glow-a: 232, 90, 42;
   --glow-b: 157, 58, 114;
@@ -7,7 +7,7 @@
   --shadow-lift: 0 14px 40px rgba(20,20,20,.09);
   --shadow-soft: 0 8px 28px rgba(20,20,20,.06);
 }
-/* Soft ambient layer — large ellipses, high transparent stops = no hard edges */
+/* Soft ambient layer - large ellipses, high transparent stops = no hard edges */
 html body::before{
   content:"";
   position:fixed;
@@ -24,7 +24,7 @@ html body::before{
 html body{
   background-attachment: scroll !important;
 }
-/* Card polish — lifts off ambient on phone + desktop */
+/* Card polish - lifts off ambient on phone + desktop */
 .mc, .journey-card, .how-step, .cc, .case-teaser, .case-card, .output-card,
 .proof-slide, .next-card, .metric-pill, .flow-step, .channel-card, .stat-card, .chart-card{
   transition: transform .3s ease, box-shadow .3s ease;
