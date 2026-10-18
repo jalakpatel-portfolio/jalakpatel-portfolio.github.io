@@ -35,14 +35,14 @@
       <h1>Groups as a Distribution Surface</h1>
       <p class="lede">Facebook Gujarati groups used as a practical channel for reach where organic page posts were not enough on their own.</p>
       <div class="metric-row">
-        <div class="metric-pill"><strong><span class="metric-count" data-count="647">0</span> → <span class="metric-count" data-count="14473">0</span></strong><span> followers recorded</span></div>
-        <div class="metric-pill">Organic <span>group distribution</span></div>
+        <div class="metric-pill"><strong><span class="metric-count" data-count="647">647</span> → <span class="metric-count" data-count="14473">14,473</span></strong> followers recorded</div>
+        <div class="metric-pill">Organic group distribution</div>
       </div>
     </header>
     <section class="section" id="context">
       <p class="section-label">Context</p>
       <h2>Where the audience already gathered</h2>
-      <p>Many of the buyers and browsers Ajmera needed were already active inside Gujarati-language Facebook groups.</p>
+      <p>Many of the buyers and browsers Ajmera needed were already active inside Gujarati-language Facebook groups. The work focused on those dedicated group surfaces rather than page-only reach.</p>
     </section>
     <section class="section" id="problem">
       <p class="section-label">Problem</p>
@@ -86,6 +86,9 @@
         navToggle.addEventListener('click', function () {
           var open = mainNav.classList.toggle('open');
           navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        mainNav.querySelectorAll('a').forEach(function(a){
+          a.addEventListener('click', function(){ mainNav.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); });
         });
       }
     })();
