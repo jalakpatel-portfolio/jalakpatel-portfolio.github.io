@@ -28,9 +28,9 @@
 </div>
 </header>
 <main class="container">
-<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a> · <a href="index.html">Swad Cooking Institute</a> · Student live systems</nav>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a> · <a href="index.html">Swad Cooking Institute</a> · Case 01 · Student live systems</nav>
 <section class="case-hero">
-<p class="eyebrow">Student live systems · Swad Cooking Institute</p>
+<p class="eyebrow">Case 01 · Student live systems · Swad Cooking Institute</p>
 <h1>Students as marketing assets</h1>
 <p class="lede">The one-year diploma was the institute’s highest-ticket course. Students became its strongest promoters through live sessions and shareable proof.</p>
 <div class="metric-row">
@@ -57,6 +57,7 @@
 <section class="section" id="outputs">
 <p class="section-label">Work output</p>
 <h2>Selected output</h2>
+<p class="section-intro">First tile is the diploma / student live in YouTube landscape ratio. Remaining tiles are Instagram reels in vertical ratio.</p>
 <div class="output-carousel" data-output-carousel>
 <button type="button" class="carousel-btn prev" aria-label="Previous">&#8592;</button>
 <div class="output-carousel-track">
@@ -110,17 +111,6 @@
 var t=document.getElementById('navToggle'),n=document.getElementById('mainNav');
 if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
 n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
-})();
-(function(){
-document.querySelectorAll('[data-output-carousel]').forEach(function(root){
-var track=root.querySelector('.output-carousel-track');
-var prev=root.querySelector('.carousel-btn.prev');
-var next=root.querySelector('.carousel-btn.next');
-if(!track)return;
-function step(){return Math.min(track.clientWidth*0.85,280);}
-if(prev)prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});
-if(next)next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});
-});
 })();
 </script>
 <script src="lightbox.js" defer></script>

@@ -28,13 +28,13 @@
 </div>
 </header>
 <main class="container">
-<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a> · <a href="index.html">Swad Cooking Institute</a> · Editorial strategy</nav>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a> · <a href="index.html">Swad Cooking Institute</a> · Case 02 · Editorial strategy</nav>
 <section class="case-hero">
-<p class="eyebrow">Editorial strategy · Swad Cooking Institute</p>
+<p class="eyebrow">Case 02 · Editorial strategy · Swad Cooking Institute</p>
 <h1>Matching content to the chef, and the Monday Mistake series</h1>
 <p class="lede">A how-to-store series built from one familiar topic, and a weekly series built around mistakes everyone makes.</p>
 <div class="metric-row">
-<span class="metric-pill"><strong class="metric-count" data-count="359" data-suffix="K">0</strong> top how-to views</span>
+<span class="metric-pill"><strong class="metric-count" data-count="359" data-suffix="K">359K</strong> top how-to views</span>
 <span class="metric-pill"><strong>Series</strong> logic per upload</span>
 </div>
 </section>
@@ -51,6 +51,7 @@
 <section class="section" id="outputs">
 <p class="section-label">Work output</p>
 <h2>Selected output</h2>
+<p class="section-intro">How-to-store and Monday Mistake samples. Carousel loops so the series stays visible.</p>
 <div class="output-carousel" data-output-carousel>
 <button type="button" class="carousel-btn prev" aria-label="Previous">&#8592;</button>
 <div class="output-carousel-track">
@@ -101,24 +102,6 @@
 var t=document.getElementById('navToggle'),n=document.getElementById('mainNav');
 if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
 n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
-})();
-(function(){
-document.querySelectorAll('[data-output-carousel]').forEach(function(root){
-var track=root.querySelector('.output-carousel-track');
-var prev=root.querySelector('.carousel-btn.prev');
-var next=root.querySelector('.carousel-btn.next');
-if(!track)return;
-function step(){return Math.min(track.clientWidth*0.85,280);}
-function go(dir){
-  var max=track.scrollWidth-track.clientWidth;
-  var nextPos=track.scrollLeft+dir*step();
-  if(nextPos>max-4) track.scrollTo({left:0,behavior:'smooth'});
-  else if(nextPos<4&&dir<0) track.scrollTo({left:max,behavior:'smooth'});
-  else track.scrollBy({left:dir*step(),behavior:'smooth'});
-}
-if(prev)prev.addEventListener('click',function(){go(-1);});
-if(next)next.addEventListener('click',function(){go(1);});
-});
 })();
 </script>
 <script src="../../media/portfolio-animate.js" defer></script>
