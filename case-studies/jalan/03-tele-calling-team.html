@@ -14,6 +14,21 @@
   .flow-clean .step{display:flex;align-items:center;gap:.75rem;padding:.55rem .7rem;background:#f3efe8;border-radius:10px;font-size:.9rem;font-weight:600;color:#141414}
   .flow-clean .step .n{width:28px;height:28px;border-radius:999px;background:linear-gradient(135deg,#B8441B,#A84580);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0}
   .process-note{font-size:.85rem;color:#5a5a5a;margin-top:.35rem}
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.15rem 0}
+  .stat-card{background:#fff;border:1px solid #e8e2d8;border-radius:12px;padding:1.1rem;text-align:center;box-shadow:0 10px 32px rgba(20,20,20,.07)}
+  .stat-card .num{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;line-height:1}
+  .stat-card .lbl{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#5a5a5a;margin-top:.4rem}
+  @media(max-width:640px){.stat-grid{grid-template-columns:1fr}}
+  .chart-card{background:#fff;border:1px solid #e8e2d8;border-radius:16px;padding:1.25rem;box-shadow:0 10px 32px rgba(20,20,20,.07);margin:1.15rem 0}
+  .chart-card h3{margin:0 0 .85rem;font-size:1rem;font-weight:700}
+  .bar-row{display:grid;grid-template-columns:110px 1fr 78px;gap:.65rem;align-items:center;font-size:.85rem;margin-bottom:.55rem}
+  .bar-label{font-weight:600;color:#5a5a5a}
+  .bar-track{height:11px;background:#f0ebe3;border-radius:999px;overflow:hidden}
+  .bar-fill{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#B8441B,#A84580);transition:width .9s ease}
+  .chart-card.is-inview .bar-fill,.chart-card.is-in .bar-fill,.bars.is-inview .bar-fill{width:var(--w,50%)}
+  .bar-value{font-weight:700;font-variant-numeric:tabular-nums;text-align:right;font-size:.8rem}
+  .chart-note{font-size:.8rem;color:#5a5a5a;margin-top:.55rem;line-height:1.45}
+  @media(max-width:560px){.bar-row{grid-template-columns:1fr;gap:.3rem}}
   </style>
 </head>
 <body>
@@ -62,11 +77,57 @@
 <li>Kept attention on follow-up and pending buyer requests.</li>
 </ul>
 </section>
+
+<section class="section" id="tracker-charts">
+<p class="section-label">Ops tracker evidence</p>
+<h2>What the coordination sheet supports</h2>
+<p>The portfolio archive does not include a verified tele-calling bill report, so no revenue total is claimed here. The same operational discipline shows up in the booking tracker: rows logged with a clear next step (sent material, scheduled visit, or still open). Charts below are built only from those status and language fields.</p>
+
+<div class="stat-grid">
+  <div class="stat-card"><div class="num"><span class="metric-count" data-count="99">99</span></div><div class="lbl">Rows logged with status</div></div>
+  <div class="stat-card"><div class="num"><span class="metric-count" data-count="31">31</span></div><div class="lbl">Marked VISIT</div></div>
+  <div class="stat-card"><div class="num"><span class="metric-count" data-count="7">7</span></div><div class="lbl">Marked SENT</div></div>
+</div>
+
+<div class="chart-card" data-chart-animate>
+  <h3>Chart 1 · Pipeline stage on the tracker</h3>
+  <div class="bars">
+    <div class="bar-row"><span class="bar-label">Logged open</span><div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div><span class="bar-value">61 rows</span></div>
+    <div class="bar-row"><span class="bar-label">VISIT</span><div class="bar-track"><div class="bar-fill" style="--w:51%"></div></div><span class="bar-value">31 rows</span></div>
+    <div class="bar-row"><span class="bar-label">SENT</span><div class="bar-track"><div class="bar-fill" style="--w:11%"></div></div><span class="bar-value">7 rows</span></div>
+  </div>
+  <p class="chart-note">Maps to the case flow: contact is logged, material is sent, or a visit is booked. About 31% of rows reached a VISIT mark; 7% were marked SENT. The rest stayed as open logged follow-up.</p>
+</div>
+
+<div class="chart-card" data-chart-animate>
+  <h3>Chart 2 · Monthly activity intensity</h3>
+  <div class="bars">
+    <div class="bar-row"><span class="bar-label">Aug 23</span><div class="bar-track"><div class="bar-fill" style="--w:80%"></div></div><span class="bar-value">12 rows</span></div>
+    <div class="bar-row"><span class="bar-label">Sep 23</span><div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div><span class="bar-value">15 rows</span></div>
+    <div class="bar-row"><span class="bar-label">Dec 23</span><div class="bar-track"><div class="bar-fill" style="--w:53%"></div></div><span class="bar-value">8 rows</span></div>
+    <div class="bar-row"><span class="bar-label">May 24</span><div class="bar-track"><div class="bar-fill" style="--w:53%"></div></div><span class="bar-value">8 rows</span></div>
+    <div class="bar-row"><span class="bar-label">Oct 24</span><div class="bar-track"><div class="bar-fill" style="--w:80%"></div></div><span class="bar-value">12 rows</span></div>
+  </div>
+  <p class="chart-note">Busy months show denser logging - the same idea as daily tele-calling targets: activity has to stay visible week after week, not only in one campaign burst.</p>
+</div>
+
+<div class="chart-card" data-chart-animate>
+  <h3>Chart 3 · Regional mix of tracked contacts</h3>
+  <div class="bars">
+    <div class="bar-row"><span class="bar-label">Hindi</span><div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div><span class="bar-value">69 · 36% visit</span></div>
+    <div class="bar-row"><span class="bar-label">Telugu</span><div class="bar-track"><div class="bar-fill" style="--w:19%"></div></div><span class="bar-value">13 · 8% visit</span></div>
+    <div class="bar-row"><span class="bar-label">Marathi</span><div class="bar-track"><div class="bar-fill" style="--w:13%"></div></div><span class="bar-value">9 · 44% visit</span></div>
+    <div class="bar-row"><span class="bar-label">Other</span><div class="bar-track"><div class="bar-fill" style="--w:12%"></div></div><span class="bar-value">8 rows</span></div>
+  </div>
+  <p class="chart-note">Regional language tags show where coordination effort sat. Marathi rows had the highest visit rate in this sample (44%); Hindi volume was largest overall.</p>
+</div>
+</section>
+
 <section class="section" id="evidence">
 <p class="section-label">Evidence boundary</p>
 <h2>Show the workflow, not an unverified total</h2>
 <p>The available portfolio archive supports tele-calling coordination and lead-generation work, but it does not include the underlying report needed to verify team size, bill totals or productivity changes. Those numbers are not presented as confirmed results.</p>
-<p>To make this a quantified case, the source report would need to be checked for readable rows, date coverage, duplicate bill numbers and a clear definition of what each amount represents.</p>
+<p>To make this a quantified sales case, the source bill report would need to be checked for readable rows, date coverage, duplicate bill numbers and a clear definition of what each amount represents. Until then, the charts above only describe pipeline status and regional activity from the ops tracker.</p>
 </section>
 <section class="section" id="results">
 <p class="section-label">Results</p>
