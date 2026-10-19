@@ -105,3 +105,11 @@ a.btn-secondary,.btn-secondary{display:inline-flex!important;align-items:center;
 }
 nav.breadcrumb{display:block!important;background:transparent!important;border:0!important;padding:1.25rem 0 .5rem!important}
 .page-nav{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:.65rem;align-items:center;justify-content:space-between}
+
+/* Micro-interactions (theme-preserving polish) */
+.page-nav .primary:active,.nav-cta:active,.btn-primary:active,a.btn-primary:active{transform:scale(0.98)}
+.page-nav .primary,.nav-cta,.btn-primary,a.btn-primary{transition:filter .2s ease,transform .15s ease,box-shadow .2s ease}
+.case-teaser,.next-card{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.case-teaser:hover,.next-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(20,20,20,.09)}
+.output-card{transition:transform .25s ease,box-shadow .25s ease}
+.output-card:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(20,20,20,.08)}
