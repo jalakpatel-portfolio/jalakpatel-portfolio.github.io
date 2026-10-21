@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jalak-patel-190.github.io/jalak-portfolio/sitemap.xml
+Sitemap: https://jalakpatel-portfolio.github.io/sitemap.xml
