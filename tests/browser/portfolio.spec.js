@@ -14,8 +14,9 @@ const primaryPages = [
   'case-studies/cinekorn/02-telugu-kannada.html',
   'case-studies/cinekorn/03-movies-catalog.html',
   'case-studies/cinekorn/04-gujarati-system.html',
-  'case-studies/cinekorn/05-kalapi-linkedin.html',
-  'case-studies/cinekorn/06-company-linkedin.html',
+  'case-studies/cinekorn/05-gujarati-platform-fit.html',
+  'case-studies/cinekorn/06-kalapi-linkedin.html',
+  'case-studies/cinekorn/07-company-linkedin.html',
   'case-studies/jalan/index.html',
   'case-studies/jalan/01-channel-network.html',
   'case-studies/jalan/02-influencer-marketing.html',
@@ -102,7 +103,7 @@ test('mobile navigation opens, closes with Escape and restores focus', async ({ 
 });
 
 
-test('live GitHub Pages deployment serves all 27 primary pages', async ({ page }) => {
+test('live GitHub Pages deployment serves all 28 primary pages', async ({ page }) => {
   test.skip(!process.env.PORTFOLIO_LIVE_URL, 'live deployment smoke test is not configured');
   const liveBaseURL = process.env.PORTFOLIO_LIVE_URL;
   const livePages = primaryPages;
@@ -149,7 +150,7 @@ for (const route of accessibilityEntryPages) {
 }
 
 
-test('local image and video asset URLs resolve across all 27 primary pages', async ({ page, request, baseURL }) => {
+test('local image and video asset URLs resolve across all 28 primary pages', async ({ page, request, baseURL }) => {
   const localAssets = new Set();
   const localOrigin = new URL(baseURL).origin;
 
