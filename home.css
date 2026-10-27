@@ -63,11 +63,13 @@ nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.9rem}
 nav a:hover{color:var(--text)}
 .nav-cta{
   padding:.55rem 1.15rem;border-radius:999px;font-size:.82rem;font-weight:700;color:#fff!important;
-  background:linear-gradient(135deg,var(--cta1),var(--cta2));
-  box-shadow:0 4px 18px rgba(194,65,12,.24);
+  color:#3b2929!important;
+  background:linear-gradient(120deg,rgba(194,65,12,.13),rgba(157,58,114,.13));
+  border:1px solid rgba(194,65,12,.17);
+  box-shadow:0 3px 12px rgba(88,45,52,.045);
   transition:box-shadow .2s,transform .2s
 }
-.nav-cta:hover,.nav-cta:focus-visible{box-shadow:0 0 0 3px rgba(194,65,12,.28),0 6px 22px rgba(194,65,12,.28);transform:translateY(-1px)}
+.nav-cta:hover,.nav-cta:focus-visible{background:linear-gradient(120deg,rgba(194,65,12,.19),rgba(157,58,114,.19));border-color:rgba(157,58,114,.24);box-shadow:0 5px 15px rgba(88,45,52,.07);transform:translateY(-1px)}
 .nt{display:none;background:var(--surface);border:1px solid var(--border);min-width:48px;min-height:42px;padding:0 .75rem;border-radius:10px;font-weight:700;cursor:pointer}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem 4.5rem}
 .hero{
@@ -90,10 +92,11 @@ nav a:hover{color:var(--text)}
 .btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:2.1rem}
 .btn{display:inline-flex;align-items:center;padding:.75rem 1.4rem;border-radius:999px;font-weight:700;font-size:.9rem;text-decoration:none;transition:box-shadow .2s,transform .2s;min-height:46px}
 .btn.bp{
-  background:linear-gradient(135deg,var(--cta1),var(--cta2));color:#fff;
-  box-shadow:0 6px 22px rgba(194,65,12,.26)
+  background:linear-gradient(120deg,rgba(194,65,12,.13),rgba(157,58,114,.13));color:#3b2929;
+  border:1px solid rgba(194,65,12,.17);
+  box-shadow:0 3px 12px rgba(88,45,52,.045)
 }
-.btn.bp:hover,.btn.bp:focus-visible{transform:translateY(-2px);box-shadow:0 0 0 3px rgba(194,65,12,.25),0 10px 28px rgba(194,65,12,.32);outline:none}
+.btn.bp:hover,.btn.bp:focus-visible{transform:translateY(-1px);background:linear-gradient(120deg,rgba(194,65,12,.19),rgba(157,58,114,.19));border-color:rgba(157,58,114,.24);box-shadow:0 5px 15px rgba(88,45,52,.07);outline:none}
 .btn.bs{background:var(--surface);border:1.5px solid var(--border);color:var(--text)}
 .btn.bs:hover,.btn.bs:focus-visible{border-color:#d4cbbd;box-shadow:0 0 0 3px rgba(194,65,12,.12);outline:none}
 .metrics{

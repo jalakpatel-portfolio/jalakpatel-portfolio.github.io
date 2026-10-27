@@ -1,0 +1,98 @@
+/* Shared visual system for the four company hubs.
+   Design-only layer: preserves all copy, media, charts, diagrams, links and page-specific content. */
+:root{
+  --hub-gradient-a: 194,65,12;
+  --hub-gradient-b: 157,58,114;
+  --hub-gradient-soft: .14;
+  --hub-button-wash: .13;
+  --hub-button-hover: .19;
+}
+html{scroll-behavior:smooth}
+body{position:relative;overflow-x:hidden}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse 95% 60% at 8% 5%, rgba(var(--hub-gradient-a),var(--hub-gradient-soft)), transparent 72%),
+    radial-gradient(ellipse 85% 55% at 94% 8%, rgba(var(--hub-gradient-b),calc(var(--hub-gradient-soft)*.9)), transparent 70%),
+    radial-gradient(ellipse 75% 50% at 50% 100%, rgba(31,92,107,.05), transparent 68%);
+}
+body>header,body>header:not(.case-hero){
+  background:rgba(247,244,239,.94);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.container{max-width:920px}
+.header-inner{gap:1rem}
+header nav{gap:clamp(.65rem,1.5vw,1.5rem)}
+header nav a:not(.btn-nav):not(.nav-cta){transition:color .2s ease}
+.case-hero{padding-top:clamp(1.5rem,3vw,2.25rem);padding-bottom:clamp(1.5rem,3vw,2.25rem)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
+a.btn-primary,.btn-primary,a.btn-nav,.btn-nav,a.nav-cta,.nav-cta,.page-nav .primary,.page-nav a.primary,.hero-actions a:not(.btn-secondary):not(.btn-back){
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:.68rem 1.25rem;
+  border:1px solid rgba(var(--hub-gradient-a),.17);
+  border-radius:999px;
+  color:#3b2929!important;
+  background:linear-gradient(120deg,rgba(var(--hub-gradient-a),var(--hub-button-wash)),rgba(var(--hub-gradient-b),var(--hub-button-wash)));
+  box-shadow:0 3px 12px rgba(88,45,52,.045);
+  font-family:inherit;
+  font-size:.88rem;
+  font-weight:700;
+  line-height:1.25;
+  text-decoration:none;
+  transition:background .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease;
+}
+a.btn-primary:hover,.btn-primary:hover,a.btn-nav:hover,.btn-nav:hover,a.nav-cta:hover,.nav-cta:hover,.page-nav .primary:hover,.page-nav a.primary:hover,.hero-actions a:not(.btn-secondary):not(.btn-back):hover{
+  background:linear-gradient(120deg,rgba(var(--hub-gradient-a),var(--hub-button-hover)),rgba(var(--hub-gradient-b),var(--hub-button-hover)));
+  border-color:rgba(var(--hub-gradient-b),.24);
+  box-shadow:0 5px 15px rgba(88,45,52,.07);
+  transform:translateY(-1px);
+}
+a.btn-secondary,.btn-secondary,.page-nav .back,.page-nav a.back{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:.65rem 1.2rem;
+  border:1px solid rgba(120,100,100,.22);
+  border-radius:999px;
+  color:var(--text,#141414)!important;
+  background:rgba(255,255,255,.72)!important;
+  box-shadow:none;
+  font-family:inherit;
+  font-size:.88rem;
+  font-weight:600;
+  line-height:1.25;
+  text-decoration:none;
+  transition:background .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease;
+}
+a.btn-secondary:hover,.btn-secondary:hover,.page-nav .back:hover,.page-nav a.back:hover{
+  background:rgba(255,255,255,.94)!important;
+  border-color:rgba(var(--hub-gradient-b),.28);
+  box-shadow:0 0 0 3px rgba(var(--hub-gradient-b),.055);
+}
+.btn-nav,.nav-cta{white-space:nowrap}
+.case-grid,.case-teaser,.case-card,.next-card,.about-block,.chart-card{scroll-margin-top:88px}
+.case-teaser,.case-card,.next-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.case-teaser:hover,.case-card:hover,.next-card:hover{border-color:rgba(var(--hub-gradient-b),.18)}
+footer{background:rgba(255,255,255,.22)}
+a:focus-visible,button:focus-visible{outline:2px solid rgba(var(--hub-gradient-b),.55);outline-offset:3px}
+@media(max-width:768px){
+  header nav,#mainNav{gap:.45rem}
+  header nav a,.header-inner nav a{max-width:100%}
+  .hero-actions a,.page-nav a{flex:1 1 auto}
+}
+@media(max-width:560px){
+  .hero-actions a,.page-nav a{min-height:44px;padding:.65rem .85rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important}
+}
