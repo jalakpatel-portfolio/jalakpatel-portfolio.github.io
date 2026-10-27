@@ -8,7 +8,7 @@
   --hub-button-hover: .19;
 }
 html{scroll-behavior:smooth}
-body{position:relative;isolation:isolate;overflow-x:hidden}
+body{position:relative;overflow-x:hidden}
 body::before{
   content:"";
   position:fixed;
@@ -25,6 +25,7 @@ body>header,body>header:not(.case-hero){
   backdrop-filter:blur(12px);
   -webkit-backdrop-filter:blur(12px);
 }
+.container{max-width:920px}
 .header-inner{gap:1rem}
 header nav{gap:clamp(.65rem,1.5vw,1.5rem)}
 header nav a:not(.btn-nav):not(.nav-cta){transition:color .2s ease}
