@@ -14,7 +14,7 @@ jobs:
   browser-qa:
     runs-on: ubuntu-latest
     env:
-      PORTFOLIO_LIVE_URL: https://jalak-patel-190.github.io/jalak-portfolio/
+      PORTFOLIO_LIVE_URL: https://jalakpatel-portfolio.github.io/
       CHECK_PUBLISHED_INTERNAL_PATHS: ${{ github.event_name == 'push' && 'true' || 'false' }}
       CHECK_EXTERNAL_MEDIA: ${{ github.event_name == 'push' && 'true' || 'false' }}
     timeout-minutes: 15
@@ -63,7 +63,7 @@ jobs:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     env:
-      PORTFOLIO_LIVE_URL: https://jalak-patel-190.github.io/jalak-portfolio/
+      PORTFOLIO_LIVE_URL: https://jalakpatel-portfolio.github.io/
     timeout-minutes: 15
     steps:
       - name: Wait for updated Pages output after a main-branch push
@@ -87,11 +87,11 @@ jobs:
         uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
-            https://jalak-patel-190.github.io/jalak-portfolio/
-            https://jalak-patel-190.github.io/jalak-portfolio/case-studies/ajmera/
-            https://jalak-patel-190.github.io/jalak-portfolio/case-studies/cinekorn/
-            https://jalak-patel-190.github.io/jalak-portfolio/case-studies/jalan/
-            https://jalak-patel-190.github.io/jalak-portfolio/case-studies/swad/
+            https://jalakpatel-portfolio.github.io/
+            https://jalakpatel-portfolio.github.io/case-studies/ajmera/
+            https://jalakpatel-portfolio.github.io/case-studies/cinekorn/
+            https://jalakpatel-portfolio.github.io/case-studies/jalan/
+            https://jalakpatel-portfolio.github.io/case-studies/swad/
           runs: 1
           uploadArtifacts: true
           temporaryPublicStorage: false
