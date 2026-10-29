@@ -8,6 +8,8 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+/* Keep keyboard focus visible even when component rules reset the browser outline. */
+#navToggle:focus-visible,.nav-toggle:focus-visible{outline:3px solid var(--cta1)!important;outline-offset:3px!important;box-shadow:0 0 0 2px var(--bg)!important}
 body{
   font-family:'Space Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;
   position:relative;overflow-x:hidden;
