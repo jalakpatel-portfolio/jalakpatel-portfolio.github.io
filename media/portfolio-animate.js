@@ -7,6 +7,16 @@
  * Respects prefers-reduced-motion.
  */
 (function () {
+  // Let keyboard users dismiss the mobile navigation on every page using this shared script.
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    var toggle = document.getElementById('navToggle');
+    var nav = document.getElementById('mainNav');
+    if (!toggle || !nav || !nav.classList.contains('open')) return;
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.focus();
+  });
   try {
     var scriptEl = document.currentScript || document.querySelector('script[src*="portfolio-animate.js"]');
     if (scriptEl && scriptEl.src && !document.querySelector('link[data-global-ambient]')) {
