@@ -14,6 +14,7 @@ const primaryPages = [
   'case-studies/cinekorn/02-telugu-kannada.html',
   'case-studies/cinekorn/03-movies-catalog.html',
   'case-studies/cinekorn/04-gujarati-system.html',
+  'case-studies/cinekorn/05-gujarati-platform-fit.html',
   'case-studies/cinekorn/06-kalapi-linkedin.html',
   'case-studies/cinekorn/07-company-linkedin.html',
   'case-studies/jalan/index.html',
@@ -220,7 +221,7 @@ test('every sitemap URL maps to a published local page', async ({ request, baseU
   const response = await request.get('sitemap.xml');
   expect(response.status(), 'sitemap should be served successfully').toBe(200);
   const xml = await response.text();
-  const urls = [...xml.matchAll(/<loc>(https?:\\/\\/[^<]+)<\\/loc>/g)].map(match => match[1]);
+  const urls = [...xml.matchAll(/<loc>(https?:\/\/[^<]+)<\/loc>/g)].map(match => match[1]);
   expect(urls.length, 'sitemap should contain canonical URLs').toBeGreaterThan(0);
   const failures = [];
   for (const url of urls) {
