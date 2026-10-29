@@ -203,6 +203,34 @@ test('live custom 404 page returns 404 and offers a route back to the portfolio'
 });
 
 
+
+
+test('custom 404 links use canonical root-relative routes', async ({ page }) => {
+  await page.goto('404.html', { waitUntil: 'domcontentloaded' });
+  const oldPrefixLinks = await page.locator('a[href*="/jalak-portfolio/"]').evaluateAll(links =>
+    links.map(link => ({ text: link.innerText.trim(), href: link.getAttribute('href') }))
+  );
+  expect(oldPrefixLinks, '404 page should not link to the retired GitHub Pages subpath').toEqual([]);
+  for (const href of await page.locator('a[href^="/"]').evaluateAll(links => links.map(link => link.getAttribute('href')))) {
+    expect(href).toMatch(/^\/(?:#|favicon\.svg|case-studies\/|$)/);
+  }
+});
+
+test('every sitemap URL maps to a published local page', async ({ request, baseURL }) => {
+  const response = await request.get('sitemap.xml');
+  expect(response.status(), 'sitemap should be served successfully').toBe(200);
+  const xml = await response.text();
+  const urls = [...xml.matchAll(/<loc>(https?:\\/\\/[^<]+)<\\/loc>/g)].map(match => match[1]);
+  expect(urls.length, 'sitemap should contain canonical URLs').toBeGreaterThan(0);
+  const failures = [];
+  for (const url of urls) {
+    const path = new URL(url).pathname;
+    const pageResponse = await request.get(new URL(path, baseURL).toString());
+    if (pageResponse.status() !== 200) failures.push(`${pageResponse.status()} ${path}`);
+  }
+  expect(failures, 'all sitemap URLs should resolve to HTTP 200 locally').toEqual([]);
+});
+
 test('audit documents and QA source files are not published after Pages deployment', async ({ request }) => {
   test.skip(process.env.CHECK_PUBLISHED_INTERNAL_PATHS !== 'true', 'runs after a successful GitHub Pages deployment');
   const liveBaseURL = process.env.PORTFOLIO_LIVE_URL;
