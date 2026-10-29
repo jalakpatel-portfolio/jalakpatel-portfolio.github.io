@@ -272,5 +272,20 @@ document.querySelectorAll('[data-proof-carousel]').forEach(function(root){
 })();
 })();
 </script>
+
+<script>
+(function(){
+  var toggle=document.getElementById('navToggle');
+  var nav=document.getElementById('mainNav');
+  if(!toggle||!nav)return;
+  document.addEventListener('keydown',function(event){
+    if(event.key==='Escape'&&nav.classList.contains('open')){
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+      toggle.focus();
+    }
+  });
+})();
+</script>
 </body>
 </html>
