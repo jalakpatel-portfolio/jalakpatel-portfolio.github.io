@@ -28,6 +28,13 @@
 
 html { scroll-behavior: smooth; }
 
+/* Keep keyboard focus visible on the mobile menu toggle, including when hub styles load later. */
+#navToggle:focus-visible, .nav-toggle:focus-visible {
+  outline: 3px solid var(--cta-start) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 2px var(--bg) !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
