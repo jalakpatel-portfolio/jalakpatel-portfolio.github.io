@@ -8,6 +8,8 @@
 html{scroll-behavior:smooth}
 main[id],section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--cta-start);outline-offset:3px}
+/* Keep keyboard focus visible even when component rules reset the browser outline. */
+#navToggle:focus-visible,.nav-toggle:focus-visible{outline:3px solid var(--cta-start)!important;outline-offset:3px!important;box-shadow:0 0 0 2px var(--bg)!important}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
