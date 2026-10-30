@@ -197,20 +197,33 @@ nav a:hover{color:var(--text)}
 .journey-logo{width:48px;height:48px;object-fit:contain;border-radius:10px;background:#faf8f4;border:1px solid var(--border);padding:4px}
 .journey-blurb{font-size:.88rem;color:var(--muted);line-height:1.5;margin:.15rem 0 .35rem}
 .journey-cta{font-size:.82rem;font-weight:700;color:var(--cta1);margin-top:auto}
-.how-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:.75rem}
+.how-flow{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem;
+  margin-top:.75rem;position:relative;isolation:isolate
+}
+.how-flow::before{
+  content:"";position:absolute;z-index:0;left:16.66%;right:16.66%;top:2.1rem;height:1px;
+  background:linear-gradient(90deg,rgba(194,65,12,.32),rgba(157,58,114,.38),rgba(31,92,107,.28))
+}
 .how-step{
-  background:var(--surface);border:1px solid rgba(232,226,216,.85);border-radius:20px;
-  padding:1.25rem 1.15rem;box-shadow:var(--shadow)
+  position:relative;z-index:1;overflow:hidden;
+  background:var(--surface);border:1px solid rgba(232,226,216,.9);border-radius:20px;
+  padding:1.35rem 1.2rem 1.3rem;box-shadow:var(--shadow)
 }
-.how-step:nth-child(2){background:linear-gradient(160deg,#fff 70%, rgba(157,58,114,.03))}
+.how-step::before{
+  content:"";position:absolute;top:0;left:1.2rem;right:1.2rem;height:3px;
+  border-radius:0 0 4px 4px;background:linear-gradient(90deg,var(--cta1),var(--cta2),var(--link));
+  opacity:.82
+}
+.how-step:nth-child(2){background:linear-gradient(160deg,#fff 70%, rgba(157,58,114,.035))}
 .how-num{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:28px;height:28px;border-radius:999px;font-size:.75rem;font-weight:700;color:#fff;
+  position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;border-radius:999px;font-size:.75rem;font-weight:700;color:#fff;
   background:linear-gradient(135deg,var(--cta1),var(--cta2));
-  margin-bottom:.55rem
+  margin-bottom:.65rem;box-shadow:0 3px 9px rgba(157,58,114,.13)
 }
-.how-step h3{font-size:1rem;font-weight:700;margin-bottom:.35rem}
-.how-step p{font-size:.88rem;color:var(--muted);line-height:1.5;margin:0}
+.how-step h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
+.how-step p{font-size:.88rem;color:var(--muted);line-height:1.55;margin:0}
 .cg{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:.5rem}
 .cc{
   display:flex;flex-direction:column;background:var(--surface);
