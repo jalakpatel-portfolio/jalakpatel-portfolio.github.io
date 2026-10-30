@@ -46,12 +46,20 @@ h1{font-size:clamp(28px,4vw,42px);line-height:1.05;margin:0 0 10px;letter-spacin
 .tile img{display:block;width:100%;height:auto;max-width:100%;max-height:280px;object-fit:contain;object-position:center;background:#f3f0eb}
 .tile figcaption{padding:11px 12px;font-size:11px;font-weight:700}
 .tile figcaption span{display:block;color:var(--muted);font-size:10px;font-weight:400;margin-top:3px}
+/* Masonry-style packing only for the two galleries still being refined */
+.panel[data-brand="cinekorn"] .grid,
+.panel[data-brand="swad"] .grid{display:block;columns:3;column-gap:10px}
+.panel[data-brand="cinekorn"] .tile,
+.panel[data-brand="swad"] .tile{display:inline-flex;width:100%;margin:0 0 10px;break-inside:avoid;vertical-align:top}
+.panel[data-brand="cinekorn"] .tile img,
+.panel[data-brand="swad"] .tile img{width:100%;height:auto;max-height:280px;object-fit:contain}
+
 .bottom{padding:0 clamp(22px,4vw,42px) 30px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
 .note{font-size:11px;color:var(--muted);max-width:650px}
 .actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:0;border-radius:999px;padding:10px 16px;font-size:11px;font-weight:800;background:linear-gradient(120deg,var(--orange),var(--plum));color:white}.btn.secondary{background:#fff;color:#393530;border:1px solid var(--line)}
 .foot{margin-top:18px;color:#847d74;font-size:11px}
-@media(max-width:760px){.cover-top{grid-template-columns:1fr}.feature{min-height:140px}.grid{grid-template-columns:1fr 1fr}.tile:first-child{grid-column:auto}}
-@media(max-width:440px){.grid{grid-template-columns:1fr}.tile:first-child{grid-column:auto}.logo-box{width:62px;height:62px}.wrap{padding:0 14px}.cover{border-radius:18px}}
+@media(max-width:760px){.cover-top{grid-template-columns:1fr}.feature{min-height:140px}.grid{grid-template-columns:1fr 1fr}.tile:first-child{grid-column:auto}.panel[data-brand="cinekorn"] .grid,.panel[data-brand="swad"] .grid{columns:2}}
+@media(max-width:440px){.grid{grid-template-columns:1fr}.tile:first-child{grid-column:auto}.panel[data-brand="cinekorn"] .grid,.panel[data-brand="swad"] .grid{columns:1}.logo-box{width:62px;height:62px}.wrap{padding:0 14px}.cover{border-radius:18px}}
 </style>
 </head>
 <body>
@@ -73,7 +81,7 @@ h1{font-size:clamp(28px,4vw,42px);line-height:1.05;margin:0 0 10px;letter-spacin
 <div class="evidence"><div class="evidence-head"><h2>Selected evidence</h2><p>Real portfolio assets · illustrative arrangement</p></div><div class="grid">
 <figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/cinekorn/yt-movie.png" alt="Cinekorn Movies YouTube analytics"><figcaption>Movies catalogue operations<span>Channel performance evidence</span></figcaption></figure>
 <figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/cinekorn/rakhewal-youtube-analytics.png" alt="Rakhewal channel analytics"><figcaption>Gujarati distribution<span>Regional packaging and formats</span></figcaption></figure>
-<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/cinekorn/kalapi-profile2.png" alt="Founder LinkedIn profile"><figcaption>Founder LinkedIn<span>Professional brand surface</span></figcaption></figure>
+<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/cinekorn/kalapi-profile2.png?v=20261030" alt="Founder LinkedIn profile"><figcaption>Founder LinkedIn<span>Professional brand surface</span></figcaption></figure>
 </div></div>
 <div class="bottom"><div class="note">Evidence gallery is a preview of existing case-study material. Keep the full evidence and its context within the existing case-study sections.</div><div class="actions"><button class="btn">Explore case studies →</button><button class="btn secondary">View company hub</button></div></div>
 </div></section>
