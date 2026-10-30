@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Company Hub Cover Frames — Visual Preview</title>
+<style>
+:root{--bg:#f7f4ef;--ink:#242321;--muted:#77716a;--line:#e8e2d8;--white:#fff;--orange:#c2410c;--plum:#9d3a72;--shadow:0 14px 38px rgba(35,28,20,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"Space Grotesk",system-ui,sans-serif;line-height:1.5}
+.top{background:#211f1d;color:#fff;padding:14px clamp(16px,4vw,54px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:.08em;font-size:13px}.notice{font-size:11px;letter-spacing:.12em;color:#f1d8ca}
+.wrap{max-width:1160px;margin:34px auto;padding:0 22px}
+h1{font-size:clamp(28px,4vw,42px);line-height:1.05;margin:0 0 10px;letter-spacing:-.04em}
+.intro{color:var(--muted);max-width:720px;margin:0 0 24px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}
+.tab{border:1px solid #d9d0c4;background:#fff;color:#393530;padding:10px 16px;border-radius:999px;font-weight:700;cursor:pointer}
+.tab[aria-selected=true]{background:#f4e3dc;border-color:#d99b84;color:#8e3519}
+.panel{display:none}.panel.active{display:block}
+.kicker{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--orange);font-weight:800}
+.cover{background:linear-gradient(120deg,rgba(194,65,12,.07),rgba(157,58,114,.07)),#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.cover-top{padding:clamp(22px,4vw,42px);display:grid;grid-template-columns:1fr minmax(220px,34%);gap:28px;align-items:center}
+.identity{display:flex;align-items:center;gap:16px;margin:14px 0 18px}
+.logo-box{width:76px;height:76px;border:1px solid var(--line);border-radius:18px;background:#fff;display:grid;place-items:center;padding:10px;flex-shrink:0}
+.logo-box img{max-width:100%;max-height:100%;object-fit:contain}
+.company{font-size:clamp(27px,4vw,46px);font-weight:850;letter-spacing:-.055em;line-height:1.03;margin:0}
+.role{font-size:13px;color:var(--muted);margin-top:7px}
+.lede{max-width:620px;color:#5e5953;font-size:15px;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.pill{border:1px solid var(--line);background:rgba(255,255,255,.75);border-radius:999px;padding:7px 11px;font-size:11px;color:#514b44}
+.feature{background:#252321;color:#fff;border-radius:18px;padding:18px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}
+.feature:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:linear-gradient(135deg,rgba(194,65,12,.5),rgba(157,58,114,.4));right:-70px;top:-70px}
+.feature small,.feature strong,.feature span{position:relative;z-index:1}
+.feature small{color:#e9c5b4;text-transform:uppercase;letter-spacing:.14em;font-size:9px;font-weight:800}
+.feature strong{font-size:24px;line-height:1.05;max-width:230px;letter-spacing:-.04em}
+.feature span{font-size:11px;color:#d8d1ca}
+.evidence{padding:0 clamp(22px,4vw,42px) 34px}
+.evidence-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:0 0 13px}
+.evidence-head h2{font-size:18px;margin:0;letter-spacing:-.03em}
+.evidence-head p{font-size:11px;color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:1.15fr .85fr .85fr;gap:12px}
+.tile{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;min-width:0;box-shadow:0 6px 18px rgba(30,24,18,.045)}
+.tile img{display:block;width:100%;height:160px;object-fit:cover;background:#e9e3da}
+.tile:first-child img{height:208px}
+.tile figcaption{padding:11px 12px;font-size:11px;font-weight:700}
+.tile figcaption span{display:block;color:var(--muted);font-size:10px;font-weight:400;margin-top:3px}
+.bottom{padding:0 clamp(22px,4vw,42px) 30px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.note{font-size:11px;color:var(--muted);max-width:650px}
+.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:0;border-radius:999px;padding:10px 16px;font-size:11px;font-weight:800;background:linear-gradient(120deg,var(--orange),var(--plum));color:white}.btn.secondary{background:#fff;color:#393530;border:1px solid var(--line)}
+.foot{margin-top:18px;color:#847d74;font-size:11px}
+@media(max-width:760px){.cover-top{grid-template-columns:1fr}.feature{min-height:140px}.grid{grid-template-columns:1fr 1fr}.tile:first-child{grid-column:1/-1}.tile:first-child img{height:190px}.tile img{height:135px}}
+@media(max-width:440px){.grid{grid-template-columns:1fr}.tile:first-child{grid-column:auto}.tile img,.tile:first-child img{height:190px}.logo-box{width:62px;height:62px}.wrap{padding:0 14px}.cover{border-radius:18px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="brand">JALAK PATEL · PORTFOLIO DESIGN PREVIEW</div><div class="notice">VISUAL PREVIEW ONLY · NOT LIVE</div></div>
+<main class="wrap">
+<div class="kicker">Step 01 · Company hub cover frames</div>
+<h1>One consistent frame.<br>Four distinct company stories.</h1>
+<p class="intro">Explore how each existing company hub could open with a stronger company identity, role context and a small evidence preview. This is a concept preview using existing public portfolio assets. It does not change the live website.</p>
+<div class="tabs" role="tablist" aria-label="Company preview">
+<button class="tab" role="tab" aria-selected="true" data-tab="cinekorn">Cinekorn</button>
+<button class="tab" role="tab" aria-selected="false" data-tab="swad">Swad</button>
+<button class="tab" role="tab" aria-selected="false" data-tab="jalan">Jalan Mega Mart</button>
+<button class="tab" role="tab" aria-selected="false" data-tab="ajmera">Ajmera Fashion</button>
+</div>
+
+<section class="panel active" id="cinekorn" role="tabpanel">
+<div class="cover">
+<div class="cover-top"><div><div class="kicker">Entertainment · Company hub</div><div class="identity"><div class="logo-box"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/logos/cinekorn-logo.png" alt="Cinekorn logo"></div><div><h2 class="company">Cinekorn Entertainment</h2><div class="role">Senior Social Media Manager · Jan 2026 to Present</div></div></div><p class="lede">A multi-account content and distribution system across film catalogue, regional channels and professional brand surfaces.</p><div class="meta"><span class="pill">YouTube distribution</span><span class="pill">Catalogue operations</span><span class="pill">LinkedIn presence</span></div></div><div class="feature"><small>Featured work</small><strong>Content systems across entertainment channels</strong><span>Selected analytics and execution evidence below</span></div></div>
+<div class="evidence"><div class="evidence-head"><h2>Selected evidence</h2><p>Real portfolio assets · illustrative arrangement</p></div><div class="grid">
+<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/cinekorn/yt-movie.png" alt="Cinekorn Movies YouTube analytics"><figcaption>Movies catalogue operations<span>Channel performance evidence</span></figcaption></figure>
+<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/cinekorn/rakhewal-youtube-analytics.png" alt="Rakhewal channel analytics"><figcaption>Gujarati distribution<span>Regional packaging and formats</span></figcaption></figure>
+<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/cinekorn/kalapi-profile.png" alt="Founder LinkedIn profile"><figcaption>Founder LinkedIn<span>Professional brand surface</span></figcaption></figure>
+</div></div>
+<div class="bottom"><div class="note">Evidence gallery is a preview of existing case-study material. Keep the full evidence and its context within the existing case-study sections.</div><div class="actions"><button class="btn">Explore case studies →</button><button class="btn secondary">View company hub</button></div></div>
+</div></section>
+
+<section class="panel" id="swad" role="tabpanel"><div class="cover">
+<div class="cover-top"><div><div class="kicker">Culinary education · Company hub</div><div class="identity"><div class="logo-box"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/logos/swad-logo.png" alt="Swad logo"></div><div><h2 class="company">Swad Cooking Institute</h2><div class="role">Social Media Manager & Content Lead · Nov 2024 to Oct 2025</div></div></div><p class="lede">Instructor-led content, student-facing programming and channel systems shaped around audience response and each channel’s purpose.</p><div class="meta"><span class="pill">YouTube growth</span><span class="pill">Food content</span><span class="pill">Live programming</span></div></div><div class="feature"><small>Featured work</small><strong>Turning culinary expertise into audience-led content</strong><span>Production, programming and channel evidence</span></div></div>
+<div class="evidence"><div class="evidence-head"><h2>Selected evidence</h2><p>Real portfolio assets · illustrative arrangement</p></div><div class="grid">
+<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/swad/swad-cooking.png" alt="Swad cooking content"><figcaption>Institute content<span>Cooking and educational formats</span></figcaption></figure>
+<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/swad/DSC02610.JPG" alt="Swad event photography"><figcaption>Community livestream<span>Event and audience experience</span></figcaption></figure>
+<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/swad/director-with-camera.jpg" alt="Production behind the scenes"><figcaption>Production workflow<span>Behind-the-scenes evidence</span></figcaption></figure>
+</div></div><div class="bottom"><div class="note">Use genuine institute, workshop and production imagery. Avoid using one repeated thumbnail for every case study.</div><div class="actions"><button class="btn">Explore case studies →</button><button class="btn secondary">View company hub</button></div></div></div></section>
+
+<section class="panel" id="jalan" role="tabpanel"><div class="cover">
+<div class="cover-top"><div><div class="kicker">Retail & wholesale · Company hub</div><div class="identity"><div class="logo-box"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/logos/jalan-logo.png" alt="Jalan Mega Mart logo"></div><div><h2 class="company">Jalan Mega Mart</h2><div class="role">Social Media Manager · Jul 2023 to Oct 2024</div></div></div><p class="lede">Marketing operations for a growing B2B textile business, spanning channel setup, content planning, influencer coordination and offline promotion.</p><div class="meta"><span class="pill">Marketing operations</span><span class="pill">B2B textiles</span><span class="pill">Influencer coordination</span></div></div><div class="feature"><small>Featured work</small><strong>Building a connected marketing operation</strong><span>Channel, campaign and coordination evidence</span></div></div>
+<div class="evidence"><div class="evidence-head"><h2>Selected evidence</h2><p>Real portfolio assets · illustrative arrangement</p></div><div class="grid">
+<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/Jalan/Jalan-yt-c-01.jpg" alt="Jalan YouTube content"><figcaption>YouTube channel content<span>Channel and publishing system</span></figcaption></figure>
+<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/Jalan/Jalan-ig-01.jpg" alt="Jalan Instagram content"><figcaption>Social content<span>Brand and product communication</span></figcaption></figure>
+<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/Jalan/Jalan-yt-c-02.jpg" alt="Jalan YouTube channel"><figcaption>Channel execution<span>Publishing and content evidence</span></figcaption></figure>
+</div></div><div class="bottom"><div class="note">Keep business outcomes tied to their actual source and reporting period. Do not add unverified sales claims to the cover.</div><div class="actions"><button class="btn">Explore case studies →</button><button class="btn secondary">View company hub</button></div></div></div></section>
+
+<section class="panel" id="ajmera" role="tabpanel"><div class="cover">
+<div class="cover-top"><div><div class="kicker">Fashion & textiles · Company hub</div><div class="identity"><div class="logo-box"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/logos/ajmera-logo.png" alt="Ajmera Fashion logo"></div><div><h2 class="company">Ajmera Fashion</h2><div class="role">Digital Marketing Executive · Jul 2022 to Jul 2023</div></div></div><p class="lede">Regional content and audience development for a B2B textile business, using local product language, founder-led communication and social channels.</p><div class="meta"><span class="pill">Regional strategy</span><span class="pill">Founder content</span><span class="pill">Audience development</span></div></div><div class="feature"><small>Featured work</small><strong>Making regional content relevant to real buyers</strong><span>Founder, community and regional evidence</span></div></div>
+<div class="evidence"><div class="evidence-head"><h2>Selected evidence</h2><p>Real portfolio assets · illustrative arrangement</p></div><div class="grid">
+<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/ajmera/linkedin-ajay-ajmera-breakfast.jpg" alt="Founder-led content"><figcaption>Founder-led content<span>People and company culture</span></figcaption></figure>
+<figure class="tile"><img src="https://raw.githubusercontent.com/jalakpatel-portfolio/jalakpatel-portfolio.github.io/main/media/ajmera/Ig01.jpg.jpeg" alt="Ajmera social content"><figcaption>Regional social content<span>Visual language for local audiences</span></figcaption></figure>
+<figure class="tile"><img src="https://img.youtube.com/vi/2bMASguJVu0/hqdefault.jpg" alt="Ajmera regional content video"><figcaption>Regional video content<span>Product and audience relevance</span></figcaption></figure>
+</div></div><div class="bottom"><div class="note">Use region-specific examples and founder content only where they support the actual case-study narrative.</div><div class="actions"><button class="btn">Explore case studies →</button><button class="btn secondary">View company hub</button></div></div></div></section>
+
+<p class="foot">Preview notes: company labels and employment periods are based on the existing portfolio pages. Image choices are representative samples, not a final approved gallery. Buttons are visual placeholders and do not navigate.</p>
+</main>
+<script>
+const tabs=[...document.querySelectorAll('.tab')],panels=[...document.querySelectorAll('.panel')];
+tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.setAttribute('aria-selected',String(x===t)));panels.forEach(p=>p.classList.toggle('active',p.id===t.dataset.tab));}));
+</script>
+</body></html>
