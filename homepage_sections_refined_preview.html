@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Homepage Sections — Refined Polish Preview | Jalak Patel</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box} :root{--bg:#F7F4EF;--paper:#fff;--ink:#141414;--muted:#5A5A5A;--line:#E8E2D8;--a:#C2410C;--b:#9D3A72;--shadow:0 10px 32px rgba(20,20,20,.065)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 'Space Grotesk',system-ui,sans-serif}
+main{max-width:1120px;margin:auto;padding:42px 24px 76px}
+.kicker{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:var(--a)}
+h1,h2,h3,p{margin-top:0}h1,h2,.company-name,.project-title{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;letter-spacing:.025em}
+h1{font-size:clamp(2.6rem,6vw,4.2rem);line-height:.98;margin:.4rem 0 .8rem}
+.intro{max-width:700px;color:var(--muted);margin-bottom:2.8rem}
+section{margin:0 0 4.5rem}.section-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.35rem}
+h2{font-size:2.2rem;line-height:1;margin-bottom:.35rem}.section-head p{color:var(--muted);margin:0;max-width:550px;font-size:.9rem}
+.eyebrow{font-size:.66rem;text-transform:uppercase;letter-spacing:.13em;font-weight:700;color:var(--a);margin:0 0 .4rem}
+.journey{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding-top:20px}
+.journey:before{content:"";position:absolute;left:3%;right:3%;top:7px;height:1px;background:linear-gradient(90deg,rgba(194,65,12,.65),rgba(157,58,114,.45))}
+.journey-card{position:relative;display:flex;flex-direction:column;min-height:260px;background:var(--paper);border:1px solid var(--line);border-radius:19px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+.journey-card:hover,.case-card:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(20,20,20,.1)}
+.journey-card:before{content:"";position:absolute;z-index:2;top:-18px;left:20px;width:10px;height:10px;border-radius:50%;background:var(--a);border:3px solid var(--bg)}
+.cover{position:relative;min-height:105px;padding:18px 18px 14px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:linear-gradient(135deg,#fff 0%,#f7f3ed 100%);border-bottom:1px solid var(--line);overflow:hidden}
+.cover:after{content:"";position:absolute;inset:0;opacity:.38;pointer-events:none;background:repeating-linear-gradient(135deg,transparent 0 17px,rgba(31,92,107,.045) 17px 18px)}
+.cover img{position:relative;z-index:1;max-width:54%;max-height:58px;width:auto;height:auto;object-fit:contain}
+.cover-label{position:relative;z-index:1;text-align:right;font-size:.58rem;line-height:1.3;letter-spacing:.12em;text-transform:uppercase;color:#746d65;font-weight:700;max-width:92px}
+.card-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.date{font-size:.65rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700;color:var(--a);margin-bottom:5px}
+.role{font-size:.77rem;font-weight:600;color:var(--muted);line-height:1.35;margin-bottom:9px}
+.company-name{font-size:1.45rem;line-height:1.05;margin-bottom:8px}
+.desc{font-size:.78rem;line-height:1.5;color:var(--muted);margin:0 0 14px}
+.link{margin-top:auto;color:var(--a);font-size:.75rem;font-weight:700}
+.case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.case-card{display:flex;flex-direction:column;overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:20px;text-decoration:none;color:inherit;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+.case-card .cover{min-height:125px;padding:20px 22px}
+.case-card .cover img{max-height:68px;max-width:48%}
+.cover-meta{position:relative;z-index:1;text-align:right;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#756c63}
+.case-card .card-body{padding:17px 22px 20px}
+.project-title{font-size:1.5rem;line-height:1.08;margin:0 0 7px}
+.case-desc{font-size:.83rem;color:var(--muted);line-height:1.5;margin:0 0 13px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:13px}
+.tag{font-size:.65rem;font-weight:600;padding:4px 9px;border:1px solid var(--line);border-radius:999px;background:#f7f3ed;color:#625c55}
+.bottom-patch{margin-top:24px;padding:17px 20px;border-radius:15px;background:linear-gradient(110deg,rgba(194,65,12,.09),rgba(157,58,114,.09));border:1px solid rgba(194,65,12,.14);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.bottom-patch strong{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.04em}
+.bottom-patch span{font-size:.78rem;color:var(--muted)}
+.note{margin-top:30px;padding:14px 17px;border-left:3px solid #1f5c6b;background:rgba(31,92,107,.06);font-size:.78rem;color:#4f5758}
+@media(max-width:850px){.journey{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:22px}.journey:before{display:none}.journey-card:before{display:none}}
+@media(max-width:600px){main{padding:30px 16px 52px}.section-head{display:block}.section-head p{margin-top:8px}.journey,.case-grid{grid-template-columns:1fr}.journey-card{min-height:0}.cover{min-height:95px}.case-card .cover{min-height:112px}.bottom-patch{align-items:flex-start;flex-direction:column;gap:5px}}
+</style>
+</head>
+<body><main>
+<p class="kicker">Portfolio homepage · visual concept · preview only</p>
+<h1>Professional Journey &amp; Selected Case Studies</h1>
+<p class="intro">A shared company-cover language across both sections: recognisable logo presentation, framed identity area and a consistent editorial structure. The journey stays chronological; the case studies give more room to the work and decisions.</p>
+
+<section id="journey">
+<div class="section-head"><div><p class="eyebrow">The experience behind the work</p><h2>Professional Journey</h2></div><p>Four company systems. Roles as titled, scope as delivered. Each company cover uses the same visual treatment as the case-study cards below.</p></div>
+<div class="journey">
+<a class="journey-card" href="case-studies/cinekorn/"><div class="cover"><img src="media/logos/cinekorn-logo.png" alt="Cinekorn Entertainment logo"><span class="cover-label">Company<br>01 / 04</span></div><div class="card-body"><div class="date">Jan 2026 to Present</div><div class="role">Sr. Social Media Manager</div><div class="company-name">Cinekorn Entertainment</div><p class="desc">Multi-account distribution across YouTube, Facebook, and LinkedIn.</p><span class="link">Explore Cinekorn →</span></div></a>
+<a class="journey-card" href="case-studies/swad/"><div class="cover"><img src="media/logos/swad-logo.png" alt="Swad Cooking Institute logo"><span class="cover-label">Company<br>02 / 04</span></div><div class="card-body"><div class="date">Nov 2024 to Oct 2025</div><div class="role">Social Media Manager &amp; Content Lead</div><div class="company-name">Swad Cooking Institute</div><p class="desc">Creator and institute channels shaped by audience response and each channel’s purpose.</p><span class="link">Explore Swad →</span></div></a>
+<a class="journey-card" href="case-studies/jalan/"><div class="cover"><img src="media/logos/jalan-logo.png" alt="Jalan Mega Mart logo"><span class="cover-label">Company<br>03 / 04</span></div><div class="card-body"><div class="date">Jul 2023 to Nov 2024</div><div class="role">Social Media Manager (with Ops Oversight)</div><div class="company-name">Jalan Mega Mart</div><p class="desc">Marketing operations, content planning, and promotion for a B2B textile business.</p><span class="link">Explore Jalan →</span></div></a>
+<a class="journey-card" href="case-studies/ajmera/"><div class="cover"><img src="media/logos/ajmera-logo.png" alt="Ajmera Fashion logo"><span class="cover-label">Company<br>04 / 04</span></div><div class="card-body"><div class="date">Jul 2022 to Jul 2023</div><div class="role">Digital Marketing Executive</div><div class="company-name">Ajmera Fashion</div><p class="desc">Multilingual content systems and regional audience logic for B2B textile growth.</p><span class="link">Explore Ajmera →</span></div></a>
+</div>
+</section>
+
+<section id="work">
+<div class="section-head"><div><p class="eyebrow">Selected work &amp; decisions</p><h2>Selected Case Studies</h2></div><p>The same company-cover treatment is repeated here, but the project title, context and evidence remain the priority.</p></div>
+<div class="case-grid">
+<a class="case-card" href="case-studies/cinekorn/"><div class="cover"><img src="media/logos/cinekorn-logo.png" alt="Cinekorn Entertainment logo"><span class="cover-meta">Film &amp; digital distribution</span></div><div class="card-body"><p class="eyebrow">Cinekorn Entertainment</p><h3 class="project-title">Multi-channel film distribution</h3><p class="case-desc">Work across YouTube, Facebook, and LinkedIn. Case studies distinguish existing catalogue performance from tenure work.</p><div class="tags"><span class="tag">YouTube</span><span class="tag">Distribution</span><span class="tag">108M+ lifetime views</span></div><span class="link">Explore company hub →</span></div></a>
+<a class="case-card" href="case-studies/ajmera/"><div class="cover"><img src="media/logos/ajmera-logo.png" alt="Ajmera Fashion logo"><span class="cover-meta">Regional B2B content</span></div><div class="card-body"><p class="eyebrow">Ajmera Fashion</p><h3 class="project-title">Regional content for a B2B textile business</h3><p class="case-desc">Regional content strategy for a B2B textile wholesaler, with tracker comparisons across about fifty accounts.</p><div class="tags"><span class="tag">Regional strategy</span><span class="tag">B2B</span><span class="tag">Tracker review</span></div><span class="link">Explore company hub →</span></div></a>
+<a class="case-card" href="case-studies/swad/"><div class="cover"><img src="media/logos/swad-logo.png" alt="Swad Cooking Institute logo"><span class="cover-meta">Food media &amp; channel growth</span></div><div class="card-body"><p class="eyebrow">Swad Cooking Institute</p><h3 class="project-title">Audience-led food content</h3><p class="case-desc">Work across creator and institute channels, using audience response and channel purpose to guide editorial decisions.</p><div class="tags"><span class="tag">Food media</span><span class="tag">Retention</span><span class="tag">Funnels</span></div><span class="link">Explore company hub →</span></div></a>
+<a class="case-card" href="case-studies/jalan/"><div class="cover"><img src="media/logos/jalan-logo.png" alt="Jalan Mega Mart logo"><span class="cover-meta">B2B textile marketing</span></div><div class="card-body"><p class="eyebrow">Jalan Mega Mart</p><h3 class="project-title">Marketing operations for a B2B textile business</h3><p class="case-desc">Channel setup, content planning, influencer coordination, and offline promotion for retailers and business owners.</p><div class="tags"><span class="tag">Retail</span><span class="tag">Performance</span><span class="tag">Systems</span></div><span class="link">Explore company hub →</span></div></a>
+</div>
+<div class="bottom-patch"><strong>From strategy to execution</strong><span>A shared closing detail to connect the sections without competing with the work.</span></div>
+</section>
+<p class="note"><strong>Review note:</strong> Preview only. This concept uses the existing logo assets and homepage copy. No company brand colours have been guessed or applied. The same framed logo-cover language is intentionally shared by both sections; only the information hierarchy changes. The live homepage files remain unchanged.</p>
+</main></body></html>
