@@ -174,18 +174,20 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(var(--hub-gradient-b
   display:flex;
   align-items:center;
   justify-content:center;
-  width:100%;
+  width:min(100%,760px);
+  aspect-ratio:16/9;
+  margin-inline:auto;
   overflow:hidden;
   border:1px solid var(--hub-brand-soft);
   border-radius:14px;
-  background:rgba(255,255,255,.66);
+  background:rgba(255,255,255,.72);
 }
 .hub-featured-media img{
   display:block;
   width:100%;
-  height:auto;
-  max-height:none;
+  height:100%;
   object-fit:contain;
+  object-position:center;
 }
 .hub-cinekorn{--hub-brand:#946300;--hub-brand-soft:rgba(148,99,0,.18);--hub-pattern:url("media/cinekorn.png");}
 .hub-swad{--hub-brand:#d71920;--hub-brand-soft:rgba(215,25,32,.16);--hub-pattern:url("media/swad.jpeg");}
