@@ -1,43 +1,34 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>How I Work — Preview | Jalak Patel</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How I Work — Refined Preview | Jalak Patel</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#F7F4EF;--ink:#171717;--muted:#66615c;--line:#e6ded4;--rose:#9D3A72;--orange:#C2410C;--gradient:linear-gradient(135deg,#C2410C,#9D3A72)}
+:root{--paper:#F7F4EF;--ink:#201b1b;--muted:#6a625e;--line:#e5ddd4;--rust:#bd542f;--plum:#8e477b;--sage:#4e766b;--rose:#bd7187}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Space Grotesk',sans-serif}
-.preview-note{max-width:1120px;margin:22px auto 0;padding:0 24px;color:#6d6259;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-main{max-width:1120px;margin:0 auto;padding:58px 24px 72px}
-.eyebrow{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);font-weight:700;margin:0 0 14px}
-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.7rem,6vw,4.5rem);line-height:.96;letter-spacing:.02em;margin:0 0 14px}
-.intro{max-width:660px;color:var(--muted);font-size:1rem;line-height:1.7;margin:0 0 44px}
-.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;position:relative;isolation:isolate}
-.flow:before{content:"";position:absolute;z-index:-1;left:8%;right:8%;top:36px;height:2px;background:linear-gradient(90deg,rgba(194,65,12,.34),rgba(157,58,114,.34))}
-.step{position:relative;min-height:260px;padding:26px 26px 28px;border:1px solid rgba(104,83,66,.15);border-radius:20px;background:rgba(255,255,255,.68);box-shadow:0 10px 28px rgba(54,39,26,.045)}
-.step:nth-child(2){transform:translateY(16px)}.step:nth-child(3){transform:translateY(32px)}
-.step-head{display:flex;align-items:center;gap:14px;margin-bottom:28px}
-.number{display:grid;place-items:center;width:48px;height:48px;flex:0 0 48px;border-radius:50%;background:var(--paper);border:1px solid #e5d5c9;color:var(--orange);font-weight:700;font-size:.85rem;box-shadow:0 0 0 7px var(--paper)}
-.step:nth-child(2) .number{color:#a45145;border-color:#e5c9c6}.step:nth-child(3) .number{color:var(--rose);border-color:#dfc4d4}
-.stage{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:700}
-h2{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.035em;margin:0 0 12px}
-.step p{font-size:.92rem;line-height:1.72;color:#5e5852;margin:0}
-@media(max-width:760px){main{padding-top:40px}.intro{margin-bottom:28px}.flow{grid-template-columns:1fr;gap:14px;padding-left:22px}.flow:before{left:45px;right:auto;top:30px;bottom:30px;width:2px;height:auto;background:linear-gradient(180deg,rgba(194,65,12,.35),rgba(157,58,114,.35))}.step,.step:nth-child(2),.step:nth-child(3){transform:none;min-height:0;padding:22px 22px 24px}.step-head{margin-bottom:18px}.number{width:44px;height:44px;flex-basis:44px;box-shadow:0 0 0 6px var(--paper)}}
+.preview-note{max-width:1160px;margin:20px auto 0;padding:0 24px;color:#786d65;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+main{max-width:1160px;margin:auto;padding:52px 24px 76px}.eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--plum);font-weight:700;margin:0 0 12px}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,7vw,5.3rem);line-height:.9;letter-spacing:.025em;margin:0 0 18px}
+.intro{max-width:650px;color:var(--muted);font-size:1rem;line-height:1.75;margin:0 0 46px}
+.rail{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;position:relative;isolation:isolate}
+.rail:before{content:"";position:absolute;z-index:-1;left:13%;right:13%;top:45px;height:2px;background:linear-gradient(90deg,var(--rust),var(--rose),var(--sage));opacity:.55}
+.step{--accent:var(--rust);--wash:#f5e6df;position:relative;overflow:hidden;min-height:300px;padding:26px 27px 30px;border:1px solid color-mix(in srgb,var(--accent) 25%,white);border-radius:24px;background:linear-gradient(155deg,var(--wash) 0%,rgba(255,255,255,.82) 60%);box-shadow:0 14px 32px rgba(53,36,25,.055)}
+.step:nth-child(2){--accent:var(--plum);--wash:#f0e4ed;transform:translateY(18px)}
+.step:nth-child(3){--accent:var(--sage);--wash:#e3eee8;transform:translateY(36px)}
+.step:after{content:"";position:absolute;width:150px;height:150px;border:1px solid color-mix(in srgb,var(--accent) 17%,transparent);border-radius:50%;right:-65px;bottom:-72px;box-shadow:0 0 0 18px color-mix(in srgb,var(--accent) 5%,transparent),0 0 0 38px color-mix(in srgb,var(--accent) 3%,transparent);pointer-events:none}
+.step-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:34px}
+.num{display:grid;place-items:center;width:54px;height:54px;border-radius:17px;background:var(--accent);color:white;font-weight:700;font-size:.9rem;box-shadow:0 7px 18px color-mix(in srgb,var(--accent) 25%,transparent)}
+.label{font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent)}
+h2{font-family:'Bebas Neue',sans-serif;font-size:2.45rem;letter-spacing:.035em;margin:0 0 12px}
+.step p{position:relative;z-index:1;max-width:34ch;font-size:.93rem;line-height:1.75;color:#5f5753;margin:0}
+@media(max-width:760px){main{padding:38px 20px 52px}.preview-note{padding:0 20px;font-size:10px}.intro{margin-bottom:30px}.rail{grid-template-columns:1fr;gap:14px;padding-left:18px}.rail:before{left:43px;right:auto;top:32px;bottom:32px;width:2px;height:auto;background:linear-gradient(180deg,var(--rust),var(--rose),var(--sage));opacity:.55}.step,.step:nth-child(2),.step:nth-child(3){transform:none;min-height:0;padding:22px 22px 25px;border-radius:20px}.step-top{justify-content:flex-start;margin-bottom:20px;gap:16px}.num{width:46px;height:46px;flex-basis:46px;border-radius:14px;box-shadow:0 0 0 6px var(--paper)}.label{margin-left:auto}.step p{max-width:42ch;font-size:.92rem}h2{font-size:2.2rem}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
-</style>
-</head>
-<body>
-<div class="preview-note">Standalone design preview · Existing homepage copy · Not applied to the live homepage</div>
-<main>
-<p class="eyebrow">The operating loop</p>
-<h1>How I Work</h1>
-<p class="intro">A simple operating loop used across media, retail, and food systems.</p>
-<section class="flow" aria-label="Three-step working process">
-<article class="step"><div class="step-head"><span class="number">01</span><span class="stage">Step one</span></div><h2>Diagnose</h2><p>Map the channel, audience, and what is already working. Find the constraint before adding more content.</p></article>
-<article class="step"><div class="step-head"><span class="number">02</span><span class="stage">Step two</span></div><h2>Build</h2><p>Set cadence, formats, and ownership so the system can run without constant reinvention.</p></article>
-<article class="step"><div class="step-head"><span class="number">03</span><span class="stage">Step three</span></div><h2>Measure</h2><p>Track the same accounts on fixed dates. Defend spend and growth with records, not claims.</p></article>
-</section>
-</main>
-</body>
-</html>
+</style></head>
+<body><div class="preview-note">Standalone design preview · Existing homepage copy · Not applied to the live homepage</div>
+<main><p class="eyebrow">The operating loop</p><h1>How I Work</h1><p class="intro">A simple operating loop used across media, retail, and food systems.</p>
+<section class="rail" aria-label="Three-step working process">
+<article class="step"><div class="step-top"><span class="num">01</span><span class="label">Step one</span></div><h2>Diagnose</h2><p>Map the channel, audience, and what is already working. Find the constraint before adding more content.</p></article>
+<article class="step"><div class="step-top"><span class="num">02</span><span class="label">Step two</span></div><h2>Build</h2><p>Set cadence, formats, and ownership so the system can run without constant reinvention.</p></article>
+<article class="step"><div class="step-top"><span class="num">03</span><span class="label">Step three</span></div><h2>Measure</h2><p>Track the same accounts on fixed dates. Defend spend and growth with records, not claims.</p></article>
+</section></main></body></html>
