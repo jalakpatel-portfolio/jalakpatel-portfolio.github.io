@@ -151,25 +151,6 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(var(--hub-gradient-b
   height:auto;
   object-fit:contain;
 }
-.hub-featured-label{
-  display:inline-flex;
-  align-items:center;
-  gap:.55rem;
-  color:var(--hub-brand);
-  font-size:.68rem;
-  font-weight:700;
-  letter-spacing:1.25px;
-  text-transform:uppercase;
-  white-space:nowrap;
-}
-.hub-featured-label::before{
-  content:"";
-  width:2px;
-  height:18px;
-  border-radius:2px;
-  background:var(--hub-brand);
-  opacity:.55;
-}
 .hub-featured-media{
   display:flex;
   align-items:center;
@@ -198,5 +179,4 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(var(--hub-gradient-b
   .hub-cover-head{align-items:flex-start;margin-bottom:.75rem}
   .hub-cover-logo{min-height:54px}
   .hub-cover-logo img{max-width:46vw;max-height:54px}
-  .hub-featured-label{font-size:.61rem;letter-spacing:.9px}
 }
