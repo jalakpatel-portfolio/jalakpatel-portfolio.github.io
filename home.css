@@ -197,33 +197,36 @@ nav a:hover{color:var(--text)}
 .journey-logo{width:48px;height:48px;object-fit:contain;border-radius:10px;background:#faf8f4;border:1px solid var(--border);padding:4px}
 .journey-blurb{font-size:.88rem;color:var(--muted);line-height:1.5;margin:.15rem 0 .35rem}
 .journey-cta{font-size:.82rem;font-weight:700;color:var(--cta1);margin-top:auto}
+/* How I Work — aligned to the site's terracotta / rose / teal identity */
 .how-flow{
   display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem;
   margin-top:.75rem;position:relative;isolation:isolate
 }
 .how-flow::before{
-  content:"";position:absolute;z-index:0;left:16.66%;right:16.66%;top:2.1rem;height:1px;
-  background:linear-gradient(90deg,rgba(194,65,12,.32),rgba(157,58,114,.38),rgba(31,92,107,.28))
+  content:"";position:absolute;z-index:0;left:13%;right:13%;top:2.8rem;height:2px;
+  background:linear-gradient(90deg,var(--cta1),var(--cta2),var(--link));opacity:.5
 }
 .how-step{
-  position:relative;z-index:1;overflow:hidden;
-  background:var(--surface);border:1px solid rgba(232,226,216,.9);border-radius:20px;
-  padding:1.35rem 1.2rem 1.3rem;box-shadow:var(--shadow)
+  --how-accent:var(--cta1);--how-wash:rgba(194,65,12,.08);
+  position:relative;z-index:1;overflow:hidden;min-height:280px;
+  background:linear-gradient(155deg,var(--how-wash),rgba(255,255,255,.9) 65%);
+  border:1px solid color-mix(in srgb,var(--how-accent) 23%,var(--border));
+  border-radius:24px;padding:1.5rem 1.45rem 1.6rem;box-shadow:var(--shadow)
 }
-.how-step::before{
-  content:"";position:absolute;top:0;left:1.2rem;right:1.2rem;height:3px;
-  border-radius:0 0 4px 4px;background:linear-gradient(90deg,var(--cta1),var(--cta2),var(--link));
-  opacity:.82
+.how-step:nth-child(2){--how-accent:var(--cta2);--how-wash:rgba(157,58,114,.08);transform:translateY(16px)}
+.how-step:nth-child(3){--how-accent:var(--link);--how-wash:rgba(31,92,107,.08);transform:translateY(32px)}
+.how-step::after{
+  content:"";position:absolute;width:138px;height:138px;border:1px solid color-mix(in srgb,var(--how-accent) 17%,transparent);
+  border-radius:50%;right:-62px;bottom:-68px;
+  box-shadow:0 0 0 17px color-mix(in srgb,var(--how-accent) 5%,transparent),0 0 0 36px color-mix(in srgb,var(--how-accent) 3%,transparent);pointer-events:none
 }
-.how-step:nth-child(2){background:linear-gradient(160deg,#fff 70%, rgba(157,58,114,.035))}
 .how-num{
   position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;
-  width:30px;height:30px;border-radius:999px;font-size:.75rem;font-weight:700;color:#fff;
-  background:linear-gradient(135deg,var(--cta1),var(--cta2));
-  margin-bottom:.65rem;box-shadow:0 3px 9px rgba(157,58,114,.13)
+  width:48px;height:48px;border-radius:15px;font-size:.82rem;font-weight:700;color:#fff;
+  background:var(--how-accent);margin-bottom:1.1rem;box-shadow:0 5px 14px color-mix(in srgb,var(--how-accent) 22%,transparent)
 }
-.how-step h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.how-step p{font-size:.88rem;color:var(--muted);line-height:1.55;margin:0}
+.how-step h3{position:relative;z-index:1;font-family:'Bebas Neue',sans-serif;font-size:2rem;font-weight:400;letter-spacing:.035em;margin:0 0 .55rem;color:var(--text)}
+.how-step p{position:relative;z-index:1;font-size:.9rem;color:var(--muted);line-height:1.7;margin:0;max-width:34ch}
 .cg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.35rem;margin-top:.65rem;align-items:stretch}
 .cc{
   display:flex;flex-direction:column;min-width:0;background:var(--surface);
