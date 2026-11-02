@@ -278,11 +278,15 @@ footer a{color:var(--link);text-decoration:none;font-weight:600}
   .mc{flex:1 1 46%;padding:1.1rem 1rem}
   .mc:first-child{flex:1 1 100%}
   .proof-arrow{display:none}
-  .how-flow{grid-template-columns:1fr;gap:1rem}
+  .how-flow{grid-template-columns:1fr;gap:.9rem;padding-left:1rem}
   .how-flow::before{
-    left:2.15rem;right:auto;top:2.1rem;bottom:2.1rem;width:1px;height:auto;
-    background:linear-gradient(180deg,rgba(194,65,12,.32),rgba(157,58,114,.38),rgba(31,92,107,.28))
+    left:2.5rem;right:auto;top:2rem;bottom:2rem;width:2px;height:auto;
+    background:linear-gradient(180deg,var(--cta1),var(--cta2),var(--link));opacity:.48
   }
+  .how-step,.how-step:nth-child(2),.how-step:nth-child(3){transform:none;min-height:0;padding:1.25rem 1.25rem 1.4rem;border-radius:20px}
+  .how-num{width:44px;height:44px;border-radius:14px;margin-bottom:.85rem;box-shadow:0 0 0 6px var(--bg)}
+  .how-step h3{font-size:1.85rem}
+  .how-step p{max-width:42ch;font-size:.9rem}
   .cg{grid-template-columns:1fr;gap:1.2rem}
 }
 @media(max-width:480px){
