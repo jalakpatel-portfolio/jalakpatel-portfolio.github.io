@@ -1,4 +1,4 @@
-/* home.css — Creative Light homepage (open, less boxy) */
+/* home.css - Creative Light homepage (open, less boxy) */
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#F7F4EF;
@@ -197,7 +197,7 @@ nav a:hover{color:var(--text)}
 .journey-logo{width:48px;height:48px;object-fit:contain;border-radius:10px;background:#faf8f4;border:1px solid var(--border);padding:4px}
 .journey-blurb{font-size:.88rem;color:var(--muted);line-height:1.5;margin:.15rem 0 .35rem}
 .journey-cta{font-size:.82rem;font-weight:700;color:var(--cta1);margin-top:auto}
-/* How I Work — aligned to the site's terracotta / rose / teal identity */
+/* How I Work - aligned to the site's terracotta / rose / teal identity */
 .how-flow{
   display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem;
   margin-top:.75rem;position:relative;isolation:isolate
@@ -295,7 +295,54 @@ footer a{color:var(--link);text-decoration:none;font-weight:600}
   .cc{border-radius:20px}
 }
 
-/* Connected Professional Journey timeline */
-.career-timeline{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:500px;gap:1rem;margin-top:1.5rem}.career-track{position:absolute;left:6%;right:6%;top:50%;height:3px;background:linear-gradient(90deg,rgba(194,65,12,.72),rgba(157,58,114,.72));border-radius:8px}.career-milestone{position:relative;min-width:0;height:500px;z-index:1}.career-card{position:absolute;left:0;right:0;padding:1rem;background:rgba(255,255,255,.95);border:1px solid var(--border);border-top:3px solid var(--cta1);border-radius:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.35rem;min-height:195px}.career-milestone:nth-child(2) .career-card,.career-milestone:nth-child(4) .career-card{bottom:calc(50% + 45px)}.career-milestone:nth-child(3) .career-card,.career-milestone:nth-child(5) .career-card{top:calc(50% + 45px)}.career-milestone:nth-child(3) .career-card{border-top-color:#78614F}.career-milestone:nth-child(4) .career-card{border-top-color:#B07A35}.career-milestone:nth-child(5) .career-card{border-top-color:var(--cta2)}.career-node{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border:3px solid var(--bg);border-radius:50%;background:#fff;box-shadow:0 3px 12px rgba(20,20,20,.12);display:grid;place-items:center;z-index:2}.career-node img{width:42px;height:42px;object-fit:contain}.career-year{position:absolute;left:0;right:0;text-align:center;font-size:.72rem;font-weight:700;color:var(--muted)}.career-milestone:nth-child(2) .career-year,.career-milestone:nth-child(4) .career-year{top:calc(50% + 42px)}.career-milestone:nth-child(3) .career-year,.career-milestone:nth-child(5) .career-year{top:calc(50% - 65px)}.career-card .journey-company{font-size:1.25rem}.career-card .journey-blurb{font-size:.8rem}.career-cta{font-size:.8rem;font-weight:700;color:var(--cta1);margin-top:auto;text-decoration:none}
-@media(max-width:1050px){.career-timeline{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;gap:1rem}.career-track,.career-node,.career-year{display:none!important}.career-milestone:nth-child(n){height:auto}.career-milestone:nth-child(n) .career-card{position:relative;inset:auto;min-height:190px}}
-@media(max-width:560px){.career-timeline{display:flex;flex-direction:column;gap:.9rem;padding-left:30px}.career-timeline:before{content:"";position:absolute;left:10px;top:16px;bottom:16px;width:3px;border-radius:5px;background:linear-gradient(180deg,rgba(194,65,12,.72),rgba(157,58,114,.72))}.career-milestone:nth-child(n){height:auto;min-height:0}.career-milestone:nth-child(n) .career-card{min-height:0;padding:1rem}.career-milestone:nth-child(n) .career-node{display:grid!important;position:absolute;left:-30px;top:18px;transform:translateX(-50%);width:42px;height:42px;border-width:2px}.career-milestone:nth-child(n) .career-node img{width:30px;height:30px}.career-milestone:nth-child(n) .career-year{display:none}}
+/* Professional Journey timeline: preserve the existing alternating layout. */
+.career-timeline{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:500px;gap:1rem;margin-top:1.5rem}
+.career-track{position:absolute;left:6%;right:6%;top:50%;height:3px;background:linear-gradient(90deg,rgba(194,65,12,.72),rgba(157,58,114,.72));border-radius:8px}
+.career-milestone{position:relative;min-width:0;height:500px;z-index:1}
+.career-card{position:absolute;left:0;right:0;padding:1rem;background:rgba(255,255,255,.96);border:1px solid var(--border);border-top:3px solid var(--cta1);border-radius:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.4rem;min-height:205px}
+.career-milestone:nth-of-type(1) .career-card,.career-milestone:nth-of-type(3) .career-card{bottom:calc(50% + 48px)}
+.career-milestone:nth-of-type(2) .career-card,.career-milestone:nth-of-type(4) .career-card{top:calc(50% + 48px)}
+.career-milestone:nth-of-type(2) .career-card{border-top-color:#78614F}
+.career-milestone:nth-of-type(3) .career-card{border-top-color:#B07A35}
+.career-milestone:nth-of-type(4) .career-card{border-top-color:var(--cta2)}
+.career-node{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:62px;height:62px;border:3px solid var(--bg);border-radius:50%;background:#fff;box-shadow:0 3px 12px rgba(20,20,20,.12);display:grid;place-items:center;z-index:2;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
+.career-node:hover,.career-node:focus-visible{transform:translate(-50%,-50%) scale(1.08);box-shadow:0 7px 20px rgba(20,20,20,.2);outline:2px solid var(--cta1);outline-offset:4px}
+.career-node img{width:44px;height:44px;object-fit:contain}
+.career-year{position:absolute;left:0;right:0;text-align:center;font-size:.72rem;font-weight:700;color:var(--muted)}
+.career-milestone:nth-of-type(1) .career-year,.career-milestone:nth-of-type(3) .career-year{top:calc(50% + 43px)}
+.career-milestone:nth-of-type(2) .career-year,.career-milestone:nth-of-type(4) .career-year{top:calc(50% - 67px)}
+.career-card .journey-company{font-size:1.2rem;line-height:1.2}
+.career-card .journey-blurb{font-size:.8rem;line-height:1.5}
+.career-cta{font-size:.8rem;font-weight:700;color:var(--cta1);margin-top:auto;text-decoration:none}
+.career-cta:hover,.career-cta:focus-visible{text-decoration:underline;text-underline-offset:3px}
+.career-timeline.is-visible .career-card{animation:journey-card-in .65s both}
+.career-timeline.is-visible .career-node{animation:journey-logo-in .5s both}
+.career-timeline.is-visible .career-milestone:nth-of-type(2) .career-card,.career-timeline.is-visible .career-milestone:nth-of-type(2) .career-node{animation-delay:.12s}
+.career-timeline.is-visible .career-milestone:nth-of-type(3) .career-card,.career-timeline.is-visible .career-milestone:nth-of-type(3) .career-node{animation-delay:.24s}
+.career-timeline.is-visible .career-milestone:nth-of-type(4) .career-card,.career-timeline.is-visible .career-milestone:nth-of-type(4) .career-node{animation-delay:.36s}
+@keyframes journey-card-in{from{opacity:.2;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}
+@keyframes journey-logo-in{from{opacity:.25;scale:.78}to{opacity:1;scale:1}}
+@media(max-width:1050px){
+  .career-timeline{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;gap:1rem}
+  .career-track{display:none}
+  .career-milestone{height:auto;min-height:225px}
+  .career-card{position:relative;inset:auto!important;min-height:190px;padding-right:4.8rem}
+  .career-node{left:auto;right:12px;top:14px;transform:none;width:48px;height:48px}
+  .career-node:hover,.career-node:focus-visible{transform:scale(1.06)}
+  .career-node img{width:34px;height:34px}
+  .career-year{position:static;text-align:left;margin:8px 0 0 4px}
+}
+@media(max-width:560px){
+  .career-timeline{display:flex;flex-direction:column;gap:.9rem;padding-left:30px}
+  .career-timeline:before{content:"";position:absolute;left:10px;top:16px;bottom:16px;width:3px;border-radius:5px;background:linear-gradient(180deg,rgba(194,65,12,.72),rgba(157,58,114,.72))}
+  .career-milestone{height:auto;min-height:0}
+  .career-card{min-height:0;padding:1rem}
+  .career-node{left:-30px;right:auto;top:18px;transform:translateX(-50%);width:42px;height:42px;border-width:2px}
+  .career-node:hover,.career-node:focus-visible{transform:translateX(-50%) scale(1.06)}
+  .career-node img{width:30px;height:30px}
+  .career-year{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .career-timeline.is-visible .career-card,.career-timeline.is-visible .career-node{animation:none}
+  .career-node{transition:none}
+}
