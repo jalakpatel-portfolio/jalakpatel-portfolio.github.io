@@ -11,19 +11,32 @@
 <link rel="stylesheet" href="swad-case-shared.css">
 
 <style>
-/* Case 05 approved visual refinements */
-.case05-doodle{background-image:linear-gradient(135deg,rgba(247,244,239,.84),rgba(247,244,239,.90)),url("../../media/swad.jpeg");background-size:cover,auto 100%;background-position:center;background-repeat:no-repeat}
-.case05-recovery{display:grid;grid-template-columns:1fr;gap:0;overflow:hidden;border:1px solid var(--border-color,#e8e2d8);border-radius:22px;background:#fff}
-.case05-reel-stage{position:relative;min-height:330px;background:#f7f4ef;display:grid;place-items:center;padding:20px}
-.case05-reel-stage img{display:block;width:min(100%,260px);height:330px;object-fit:cover;border-radius:14px;box-shadow:0 12px 30px rgba(20,20,20,.13)}
-.case05-reel-stage .case05-placeholder{width:min(100%,260px);height:330px;border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;background:linear-gradient(145deg,#f2e8dd,#e9d8ce);font:32px/1.05 "Bebas Neue",sans-serif;color:#9d3a72}
-.case05-reel-copy{padding:24px 28px 28px}
-.case05-reel-copy h3{margin:0 0 10px}
-.case05-reel-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}
-.case05-reel-links a{display:block;padding:13px;border:1px solid #e8e2d8;border-radius:12px;text-decoration:none;color:inherit;font-size:13px;transition:background .2s,border-color .2s,transform .2s}
+/* Case 05: restore the approved editorial gradient and use the doodle as a quiet texture */
+.case05-doodle,.case05-patch{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(115deg,rgba(194,65,12,.10),rgba(157,58,114,.12) 68%,rgba(255,255,255,.68));border:1px solid rgba(157,58,114,.18);border-radius:20px}
+.case05-doodle::before,.case05-patch::before{content:"";position:absolute;inset:0;z-index:-1;background:url("../../media/swad.jpeg") center/220px 180px repeat;opacity:.055;mix-blend-mode:multiply;pointer-events:none}
+.case05-patch{margin:0 0 26px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.case05-patch h2{margin:0;max-width:620px}
+.case05-patch p{margin:0;max-width:330px;color:var(--muted,#5a5a5a);font-size:14px}
+.case05-doodle{padding:34px 30px}
+.case05-recovery{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:stretch}
+.case05-recovery-left{display:flex;flex-direction:column;gap:12px}
+.case05-reel-stage{min-height:310px;border:1px solid var(--border-color,#e8e2d8);border-radius:16px;background:linear-gradient(145deg,#e9e1d5,#f7f3ec 58%,#e8d8d0);display:flex;align-items:center;justify-content:center;padding:20px}
+.case05-poster{display:none;width:100%;max-width:210px;aspect-ratio:9/16;border-radius:12px;background:linear-gradient(155deg,#28211e,#8a3d2c 60%,#d9a77d);color:#fff;padding:18px;box-shadow:0 12px 28px rgba(20,20,20,.16);flex-direction:column;justify-content:space-between}
+.case05-poster.active{display:flex;animation:case05-poster-in .24s ease both}
+.case05-poster small{font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+.case05-poster strong{font:30px/1 "Bebas Neue"}
+.case05-poster em{font-size:11px;font-style:normal}
+.case05-preview-hint{font-size:12px;color:var(--muted,#5a5a5a);text-align:center;margin:0}
+.case05-constraint{background:#f7f3ec;border:1px solid var(--border-color,#e8e2d8);border-radius:16px;padding:22px}
+.case05-constraint p{margin:0}
+.case05-reel-copy{min-width:0}
+.case05-reel-links{display:grid;gap:10px;margin-top:18px}
+.case05-reel-links a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 17px;border:1px solid var(--border-color,#e8e2d8);border-radius:14px;background:#fff;text-decoration:none;color:inherit;font-size:13px;font-weight:600;transition:background .2s,border-color .2s,transform .2s}
+.case05-reel-links a span{color:var(--cta1,#c2410c);font-size:11px;white-space:nowrap}
 .case05-reel-links a:hover,.case05-reel-links a:focus-visible,.case05-reel-links a[aria-pressed="true"]{background:#fbf3ec;border-color:#c2410c;transform:translateY(-2px)}
-@media(max-width:640px){.case05-reel-stage{min-height:250px;padding:14px}.case05-reel-stage img,.case05-reel-stage .case05-placeholder{height:260px;width:min(100%,210px)}.case05-reel-copy{padding:20px}.case05-reel-links{grid-template-columns:1fr}.case05-doodle{background-size:cover,auto 70%;}}
-@media(prefers-reduced-motion:reduce){.case05-reel-links a{transition:none}}
+@keyframes case05-poster-in{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(max-width:720px){.case05-patch{align-items:flex-start;flex-direction:column;padding:21px}.case05-doodle{padding:26px 20px}.case05-recovery{grid-template-columns:1fr}.case05-reel-stage{min-height:250px}.case05-poster{max-width:175px}.case05-reel-links a{align-items:flex-start;flex-direction:column;gap:5px}}
+@media(prefers-reduced-motion:reduce){.case05-poster.active{animation:none}.case05-reel-links a{transition:none}}
 </style>
 </head>
 <body>
@@ -68,21 +81,25 @@
 <p class="section-label">Recovery and creative problem-solving</p>
 <h2>Build a story around the footage that survived</h2>
 <div class="case05-recovery">
+<div class="case05-recovery-left">
 <div class="case05-reel-stage" id="case05ReelStage" aria-live="polite">
-<div class="case05-placeholder" id="case05ReelPlaceholder">Select a Reel<br>to preview</div>
+<div class="case05-poster active" data-poster="0"><small>Swad · Reel 01</small><strong>The story<br>that survived</strong><em>Recovered footage · Narrative treatment</em></div>
+<div class="case05-poster" data-poster="1"><small>Swad · Reel 02</small><strong>Another<br>recovery cut</strong><em>Recovered footage · Narrative treatment</em></div>
+<div class="case05-poster" data-poster="2"><small>Swad · Reel 03</small><strong>A horror<br>treatment</strong><em>Creative direction · On-camera</em></div>
+</div>
+<p class="case05-preview-hint">Hover or keyboard-focus a Reel link to preview its visual treatment.</p>
+<div class="case05-constraint"><h3>The constraint</h3><p>Recipe footage was corrupted, and a reshoot was not possible. Rather than discard the usable material, I shaped a story around the clips that remained.</p></div>
 </div>
 <div class="case05-reel-copy">
-<h3>The constraint</h3>
-<p>Recipe footage was corrupted, and a reshoot was not possible. Rather than discard the usable material, I shaped a story around the clips that remained.</p>
 <p>For the first recovery attempts, I wrote a funny narrative that could work with the surviving footage. After exploring that treatment more than once, I took a different creative direction for a third Reel: a horror-style treatment in which I also appeared on camera. The experiment received positive feedback for trying a new direction, although it was not the strongest-performing version.</p>
 <div class="case05-reel-links" role="group" aria-label="Choose a Reel preview">
-<a href="https://www.instagram.com/reel/DGnsmEaqtPw/" target="_blank" rel="noopener noreferrer" data-case05-reel="0" aria-pressed="false">Recovered-footage story Reel 1 <span>View Reel ↗</span></a>
+<a href="https://www.instagram.com/reel/DGnsmEaqtPw/" target="_blank" rel="noopener noreferrer" data-case05-reel="0" aria-pressed="true">Recovered-footage story Reel 1 <span>View Reel ↗</span></a>
 <a href="https://www.instagram.com/reel/DG5risdtdVp/" target="_blank" rel="noopener noreferrer" data-case05-reel="1" aria-pressed="false">Recovered-footage story Reel 2 <span>View Reel ↗</span></a>
 <a href="https://www.instagram.com/reel/DH8nYEkTVt8/" target="_blank" rel="noopener noreferrer" data-case05-reel="2" aria-pressed="false">Horror-treatment Reel <span>View Reel ↗</span></a>
 </div></div></div>
 </section>
 <section class="section" id="series"><p class="section-label">Short-form series R&amp;D</p><h2>Give vertical content a repeatable idea</h2><p>Alongside cutdowns from longer videos, I contributed to recurring short-form concepts across Instagram Reels and YouTube Shorts. These examples show different series directions, not sole authorship of every Reel.</p><div class="evidence-links"><a href="https://www.instagram.com/reel/DC1dzaMt_up/" target="_blank" rel="noopener noreferrer">Cooking Tips Series</a><a href="https://www.instagram.com/reel/DJRmj89pH-H/" target="_blank" rel="noopener noreferrer">A to Z Food Series</a></div></section>
-<section class="section case05-doodle" id="workshop-promo"><p class="section-label">Campaign support</p><h2>Selected workshop promotion</h2><p>This selected workshop ad is documented as written and directed by me.</p><div class="evidence-links"><a href="https://www.instagram.com/reel/DHve8LJpJ5S/" target="_blank" rel="noopener noreferrer">Workshop ad: written and directed</a></div></section><section class="section" id="takeaway">
+<section class="section case05-doodle" id="workshop-promo"><p class="section-label">Campaign support</p><h2>Selected workshop promotion</h2><h3>Written &amp; directed</h3><p>One selected workshop promotion, documented as written and directed by me.</p><div class="evidence-links"><a href="https://www.instagram.com/reel/DHve8LJpJ5S/" target="_blank" rel="noopener noreferrer">Workshop ad: written and directed</a></div></section><section class="section" id="takeaway">
 <p class="section-label">Takeaway</p>
 <h2>One shoot, two surfaces</h2>
 <p>Short-form works best when it is planned with the long form, not after the fact. Community posts filled the gaps between uploads so the audience never went quiet.</p>
@@ -96,6 +113,7 @@
 <h2>Explore the rest of the portfolio</h2>
 <div class="hero-actions"><a class="btn-primary" href="../../index.html#work">View All Work</a></div>
 </section>
+<section class="case05-patch" aria-label="Content rhythm"><h2>One content rhythm.<br>Different touchpoints.</h2><p>Short-form videos and community posts helped carry the content conversation between longer uploads.</p></section>
 </main>
 <footer>
 <p>&copy; 2026 Jalak Patel</p>
@@ -110,11 +128,8 @@ n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(
 </script>
 <script>
 (function(){
-const options=[{label:"Recovered-footage story Reel 1",image:"../../media/swad.jpeg"},{label:"Recovered-footage story Reel 2",image:"../../media/swad.jpeg"},{label:"Horror-treatment Reel",image:"../../media/swad.jpeg"}];
-const stage=document.getElementById("case05ReelStage");
-const placeholder=document.getElementById("case05ReelPlaceholder");
 const links=[...document.querySelectorAll("[data-case05-reel]")];
-function activate(link){const i=Number(link.dataset.case05Reel);links.forEach(a=>a.setAttribute("aria-pressed",String(a===link)));let img=stage.querySelector("img");if(!img){img=document.createElement("img");img.alt="Swad Reel preview image";stage.replaceChildren(img)}img.src=options[i].image;img.alt=options[i].label+" cover preview";}
+function activate(link){const i=link.dataset.case05Reel;document.querySelectorAll("[data-poster]").forEach(p=>p.classList.toggle("active",p.dataset.poster===i));links.forEach(a=>a.setAttribute("aria-pressed",String(a===link)));}
 links.forEach(link=>{link.addEventListener("mouseenter",()=>activate(link));link.addEventListener("focus",()=>activate(link));link.addEventListener("click",()=>{if(window.matchMedia("(hover: none)").matches)activate(link)});});
 })();
 </script>
