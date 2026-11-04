@@ -9,6 +9,22 @@
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="swad-case-shared.css">
+
+<style>
+/* Case 05 approved visual refinements */
+.case05-doodle{background-image:linear-gradient(135deg,rgba(247,244,239,.84),rgba(247,244,239,.90)),url("../../media/swad.jpeg");background-size:cover,auto 100%;background-position:center;background-repeat:no-repeat}
+.case05-recovery{display:grid;grid-template-columns:1fr;gap:0;overflow:hidden;border:1px solid var(--border-color,#e8e2d8);border-radius:22px;background:#fff}
+.case05-reel-stage{position:relative;min-height:330px;background:#f7f4ef;display:grid;place-items:center;padding:20px}
+.case05-reel-stage img{display:block;width:min(100%,260px);height:330px;object-fit:cover;border-radius:14px;box-shadow:0 12px 30px rgba(20,20,20,.13)}
+.case05-reel-stage .case05-placeholder{width:min(100%,260px);height:330px;border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;background:linear-gradient(145deg,#f2e8dd,#e9d8ce);font:32px/1.05 "Bebas Neue",sans-serif;color:#9d3a72}
+.case05-reel-copy{padding:24px 28px 28px}
+.case05-reel-copy h3{margin:0 0 10px}
+.case05-reel-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}
+.case05-reel-links a{display:block;padding:13px;border:1px solid #e8e2d8;border-radius:12px;text-decoration:none;color:inherit;font-size:13px;transition:background .2s,border-color .2s,transform .2s}
+.case05-reel-links a:hover,.case05-reel-links a:focus-visible,.case05-reel-links a[aria-pressed="true"]{background:#fbf3ec;border-color:#c2410c;transform:translateY(-2px)}
+@media(max-width:640px){.case05-reel-stage{min-height:250px;padding:14px}.case05-reel-stage img,.case05-reel-stage .case05-placeholder{height:260px;width:min(100%,210px)}.case05-reel-copy{padding:20px}.case05-reel-links{grid-template-columns:1fr}.case05-doodle{background-size:cover,auto 70%;}}
+@media(prefers-reduced-motion:reduce){.case05-reel-links a{transition:none}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#context">Skip to content</a>
@@ -30,7 +46,7 @@
 <h1>Short-form engine and recovery</h1>
 <p class="lede">A short-form system tied to long videos, plus recovery work when footage was lost.</p>
 </section>
-<section class="section" id="context">
+<section class="section case05-doodle" id="context">
 <p class="section-label">Context</p>
 <h2>Short-form had to serve the long form</h2>
 <p>Shorts and Reels were not treated as a separate brand. They pulled from the same shoots and topics so the same work fed both formats. When a long video was not live yet, or when new footage was delayed, the short-form surface and community posts kept the audience present.</p>
@@ -48,9 +64,25 @@
 <a class="community-card" href="https://youtube.com/post/UgkxN6E1FCbaOKAqocQqQP_AYHe_A7cj8GBS" target="_blank" rel="noopener noreferrer"><img src="../../media/swad/Swad-yt-c-06.jpg.jpeg" alt="Community post 6" loading="lazy"><span>Community post 6</span></a>
 </div>
 </section>
-<section class="section" id="recovery"><p class="section-label">Recovery and creative problem-solving</p><h2>Build a story around the footage that survived</h2><p>When recipe footage was corrupted and a reshoot was not possible, I worked with the usable clips and wrote a funny story around them instead of discarding the material. After exploring that approach more than once, I tried a different genre for a third Reel: a horror treatment in which I also appeared. The experiment received positive feedback for trying a new direction, though it was not the strongest-performing version.</p><div class="evidence-links"><a href="https://www.instagram.com/reel/DGnsmEaqtPw/" target="_blank" rel="noopener noreferrer">Recovered-footage story Reel 1</a><a href="https://www.instagram.com/reel/DG5risdtdVp/" target="_blank" rel="noopener noreferrer">Recovered-footage story Reel 2</a><a href="https://www.instagram.com/reel/DH8nYEkTVt8/" target="_blank" rel="noopener noreferrer">Horror-treatment Reel</a></div></section>
+<section class="section" id="recovery">
+<p class="section-label">Recovery and creative problem-solving</p>
+<h2>Build a story around the footage that survived</h2>
+<div class="case05-recovery">
+<div class="case05-reel-stage" id="case05ReelStage" aria-live="polite">
+<div class="case05-placeholder" id="case05ReelPlaceholder">Select a Reel<br>to preview</div>
+</div>
+<div class="case05-reel-copy">
+<h3>The constraint</h3>
+<p>Recipe footage was corrupted, and a reshoot was not possible. Rather than discard the usable material, I shaped a story around the clips that remained.</p>
+<p>For the first recovery attempts, I wrote a funny narrative that could work with the surviving footage. After exploring that treatment more than once, I took a different creative direction for a third Reel: a horror-style treatment in which I also appeared on camera. The experiment received positive feedback for trying a new direction, although it was not the strongest-performing version.</p>
+<div class="case05-reel-links" role="group" aria-label="Choose a Reel preview">
+<a href="https://www.instagram.com/reel/DGnsmEaqtPw/" target="_blank" rel="noopener noreferrer" data-case05-reel="0" aria-pressed="false">Recovered-footage story Reel 1 <span>View Reel ↗</span></a>
+<a href="https://www.instagram.com/reel/DG5risdtdVp/" target="_blank" rel="noopener noreferrer" data-case05-reel="1" aria-pressed="false">Recovered-footage story Reel 2 <span>View Reel ↗</span></a>
+<a href="https://www.instagram.com/reel/DH8nYEkTVt8/" target="_blank" rel="noopener noreferrer" data-case05-reel="2" aria-pressed="false">Horror-treatment Reel <span>View Reel ↗</span></a>
+</div></div></div>
+</section>
 <section class="section" id="series"><p class="section-label">Short-form series R&amp;D</p><h2>Give vertical content a repeatable idea</h2><p>Alongside cutdowns from longer videos, I contributed to recurring short-form concepts across Instagram Reels and YouTube Shorts. These examples show different series directions, not sole authorship of every Reel.</p><div class="evidence-links"><a href="https://www.instagram.com/reel/DC1dzaMt_up/" target="_blank" rel="noopener noreferrer">Cooking Tips Series</a><a href="https://www.instagram.com/reel/DJRmj89pH-H/" target="_blank" rel="noopener noreferrer">A to Z Food Series</a></div></section>
-<section class="section" id="workshop-promo"><p class="section-label">Campaign support</p><h2>Selected workshop promotion</h2><p>This selected workshop ad is documented as written and directed by me.</p><div class="evidence-links"><a href="https://www.instagram.com/reel/DHve8LJpJ5S/" target="_blank" rel="noopener noreferrer">Workshop ad: written and directed</a></div></section><section class="section" id="takeaway">
+<section class="section case05-doodle" id="workshop-promo"><p class="section-label">Campaign support</p><h2>Selected workshop promotion</h2><p>This selected workshop ad is documented as written and directed by me.</p><div class="evidence-links"><a href="https://www.instagram.com/reel/DHve8LJpJ5S/" target="_blank" rel="noopener noreferrer">Workshop ad: written and directed</a></div></section><section class="section" id="takeaway">
 <p class="section-label">Takeaway</p>
 <h2>One shoot, two surfaces</h2>
 <p>Short-form works best when it is planned with the long form, not after the fact. Community posts filled the gaps between uploads so the audience never went quiet.</p>
@@ -74,6 +106,16 @@
 var t=document.getElementById('navToggle'),n=document.getElementById('mainNav');
 if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
 n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
+})();
+</script>
+<script>
+(function(){
+const options=[{label:"Recovered-footage story Reel 1",image:"../../media/swad.jpeg"},{label:"Recovered-footage story Reel 2",image:"../../media/swad.jpeg"},{label:"Horror-treatment Reel",image:"../../media/swad.jpeg"}];
+const stage=document.getElementById("case05ReelStage");
+const placeholder=document.getElementById("case05ReelPlaceholder");
+const links=[...document.querySelectorAll("[data-case05-reel]")];
+function activate(link){const i=Number(link.dataset.case05Reel);links.forEach(a=>a.setAttribute("aria-pressed",String(a===link)));let img=stage.querySelector("img");if(!img){img=document.createElement("img");img.alt="Swad Reel preview image";stage.replaceChildren(img)}img.src=options[i].image;img.alt=options[i].label+" cover preview";}
+links.forEach(link=>{link.addEventListener("mouseenter",()=>activate(link));link.addEventListener("focus",()=>activate(link));link.addEventListener("click",()=>{if(window.matchMedia("(hover: none)").matches)activate(link)});});
 })();
 </script>
 <script src="lightbox.js" defer></script>
