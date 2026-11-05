@@ -19,15 +19,15 @@
 .case05-patch p{margin:0;max-width:330px;color:var(--muted,#5a5a5a);font-size:14px}
 .case05-doodle{padding:34px 30px}
 .case05-recovery{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:stretch}
-.case05-recovery-left{display:flex;flex-direction:column;gap:12px}
-.case05-reel-stage{min-height:310px;border:1px solid var(--border-color,#e8e2d8);border-radius:16px;background:linear-gradient(145deg,#e9e1d5,#f7f3ec 58%,#e8d8d0);display:flex;align-items:center;justify-content:center;padding:20px}
+.case05-recovery-left{display:flex;flex-direction:column;gap:0}
+.case05-reel-stage{min-height:310px;border-radius:16px 16px 0 0;border:1px solid var(--border-color,#e8e2d8);border-radius:16px;background:linear-gradient(145deg,#e9e1d5,#f7f3ec 58%,#e8d8d0);display:flex;align-items:center;justify-content:center;padding:20px}
 .case05-poster{display:none;width:100%;max-width:210px;aspect-ratio:9/16;border-radius:12px;background:linear-gradient(155deg,#28211e,#8a3d2c 60%,#d9a77d);color:#fff;padding:18px;box-shadow:0 12px 28px rgba(20,20,20,.16);flex-direction:column;justify-content:space-between}
 .case05-poster.active{display:flex;animation:case05-poster-in .24s ease both}
 .case05-poster small{font-size:10px;letter-spacing:.15em;text-transform:uppercase}
 .case05-poster strong{font:30px/1 "Bebas Neue"}
 .case05-poster em{font-size:11px;font-style:normal}
 .case05-preview-hint{font-size:12px;color:var(--muted,#5a5a5a);text-align:center;margin:0}
-.case05-constraint{background:#f7f3ec;border:1px solid var(--border-color,#e8e2d8);border-radius:16px;padding:22px}
+.case05-constraint{background:#f7f3ec;border:1px solid var(--border-color,#e8e2d8);border-radius:0 0 16px 16px;padding:22px;border-top:0;margin-top:-1px}
 .case05-constraint p{margin:0}
 .case05-reel-copy{min-width:0}
 .case05-reel-links{display:grid;gap:10px;margin-top:18px}
@@ -35,7 +35,7 @@
 .case05-reel-links a span{color:var(--cta1,#c2410c);font-size:11px;white-space:nowrap}
 .case05-reel-links a:hover,.case05-reel-links a:focus-visible,.case05-reel-links a[aria-pressed="true"]{background:#fbf3ec;border-color:#c2410c;transform:translateY(-2px)}
 @keyframes case05-poster-in{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:none}}
-@media(max-width:720px){.case05-patch{align-items:flex-start;flex-direction:column;padding:21px}.case05-doodle{padding:26px 20px}.case05-recovery{grid-template-columns:1fr}.case05-reel-stage{min-height:250px}.case05-poster{max-width:175px}.case05-reel-links a{align-items:flex-start;flex-direction:column;gap:5px}}
+@media(max-width:720px){.case05-patch{align-items:flex-start;flex-direction:column;padding:21px}.case05-doodle{padding:26px 20px}.case05-recovery{grid-template-columns:1fr}.case05-reel-stage{min-height:250px;border-radius:16px 16px 0 0}.case05-poster{max-width:175px}.case05-reel-links a{align-items:flex-start;flex-direction:column;gap:5px}}
 @media(prefers-reduced-motion:reduce){.case05-poster.active{animation:none}.case05-reel-links a{transition:none}}
 </style>
 </head>
@@ -81,13 +81,13 @@
 <p class="section-label">Recovery and creative problem-solving</p>
 <h2>Build a story around the footage that survived</h2>
 <div class="case05-recovery">
-<div class="case05-recovery-left">
+<div class="case05-recovery-left case05-doodle">
 <div class="case05-reel-stage" id="case05ReelStage" aria-live="polite">
 <div class="case05-poster active" data-poster="0"><small>Swad · Reel 01</small><strong>The story<br>that survived</strong><em>Recovered footage · Narrative treatment</em></div>
 <div class="case05-poster" data-poster="1"><small>Swad · Reel 02</small><strong>Another<br>recovery cut</strong><em>Recovered footage · Narrative treatment</em></div>
 <div class="case05-poster" data-poster="2"><small>Swad · Reel 03</small><strong>A horror<br>treatment</strong><em>Creative direction · On-camera</em></div>
 </div>
-<p class="case05-preview-hint">Hover or keyboard-focus a Reel link to preview its visual treatment.</p>
+
 <div class="case05-constraint"><h3>The constraint</h3><p>Recipe footage was corrupted, and a reshoot was not possible. Rather than discard the usable material, I shaped a story around the clips that remained.</p></div>
 </div>
 <div class="case05-reel-copy">
