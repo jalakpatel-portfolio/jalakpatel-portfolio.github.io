@@ -20,7 +20,7 @@
 .case05-doodle{padding:34px 30px}
 .case05-recovery{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:stretch}
 .case05-recovery-left{display:flex;flex-direction:column;gap:0}
-.case05-reel-stage{min-height:310px;border-radius:16px 16px 0 0;border:1px solid var(--border-color,#e8e2d8);border-radius:16px;background:linear-gradient(145deg,#e9e1d5,#f7f3ec 58%,#e8d8d0);display:flex;align-items:center;justify-content:center;padding:20px}
+.case05-reel-stage{min-height:310px;border:1px solid var(--border-color,#e8e2d8);border-radius:16px 16px 0 0;background:linear-gradient(145deg,#e9e1d5,#f7f3ec 58%,#e8d8d0);display:flex;align-items:center;justify-content:center;padding:20px}
 .case05-poster{display:none;width:100%;max-width:250px;max-height:420px;aspect-ratio:9/16;object-fit:contain;border-radius:12px;box-shadow:0 12px 28px rgba(20,20,20,.16)}
 .case05-poster.active{display:block;animation:case05-poster-in .24s ease both}
 .case05-poster small{font-size:10px;letter-spacing:.15em;text-transform:uppercase}
@@ -31,11 +31,15 @@
 .case05-constraint p{margin:0}
 .case05-reel-copy{min-width:0}
 .case05-reel-links{display:grid;gap:10px;margin-top:18px}
-.case05-reel-links a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 17px;border:1px solid var(--border-color,#e8e2d8);border-radius:14px;background:#fff;text-decoration:none;color:inherit;font-size:13px;font-weight:600;transition:background .2s,border-color .2s,transform .2s}
-.case05-reel-links a span{color:var(--cta1,#c2410c);font-size:11px;white-space:nowrap}
-.case05-reel-links a:hover,.case05-reel-links a:focus-visible,.case05-reel-links a[aria-pressed="true"]{background:#fbf3ec;border-color:#c2410c;transform:translateY(-2px)}
+.case05-reel-option{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:stretch;gap:8px}
+.case05-reel-select,.case05-reel-open{min-width:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 15px;border:1px solid var(--border-color,#e8e2d8);border-radius:12px;background:#fff;color:inherit;font:600 13px/1.4 'Space Grotesk',system-ui,sans-serif;text-decoration:none;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.case05-reel-select{text-align:left}
+.case05-reel-open{color:var(--cta1,#c2410c);font-size:11px;white-space:nowrap}
+.case05-reel-select:hover,.case05-reel-select:focus-visible,.case05-reel-select[aria-pressed="true"],.case05-reel-open:hover,.case05-reel-open:focus-visible{background:#fbf3ec;border-color:#c2410c}
+.case05-reel-select[aria-pressed="true"]{box-shadow:inset 3px 0 0 #c2410c}
+.case05-reel-select:focus-visible,.case05-reel-open:focus-visible{outline:3px solid rgba(194,65,12,.25);outline-offset:2px}
 @keyframes case05-poster-in{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:none}}
-@media(max-width:720px){.case05-patch{align-items:flex-start;flex-direction:column;padding:21px}.case05-doodle{padding:26px 20px}.case05-recovery{grid-template-columns:1fr}.case05-reel-stage{min-height:250px;border-radius:16px 16px 0 0}.case05-poster{max-width:190px;max-height:360px}.case05-reel-links a{align-items:flex-start;flex-direction:column;gap:5px}}
+@media(max-width:720px){.case05-patch{align-items:flex-start;flex-direction:column;padding:21px}.case05-doodle{padding:26px 20px}.case05-recovery{grid-template-columns:1fr}.case05-reel-stage{min-height:250px;border-radius:16px 16px 0 0}.case05-poster{max-width:190px;max-height:360px}.case05-reel-option{grid-template-columns:minmax(0,1fr) auto;gap:6px}.case05-reel-select,.case05-reel-open{padding:12px 10px;font-size:11px}.case05-reel-open{white-space:normal;text-align:center}}
 @media(prefers-reduced-motion:reduce){.case05-poster.active{animation:none}.case05-reel-links a{transition:none}}
 </style>
 </head>
@@ -83,9 +87,9 @@
 <div class="case05-recovery">
 <div class="case05-recovery-left case05-doodle">
 <div class="case05-reel-stage" id="case05ReelStage" aria-live="polite">
-<img class="case05-poster active" data-poster="0" src="../../media/swad/ig-05-01.jpg.jpeg" alt="Preview image for recovered-footage story Reel 1" loading="lazy">
-<img class="case05-poster" data-poster="1" src="../../media/swad/ig-05-02.jpg.jpeg" alt="Preview image for recovered-footage story Reel 2" loading="lazy">
-<img class="case05-poster" data-poster="2" src="../../media/swad/ig-05-03.jpg.jpeg" alt="Preview image for the horror-treatment Reel" loading="lazy">
+<img class="case05-poster active" data-poster="0" src="../../media/swad/Recovered-footage%20story%20Reel%201.jpg" alt="Preview image for recovered-footage story Reel 1" loading="lazy">
+<img class="case05-poster" data-poster="1" src="../../media/swad/Recovered-footage%20story%20Reel%202.jpg" alt="Preview image for recovered-footage story Reel 2" loading="lazy">
+<img class="case05-poster" data-poster="2" src="../../media/swad/Horror-treatment%20Reel.jpg" alt="Preview image for the horror-treatment Reel" loading="lazy">
 </div>
 
 <div class="case05-constraint"><h3>The constraint</h3><p>Recipe footage was corrupted, and a reshoot was not possible. Rather than discard the usable material, I shaped a story around the clips that remained.</p></div>
@@ -93,9 +97,9 @@
 <div class="case05-reel-copy">
 <p>For the first recovery attempts, I wrote a funny narrative that could work with the surviving footage. After exploring that treatment more than once, I took a different creative direction for a third Reel: a horror-style treatment in which I also appeared on camera. The experiment received positive feedback for trying a new direction, although it was not the strongest-performing version.</p>
 <div class="case05-reel-links" role="group" aria-label="Choose a Reel preview">
-<a href="https://www.instagram.com/reel/DGnsmEaqtPw/" target="_blank" rel="noopener noreferrer" data-case05-reel="0" aria-pressed="true">Recovered-footage story Reel 1 <span>View Reel ↗</span></a>
-<a href="https://www.instagram.com/reel/DG5risdtdVp/" target="_blank" rel="noopener noreferrer" data-case05-reel="1" aria-pressed="false">Recovered-footage story Reel 2 <span>View Reel ↗</span></a>
-<a href="https://www.instagram.com/reel/DH8nYEkTVt8/" target="_blank" rel="noopener noreferrer" data-case05-reel="2" aria-pressed="false">Horror-treatment Reel <span>View Reel ↗</span></a>
+<div class="case05-reel-option"><button class="case05-reel-select" type="button" data-case05-reel="0" aria-pressed="true">Recovered-footage story Reel 1</button><a class="case05-reel-open" href="https://www.instagram.com/reel/DGnsmEaqtPw/" target="_blank" rel="noopener noreferrer" aria-label="Open Recovered-footage story Reel 1 on Instagram">View Reel ↗</a></div>
+<div class="case05-reel-option"><button class="case05-reel-select" type="button" data-case05-reel="1" aria-pressed="false">Recovered-footage story Reel 2</button><a class="case05-reel-open" href="https://www.instagram.com/reel/DG5risdtdVp/" target="_blank" rel="noopener noreferrer" aria-label="Open Recovered-footage story Reel 2 on Instagram">View Reel ↗</a></div>
+<div class="case05-reel-option"><button class="case05-reel-select" type="button" data-case05-reel="2" aria-pressed="false">Horror-treatment Reel</button><a class="case05-reel-open" href="https://www.instagram.com/reel/DH8nYEkTVt8/" target="_blank" rel="noopener noreferrer" aria-label="Open Horror-treatment Reel on Instagram">View Reel ↗</a></div>
 </div></div></div>
 </section>
 <section class="section" id="series"><p class="section-label">Short-form series R&amp;D</p><h2>Give vertical content a repeatable idea</h2><p>Alongside cutdowns from longer videos, I contributed to recurring short-form concepts across Instagram Reels and YouTube Shorts. These examples show different series directions, not sole authorship of every Reel.</p><div class="evidence-links"><a href="https://www.instagram.com/reel/DC1dzaMt_up/" target="_blank" rel="noopener noreferrer">Cooking Tips Series</a><a href="https://www.instagram.com/reel/DJRmj89pH-H/" target="_blank" rel="noopener noreferrer">A to Z Food Series</a></div></section>
@@ -128,9 +132,18 @@ n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(
 </script>
 <script>
 (function(){
-const links=[...document.querySelectorAll("[data-case05-reel]")];
-function activate(link){const i=link.dataset.case05Reel;document.querySelectorAll("[data-poster]").forEach(p=>p.classList.toggle("active",p.dataset.poster===i));links.forEach(a=>a.setAttribute("aria-pressed",String(a===link)));}
-links.forEach(link=>{link.addEventListener("mouseenter",()=>activate(link));link.addEventListener("focus",()=>activate(link));link.addEventListener("click",()=>{if(window.matchMedia("(hover: none)").matches)activate(link)});});
+const selectors=[...document.querySelectorAll(".case05-reel-select[data-case05-reel]")];
+const posters=[...document.querySelectorAll(".case05-poster[data-poster]")];
+function activate(button){
+ const selected=button.dataset.case05Reel;
+ posters.forEach(p=>p.classList.toggle("active",p.dataset.poster===selected));
+ selectors.forEach(b=>b.setAttribute("aria-pressed",String(b===button)));
+}
+selectors.forEach(button=>{
+ button.addEventListener("click",()=>activate(button));
+ button.addEventListener("mouseenter",()=>activate(button));
+ button.addEventListener("focus",()=>activate(button));
+});
 })();
 </script>
 <script src="lightbox.js" defer></script>
