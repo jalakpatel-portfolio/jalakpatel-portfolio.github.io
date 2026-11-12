@@ -13,8 +13,65 @@
 <meta property="og:title" content="Workshop Operations and Revenue Insight | Swad | Jalak Patel">
 <meta property="og:image" content="https://jalakpatel-portfolio.github.io/media/swad/swad-cooking.png">
 <meta name="twitter:card" content="summary_large_image">
+
+<style>
+/* Case 06 page-level polish: deliberately scoped to this page.
+   Reuses the Swad portfolio tokens, typography and existing shared components. */
+.case06-page .case-hero{padding:2.1rem 0 2rem;border-bottom:1px solid var(--border);position:relative}
+.case06-page .case-hero:after{content:"";display:block;width:76px;height:4px;margin-top:1.35rem;border-radius:99px;background:linear-gradient(90deg,var(--cta1),var(--cta2))}
+.case06-page .case-hero h1{max-width:780px;font-size:clamp(2.35rem,5.4vw,4.2rem);line-height:.98;letter-spacing:.1px;margin-bottom:1rem}
+.case06-page .lede{max-width:690px;font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.7}
+.case06-snapshot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;padding:1.25rem 0 1.5rem}
+.case06-snapshot-item{min-width:0;padding:1rem 1.05rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:0 6px 20px rgba(20,20,20,.035)}
+.case06-snapshot-item span{display:block;font-size:.67rem;line-height:1.35;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cta1);margin-bottom:.35rem}
+.case06-snapshot-item strong{display:block;font-size:.94rem;line-height:1.35;color:var(--text)}
+.case06-page .section{padding:2rem 0}
+.case06-page .section h2{font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.05;margin-bottom:.85rem}
+.case06-page .section p{max-width:690px;line-height:1.75}
+.case06-page .flow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;counter-reset:case06step;margin-top:1rem}
+.case06-page .flow-step{position:relative;display:flex;align-items:center;min-height:74px;padding:1rem 1rem 1rem 3.2rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;line-height:1.45;box-shadow:0 5px 18px rgba(20,20,20,.035)}
+.case06-page .flow-step:before{counter-increment:case06step;content:counter(case06step,decimal-leading-zero);position:absolute;left:1rem;top:50%;transform:translateY(-50%);font-family:'Bebas Neue',sans-serif;font-size:1.35rem;color:var(--cta1)}
+.case06-page #paid-workshops .flow{grid-template-columns:repeat(3,minmax(0,1fr))}
+.case06-page #paid-workshops .flow-step{align-items:flex-start;min-height:104px;padding:2.65rem .9rem .9rem}
+.case06-page #paid-workshops .flow-step:before{top:.85rem;left:.9rem;transform:none}
+.case06-page #paid-workshops h2+h2{margin-top:2rem}
+.case06-page .figure{margin:1.5rem 0 0;padding:.65rem;background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)}
+.case06-page .figure video{border-radius:11px!important}
+.case06-page .figure figcaption{padding:.75rem .45rem .25rem;color:var(--muted);font-size:.8rem;line-height:1.55}
+.case06-page #video-execution{padding:1.5rem 1.25rem;margin:1rem 0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+.case06-page #video-execution p{max-width:none}
+.case06-page .case06-insight{position:relative;margin:1.25rem 0;padding:1.5rem 1.35rem;background:linear-gradient(135deg,rgba(194,65,12,.07),rgba(157,58,114,.075));border:1px solid var(--border);border-radius:var(--radius)}
+.case06-page .case06-insight:before{content:"";position:absolute;left:0;top:1.25rem;bottom:1.25rem;width:4px;border-radius:0 6px 6px 0;background:linear-gradient(180deg,var(--cta1),var(--cta2))}
+.case06-page .case06-insight h2:first-of-type{font-size:clamp(1.85rem,4vw,2.8rem);letter-spacing:.02em}
+.case06-page .case06-insight h2:nth-of-type(2){margin-top:1.6rem}
+.case06-page .case06-insight p{max-width:none}
+.case06-page .case06-recommendation{padding:1.5rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 7px 24px rgba(20,20,20,.04)}
+.case06-page .case06-recommendation h2{color:var(--text)}
+.case06-page #outputs{border-top:1px solid var(--border);margin-top:1rem}
+.case06-page .output-carousel{margin-top:1.4rem}
+.case06-page .output-card{flex-basis:min(62%,310px)}
+.case06-page .output-card img{aspect-ratio:16/9;object-fit:cover}
+.case06-page .output-cap{font-size:.8rem;padding:.75rem .85rem}
+@media(max-width:760px){
+ .case06-snapshot{grid-template-columns:1fr 1fr}
+ .case06-page #paid-workshops .flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+ .case06-page .case-hero{padding:1.4rem 0 1.5rem}
+ .case06-page .case-hero h1{font-size:clamp(2.2rem,11vw,3.2rem)}
+ .case06-snapshot{grid-template-columns:1fr;gap:.55rem;padding:1rem 0}
+ .case06-snapshot-item{padding:.8rem .9rem}
+ .case06-page .section{padding:1.5rem 0}
+ .case06-page .flow,.case06-page #paid-workshops .flow{grid-template-columns:1fr;gap:.55rem}
+ .case06-page .flow-step,.case06-page #paid-workshops .flow-step{min-height:62px;padding:.85rem .85rem .85rem 3rem}
+ .case06-page #paid-workshops .flow-step:before{top:50%;left:.9rem;transform:translateY(-50%)}
+ .case06-page #video-execution,.case06-page .case06-insight,.case06-page .case06-recommendation{padding:1.15rem .95rem}
+ .case06-page .output-carousel{padding:0 1.9rem}
+ .case06-page .output-card{flex-basis:82%}
+}
+</style>
 </head>
-<body>
+<body class="case06-page">
 <a class="skip-link" href="#context">Skip to content</a>
 <header>
 <div class="header-inner">
@@ -33,6 +90,11 @@
 <p class="eyebrow">Case 06 · Workshop operations · Swad Cooking Institute</p>
 <h1>Workshop operations, and the watch hours versus revenue gap</h1>
 <p class="lede">I ran the workshop back end each month, promoted paid live online masterclasses, and diagnosed why daily livestreams were not turning into revenue. I recommended edited uploads to improve repeat viewing; the emphasis later shifted back to livestreams.</p>
+</section>
+<section class="case06-snapshot" aria-label="Case overview">
+<div class="case06-snapshot-item"><span>Operations</span><strong>Monthly workshop planning and delivery</strong></div>
+<div class="case06-snapshot-item"><span>Production</span><strong>Paid live online masterclasses</strong></div>
+<div class="case06-snapshot-item"><span>Strategic focus</span><strong>Watch hours versus revenue</strong></div>
 </section>
 <section class="section" id="context">
 <p class="section-label">Context</p>
@@ -82,14 +144,15 @@
 <p><strong>Execution.</strong> Schedule and promote the masterclass, collect payment, send join details, run the live stream, then hand off recording access and post-class support notes.</p>
 <p><strong>Results and learning.</strong> The BTS recording on this page shows the dual role on a real session. Strong live watch hours still needed a separate plan for edited recipe uploads if the goal was repeat views and revenue, which is covered in the diagnosis below.</p>
 </section>
-<section class="section">
+<section class="section case06-insight">
 <p class="section-label">Diagnosis</p>
 <h2>Watch hours were high, but revenue was not following</h2>
-<p>After months of work, one problem stayed open. Watch hours were strong, but estimated revenue did not scale with them. A YouTube membership was introduced as another revenue lever, while the gap between watch hours and revenue remained. I helped identify the mismatch and recommended testing a more edited, searchable recipe format rather than assuming raw live watch time would translate into repeat viewing or revenue.<p><a href="https://www.youtube.com/@swadcooking/join" target="_blank" rel="noopener noreferrer">View the Swad Cooking membership join surface</a></p></p>
+<p>After months of work, one problem stayed open. Watch hours were strong, but estimated revenue did not scale with them. A YouTube membership was introduced as another revenue lever, while the gap between watch hours and revenue remained. I helped identify the mismatch and recommended testing a more edited, searchable recipe format rather than assuming raw live watch time would translate into repeat viewing or revenue.</p>
+<p><a href="https://www.youtube.com/@swadcooking/join" target="_blank" rel="noopener noreferrer">View the Swad Cooking membership join surface</a></p>
 <h2>The livestream was alive on the day, then dead</h2>
 <p>Daily livestreams drew strong views and engagement on the day. Afterwards they became largely dead, because few people rewatch a fifty-minute live recording full of chat and off-topic discussion.</p>
 </section>
-<section class="section">
+<section class="section case06-recommendation">
 <p class="section-label">Recommendation</p>
 <h2>Fewer lives, edited uploads</h2>
 <p>My recommendation was to reduce raw livestream output and publish tightly edited recipe videos. Edited uploads could make individual recipes easier to discover and revisit; where practical, the live and edited versions could be captured in the same session. The team later returned its emphasis to livestreams. This is a strategic recommendation and observed direction, not a quantified revenue-lift claim.</p>
