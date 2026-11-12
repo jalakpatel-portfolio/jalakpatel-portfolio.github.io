@@ -71,6 +71,28 @@
 }
 
 /* Second visual pass: stronger editorial hooks, still using the existing Swad design system. */
+/* Third visual pass: authentic Swad identity watermark + evidence-led diagnosis diagram. */
+.case06-page main.container{position:relative;isolation:isolate}
+.case06-page main.container:before{content:"";position:absolute;z-index:-1;pointer-events:none;top:230px;right:1.5%;width:clamp(210px,30vw,390px);height:190px;background:url("../../media/logos/swad-logo.png") center/contain no-repeat;opacity:.035;filter:grayscale(1)}
+.case06-gap-visual{display:block;padding:1.05rem;background:rgba(255,255,255,.78);border:1px solid var(--border);border-radius:16px;min-height:0}
+.case06-gap-kicker{display:block;margin:0 0 .85rem;text-align:left;font-size:.64rem!important;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)!important;font-weight:700}
+.case06-gap-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem;align-items:stretch}
+.case06-gap-stage{position:relative;min-width:0;padding:.8rem .7rem .85rem;background:var(--surface);border:1px solid var(--border);border-radius:11px;text-align:left}
+.case06-gap-stage:not(:last-child):after{content:"";position:absolute;z-index:1;right:-.48rem;top:50%;width:.4rem;height:.4rem;border-top:1.5px solid var(--cta2);border-right:1.5px solid var(--cta2);transform:translateY(-50%) rotate(45deg)}
+.case06-gap-stage small{display:block;margin-bottom:.4rem;color:var(--cta1);font-size:.6rem;line-height:1.3;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.case06-gap-stage strong{display:block;margin-bottom:.35rem;color:var(--text);font-size:.84rem;line-height:1.25}
+.case06-gap-stage span{display:block;color:var(--muted);font-size:.7rem;line-height:1.45;font-weight:500;text-align:left}
+.case06-gap-foot{display:flex;align-items:center;justify-content:space-between;gap:.65rem;margin-top:.7rem;padding-top:.7rem;border-top:1px solid var(--border)}
+.case06-gap-foot span{font-size:.68rem;line-height:1.35;color:var(--muted);font-weight:600}
+.case06-gap-foot b{flex:0 0 auto;font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.03em;color:var(--cta2);font-weight:400}
+@media(max-width:560px){
+ .case06-page main.container:before{top:190px;right:-25px;width:220px;height:110px;opacity:.025}
+ .case06-gap-flow{grid-template-columns:1fr;gap:.5rem}
+ .case06-gap-stage:not(:last-child):after{right:auto;left:50%;top:auto;bottom:-.38rem;transform:translateX(-50%) rotate(135deg)}
+ .case06-gap-stage{padding:.7rem .75rem}
+ .case06-gap-foot{align-items:flex-start;flex-direction:column}
+}
+
 .case06-page .case-hero{isolation:isolate;overflow:hidden}
 .case06-page .case-hero:before{content:"";position:absolute;z-index:-1;right:2%;top:8%;width:clamp(150px,24vw,300px);aspect-ratio:1;border:1px solid rgba(194,65,12,.13);border-radius:50%;box-shadow:0 0 0 22px rgba(194,65,12,.025),0 0 0 44px rgba(157,58,114,.025);pointer-events:none}
 .case06-page .case-hero:after{height:4px;width:94px}
@@ -179,7 +201,15 @@
 </section>
 <section class="section case06-insight">
 <p class="section-label">Diagnosis</p>
-<div class="case06-gap-visual" aria-label="Watch hours and estimated revenue did not scale together"><span>Watch hours</span><b>≠</b><span>Estimated revenue</span></div>
+<div class="case06-gap-visual" role="group" aria-label="Qualitative analysis of the watch-hours and estimated-revenue gap">
+<span class="case06-gap-kicker">Reading the performance gap</span>
+<div class="case06-gap-flow">
+<div class="case06-gap-stage"><small>01 · Live signal</small><strong>Watch hours</strong><span>Strong views and engagement on the day of the livestream</span></div>
+<div class="case06-gap-stage"><small>02 · Replay friction</small><strong>Long-form replay</strong><span>Fifty-minute recordings mixed recipes with chat and off-topic discussion; few viewers returned</span></div>
+<div class="case06-gap-stage"><small>03 · Revenue reality</small><strong>Estimated revenue</strong><span>Did not scale with watch hours; membership was introduced as another lever</span></div>
+</div>
+<div class="case06-gap-foot"><span>Watch hours and estimated revenue were not moving in step</span><b>≠</b></div>
+</div>
 <h2>Watch hours were high, but revenue was not following</h2>
 <p>After months of work, one problem stayed open. Watch hours were strong, but estimated revenue did not scale with them. A YouTube membership was introduced as another revenue lever, while the gap between watch hours and revenue remained. I helped identify the mismatch and recommended testing a more edited, searchable recipe format rather than assuming raw live watch time would translate into repeat viewing or revenue.</p>
 <p><a href="https://www.youtube.com/@swadcooking/join" target="_blank" rel="noopener noreferrer">View the Swad Cooking membership join surface</a></p>
