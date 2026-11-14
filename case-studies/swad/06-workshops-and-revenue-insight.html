@@ -124,6 +124,30 @@
 @media(max-width:560px){.case06-page .case-hero:before{right:-55px;top:10%;width:180px}.case06-page .case06-insight{padding:1.2rem 1rem}.case06-gap-visual{min-height:104px}}
 @media(prefers-reduced-motion:reduce){.case06-page .case06-snapshot-item,.case06-page .flow-step,.case06-page .output-card{transition:none}.case06-page .case06-snapshot-item:hover,.case06-page .flow-step:hover,.case06-page .output-card:hover{transform:none}}
 
+
+/* Case 06 QA correction: keep the three-stage diagnosis diagram stacked as one unit.
+   The earlier two-column comparison treatment is superseded by the evidence-led flow. */
+.case06-page .case06-insight>.case06-gap-visual{
+  display:block;
+  min-height:0;
+  padding:1.05rem;
+}
+.case06-page .case06-insight>.case06-gap-visual>.case06-gap-kicker{
+  display:block;
+  text-align:left;
+}
+.case06-page .case06-insight>.case06-gap-visual>.case06-gap-flow{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:.55rem;
+}
+.case06-page .case06-insight>.case06-gap-visual>.case06-gap-foot{
+  display:flex;
+}
+@media(max-width:560px){
+  .case06-page .case06-insight>.case06-gap-visual>.case06-gap-flow{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body class="case06-page">
