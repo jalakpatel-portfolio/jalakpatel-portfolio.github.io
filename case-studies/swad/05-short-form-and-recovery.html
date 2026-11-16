@@ -13,7 +13,7 @@
 <style>
 /* Case 05: restore the approved editorial gradient and use the doodle as a quiet texture */
 .case05-doodle,.case05-patch{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(115deg,rgba(194,65,12,.10),rgba(157,58,114,.12) 68%,rgba(255,255,255,.68));border:1px solid rgba(157,58,114,.18);border-radius:20px}
-.case05-doodle::before,.case05-patch::before{content:"";position:absolute;inset:0;z-index:-1;background:url("../../media/swad.jpeg") center/220px 180px repeat;opacity:.055;mix-blend-mode:multiply;pointer-events:none}
+.case05-doodle::before,.case05-patch::before{content:"";position:absolute;inset:0;z-index:-1;background:url("../../media/swad.jpeg") center/220px auto repeat;filter:invert(1);opacity:.07;mix-blend-mode:multiply;pointer-events:none}
 .case05-patch{margin:0 0 26px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:22px}
 .case05-patch h2{margin:0;max-width:620px}
 .case05-patch p{margin:0;max-width:330px;color:var(--muted,#5a5a5a);font-size:14px}
