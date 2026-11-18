@@ -39,7 +39,27 @@
 .case05-reel-select[aria-pressed="true"]{box-shadow:inset 3px 0 0 #c2410c}
 .case05-reel-select:focus-visible,.case05-reel-open:focus-visible{outline:3px solid rgba(194,65,12,.25);outline-offset:2px}
 @keyframes case05-poster-in{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:none}}
-@media(max-width:720px){.case05-patch{align-items:flex-start;flex-direction:column;padding:21px}.case05-doodle{padding:26px 20px}.case05-recovery{grid-template-columns:1fr}.case05-reel-stage{min-height:250px;border-radius:16px 16px 0 0}.case05-poster{max-width:190px;max-height:360px}.case05-reel-option{grid-template-columns:minmax(0,1fr) auto;gap:6px}.case05-reel-select,.case05-reel-open{padding:12px 10px;font-size:11px}.case05-reel-open{white-space:normal;text-align:center}}
+@media(max-width:720px){
+.case05-patch{align-items:flex-start;flex-direction:column;padding:21px}
+.case05-doodle{padding:26px 20px}
+.case05-recovery{grid-template-columns:1fr}
+.case05-reel-stage{min-height:250px;border-radius:16px 16px 0 0}
+.case05-poster{max-width:190px;max-height:360px}
+.case05-reel-links{display:block;touch-action:pan-y}
+.case05-reel-option{display:none;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:stretch}
+.case05-reel-option.is-active{display:grid}
+.case05-reel-select,.case05-reel-open{padding:13px 12px;font-size:12px}
+.case05-reel-select{min-height:58px}
+.case05-reel-open{white-space:normal;text-align:center;min-width:86px}
+.case05-carousel-controls{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:14px}
+.case05-carousel-arrow{width:36px;height:36px;border:1px solid var(--border-color,#e8e2d8);border-radius:50%;background:#fff;color:var(--text,#141414);font:600 18px/1 'Space Grotesk',system-ui,sans-serif;cursor:pointer}
+.case05-carousel-dots{display:flex;align-items:center;gap:9px}
+.case05-carousel-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#c9c1b7;cursor:pointer}
+.case05-carousel-dot[aria-current="true"]{background:var(--cta1,#c2410c);transform:scale(1.25)}
+.case05-carousel-status{font-size:11px;color:var(--muted,#5a5a5a);min-width:34px;text-align:center}
+}
+.case05-carousel-controls{display:none}
+@media(prefers-reduced-motion:reduce){.case05-carousel-arrow,.case05-carousel-dot{scroll-behavior:auto;transition:none}}
 @media(prefers-reduced-motion:reduce){.case05-poster.active{animation:none}.case05-reel-select,.case05-reel-open{transition:none}}
 </style>
 </head>
@@ -96,10 +116,20 @@
 </div>
 <div class="case05-reel-copy">
 <p>For the first recovery attempts, I wrote a funny narrative that could work with the surviving footage. After exploring that treatment more than once, I took a different creative direction for a third Reel: a horror-style treatment in which I also appeared on camera. The experiment received positive feedback for trying a new direction, although it was not the strongest-performing version.</p>
-<div class="case05-reel-links" role="group" aria-label="Choose a Reel preview">
-<div class="case05-reel-option"><button class="case05-reel-select" type="button" data-case05-reel="0" aria-pressed="true">Recovered-footage story Reel 1</button><a class="case05-reel-open" href="https://www.instagram.com/reel/DGnsmEaqtPw/" target="_blank" rel="noopener noreferrer" aria-label="Open Recovered-footage story Reel 1 on Instagram">View Reel ↗</a></div>
-<div class="case05-reel-option"><button class="case05-reel-select" type="button" data-case05-reel="1" aria-pressed="false">Recovered-footage story Reel 2</button><a class="case05-reel-open" href="https://www.instagram.com/reel/DG5risdtdVp/" target="_blank" rel="noopener noreferrer" aria-label="Open Recovered-footage story Reel 2 on Instagram">View Reel ↗</a></div>
-<div class="case05-reel-option"><button class="case05-reel-select" type="button" data-case05-reel="2" aria-pressed="false">Horror-treatment Reel</button><a class="case05-reel-open" href="https://www.instagram.com/reel/DH8nYEkTVt8/" target="_blank" rel="noopener noreferrer" aria-label="Open Horror-treatment Reel on Instagram">View Reel ↗</a></div>
+<div class="case05-reel-links" role="region" aria-roledescription="carousel" aria-label="Recovered footage Reel previews">
+<div class="case05-reel-option is-active" role="group" aria-roledescription="slide" aria-label="1 of 3"><button class="case05-reel-select" type="button" data-case05-reel="0" aria-pressed="true">Recovered-footage story Reel 1</button><a class="case05-reel-open" href="https://www.instagram.com/reel/DGnsmEaqtPw/" target="_blank" rel="noopener noreferrer" aria-label="Open Recovered-footage story Reel 1 on Instagram">View Reel ↗</a></div>
+<div class="case05-reel-option" role="group" aria-roledescription="slide" aria-label="2 of 3"><button class="case05-reel-select" type="button" data-case05-reel="1" aria-pressed="false">Recovered-footage story Reel 2</button><a class="case05-reel-open" href="https://www.instagram.com/reel/DG5risdtdVp/" target="_blank" rel="noopener noreferrer" aria-label="Open Recovered-footage story Reel 2 on Instagram">View Reel ↗</a></div>
+<div class="case05-reel-option" role="group" aria-roledescription="slide" aria-label="3 of 3"><button class="case05-reel-select" type="button" data-case05-reel="2" aria-pressed="false">Horror-treatment Reel</button><a class="case05-reel-open" href="https://www.instagram.com/reel/DH8nYEkTVt8/" target="_blank" rel="noopener noreferrer" aria-label="Open Horror-treatment Reel on Instagram">View Reel ↗</a></div>
+</div>
+<div class="case05-carousel-controls" aria-label="Carousel controls">
+<button class="case05-carousel-arrow" type="button" data-carousel-prev aria-label="Previous Reel">‹</button>
+<div class="case05-carousel-dots" aria-label="Choose a slide">
+<button class="case05-carousel-dot" type="button" data-carousel-dot="0" aria-label="Show Reel 1" aria-current="true"></button>
+<button class="case05-carousel-dot" type="button" data-carousel-dot="1" aria-label="Show Reel 2" aria-current="false"></button>
+<button class="case05-carousel-dot" type="button" data-carousel-dot="2" aria-label="Show Reel 3" aria-current="false"></button>
+</div>
+<span class="case05-carousel-status" data-carousel-status aria-live="polite">1 of 3</span>
+<button class="case05-carousel-arrow" type="button" data-carousel-next aria-label="Next Reel">›</button>
 </div></div></div>
 </section>
 <section class="section" id="series"><p class="section-label">Short-form series R&amp;D</p><h2>Give vertical content a repeatable idea</h2><p>Alongside cutdowns from longer videos, I contributed to recurring short-form concepts across Instagram Reels and YouTube Shorts. These examples show different series directions, not sole authorship of every Reel.</p><div class="evidence-links"><a href="https://www.instagram.com/reel/DC1dzaMt_up/" target="_blank" rel="noopener noreferrer">Cooking Tips Series</a><a href="https://www.instagram.com/reel/DJRmj89pH-H/" target="_blank" rel="noopener noreferrer">A to Z Food Series</a></div></section>
@@ -134,16 +164,75 @@ n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(
 (function(){
 const selectors=[...document.querySelectorAll(".case05-reel-select[data-case05-reel]")];
 const posters=[...document.querySelectorAll(".case05-poster[data-poster]")];
-function activate(button){
- const selected=button.dataset.case05Reel;
- posters.forEach(p=>p.classList.toggle("active",p.dataset.poster===selected));
- selectors.forEach(b=>b.setAttribute("aria-pressed",String(b===button)));
+const slides=[...document.querySelectorAll(".case05-reel-option")];
+const dots=[...document.querySelectorAll(".case05-carousel-dot")];
+const controls=document.querySelector(".case05-carousel-controls");
+const status=document.querySelector("[data-carousel-status]");
+const region=document.querySelector(".case05-reel-links");
+const mobile=window.matchMedia("(max-width:720px)");
+const reducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)");
+let activeIndex=0;
+let autoTimer=null;
+let manuallyPaused=false;
+let touchStartX=null;
+
+function stopAuto(){
+ if(autoTimer){window.clearInterval(autoTimer);autoTimer=null;}
 }
-selectors.forEach(button=>{
- button.addEventListener("click",()=>activate(button));
- button.addEventListener("mouseenter",()=>activate(button));
- button.addEventListener("focus",()=>activate(button));
+function setActive(index,manual){
+ activeIndex=(index+slides.length)%slides.length;
+ selectors.forEach((button,i)=>button.setAttribute("aria-pressed",String(i===activeIndex)));
+ posters.forEach((poster,i)=>poster.classList.toggle("active",i===activeIndex));
+ slides.forEach((slide,i)=>{
+  slide.classList.toggle("is-active",i===activeIndex);
+  slide.setAttribute("aria-label",(i+1)+" of "+slides.length);
+ });
+ dots.forEach((dot,i)=>dot.setAttribute("aria-current",String(i===activeIndex)));
+ if(status) status.textContent=(activeIndex+1)+" of "+slides.length;
+ if(manual){manuallyPaused=true;stopAuto();}
+}
+function startAuto(){
+ stopAuto();
+ if(!mobile.matches||reducedMotion.matches||manuallyPaused||document.hidden||slides.length<2)return;
+ autoTimer=window.setInterval(()=>setActive(activeIndex+1,false),5000);
+}
+function syncMode(){
+ if(mobile.matches){
+  if(controls)controls.style.display="flex";
+  setActive(activeIndex,false);
+  startAuto();
+ }else{
+  stopAuto();
+  manuallyPaused=false;
+  if(controls)controls.style.display="";
+  slides.forEach(slide=>slide.classList.remove("is-active"));
+ }
+}
+selectors.forEach((button,i)=>{
+ button.addEventListener("click",()=>setActive(i,true));
+ button.addEventListener("mouseenter",()=>{if(!mobile.matches)setActive(i,false);});
+ button.addEventListener("focus",()=>{if(!mobile.matches)setActive(i,false);});
 });
+const previous=document.querySelector("[data-carousel-prev]");
+const next=document.querySelector("[data-carousel-next]");
+if(previous)previous.addEventListener("click",()=>setActive(activeIndex-1,true));
+if(next)next.addEventListener("click",()=>setActive(activeIndex+1,true));
+dots.forEach((dot,i)=>dot.addEventListener("click",()=>setActive(i,true)));
+if(region){
+ region.addEventListener("touchstart",event=>{touchStartX=event.changedTouches[0].clientX;},{passive:true});
+ region.addEventListener("touchend",event=>{
+  if(touchStartX===null)return;
+  const delta=event.changedTouches[0].clientX-touchStartX;
+  touchStartX=null;
+  if(Math.abs(delta)>45)setActive(activeIndex+(delta<0?1:-1),true);
+  else startAuto();
+  },{passive:true});
+ region.addEventListener("focusin",()=>{manuallyPaused=true;stopAuto();});
+}
+document.addEventListener("visibilitychange",()=>{if(document.hidden)stopAuto();else startAuto();});
+if(mobile.addEventListener)mobile.addEventListener("change",syncMode);else mobile.addListener(syncMode);
+if(reducedMotion.addEventListener)reducedMotion.addEventListener("change",startAuto);else reducedMotion.addListener(startAuto);
+syncMode();
 })();
 </script>
 <script src="lightbox.js" defer></script>
