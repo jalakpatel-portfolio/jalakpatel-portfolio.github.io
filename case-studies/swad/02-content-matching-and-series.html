@@ -20,19 +20,20 @@
 .chef-watch-link::before{content:"▶";display:grid;place-items:center;width:1.65rem;height:1.65rem;border-radius:50%;background:#9d4e3a;color:#fff;font-size:.68rem}
 .chef-watch-link::after{content:"↗";font-size:1rem;color:#9d4e3a}
 .chef-watch-link:hover,.chef-watch-link:focus-visible{transform:translateY(-2px);border-color:#9d4e3a;box-shadow:0 9px 22px rgba(92,54,38,.15);outline-offset:3px}
-.chef-profile{display:grid;grid-template-columns:116px minmax(0,1fr);gap:1rem;align-items:center;margin:1.05rem 0 1.25rem;padding:.85rem;border:1px solid rgba(157,78,58,.14);border-radius:15px;background:rgba(255,255,255,.58)}
-.chef-profile-visual{position:relative;display:block;width:116px;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#eadfd5;box-shadow:0 4px 12px rgba(64,42,30,.10)}
+.chef-profile{display:grid;grid-template-columns:152px minmax(0,1fr);gap:1.1rem;align-items:center;margin:1.05rem 0 1.25rem;padding:.9rem;border:1px solid rgba(157,78,58,.14);border-radius:15px;background:rgba(255,255,255,.58)}
+.chef-profile-visual{position:relative;display:block;width:152px;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#eadfd5;box-shadow:0 4px 12px rgba(64,42,30,.10)}
 .chef-profile-visual img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
 .chef-profile-visual::after{content:"▶";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:rgba(157,78,58,.92);color:#fff;font-size:10px;padding-left:2px;box-shadow:0 2px 8px rgba(0,0,0,.18)}
 .chef-profile-visual:hover img,.chef-profile-visual:focus-visible img{transform:scale(1.06)}
 .chef-profile-copy{min-width:0}
 .chef-profile-copy p{margin:0 0 .55rem}
 .chef-profile-copy .chef-watch-link{margin:.15rem 0 .1rem;padding:.55rem .8rem;font-size:.88rem}
-@media(max-width:520px){.chef-profile{grid-template-columns:92px minmax(0,1fr);gap:.75rem;padding:.7rem}.chef-profile-visual{width:92px}.chef-profile-copy .chef-watch-link{font-size:.8rem;padding:.5rem .65rem}}
+@media(max-width:560px){.chef-profile{grid-template-columns:112px minmax(0,1fr);gap:.8rem;padding:.75rem}.chef-profile-visual{width:112px}.chef-profile-copy .chef-watch-link{font-size:.82rem;padding:.5rem .68rem}}
+@media(max-width:390px){.chef-profile{grid-template-columns:1fr;gap:.75rem}.chef-profile-visual{width:min(100%,260px)}}
 
-/* Case 02 evidence: editorial split-panel, inspired by Case 05's recovery layout */
-.case02-evidence{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;padding:26px;border:1px solid rgba(157,78,58,.18);border-radius:20px;background:linear-gradient(115deg,rgba(194,65,12,.09),rgba(157,58,114,.10) 68%,rgba(255,255,255,.72))}
-.case02-evidence::before{content:"";position:absolute;inset:0;z-index:-1;background:url("../../media/swad.jpeg") center/220px auto repeat;filter:invert(1);opacity:.055;mix-blend-mode:multiply;pointer-events:none}
+
+/* Case 02 evidence: editorial split-panel inside the shared Swad doodle patch */
+.case02-evidence{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;padding:0;border:0;border-radius:0;background:transparent}
 .case02-evidence-main{display:flex;flex-direction:column;gap:14px;min-width:0}
 .case02-evidence-lead{padding:23px;border:1px solid rgba(157,78,58,.18);border-radius:16px;background:rgba(255,255,255,.78)}
 .case02-evidence-lead .section-label{margin-bottom:9px}
@@ -87,23 +88,34 @@
 <section class="section" id="context">
 <p class="section-label">Context</p>
 <h2>Chefs on camera had different strengths</h2>
-<p>Time with the chef team made it clear that the same recipe idea does not land the same way with every host. Each chef already had a distinct on-camera strength. I matched YouTube live topics so the person and the subject reinforced each other, building recognisable host profiles on the institute channel instead of relying on one generic recipe calendar.</p>
+<p>As I spent more time with the chef team, I noticed that some topics worked better with certain hosts. Chef Sneha, for example, connected most naturally with authentic recipes and practical cooking tips. The other chefs had their own strengths too, so I started matching YouTube live topics to the person presenting them.</p>
+</section>
+<section class="section" id="problem">
+<p class="section-label">Problem</p>
+<h2>One recipe calendar would not fit every chef</h2>
+<p>Giving every chef the same kind of recipe topic would miss what made each host engaging. The channel also needed ideas beyond one-off recipe demonstrations: familiar kitchen questions, useful methods and common mistakes could become formats viewers recognised and returned to.</p>
 <div class="chef-profile"><a class="chef-profile-visual" href="https://www.youtube.com/live/TQUWOXIlVh4?si=KOFUYkP2yRKXdu3J" target="_blank" rel="noopener noreferrer" aria-label="Watch Chef Sneha’s YouTube live"><img src="https://img.youtube.com/vi/TQUWOXIlVh4/mqdefault.jpg" alt="Chef Sneha in a YouTube live" loading="lazy"></a><div class="chef-profile-copy"><p><strong>Chef Sneha · owner</strong><br>The most senior voice on the team, Sneha brought an experienced, trust-led presence. Authentic recipes and practical methods featuring her were a stronger fit than unrelated topics. That authority also suited a deeper live on kitchen tools and cookware.</p><a class="chef-watch-link" href="https://www.youtube.com/live/TQUWOXIlVh4?si=KOFUYkP2yRKXdu3J" target="_blank" rel="noopener noreferrer" aria-label="Watch Chef Sneha’s YouTube live">Watch Chef Sneha in action</a></div></div>
 <div class="chef-profile"><a class="chef-profile-visual" href="https://www.youtube.com/live/A4VTBg_De_0?si=L_es9LL2v6qOHgHB" target="_blank" rel="noopener noreferrer" aria-label="Watch Chef Jeni’s YouTube live"><img src="https://img.youtube.com/vi/A4VTBg_De_0/mqdefault.jpg" alt="Chef Jeni in a YouTube live" loading="lazy"></a><div class="chef-profile-copy"><p><strong>Chef Jeni</strong><br>Jeni’s high-energy, humorous and cheerful live style suited restaurant-style and street-style food: fried items, fast food and snack-led topics. The subject and pace were chosen to feel natural to how she already appeared on camera.</p><a class="chef-watch-link" href="https://www.youtube.com/live/A4VTBg_De_0?si=L_es9LL2v6qOHgHB" target="_blank" rel="noopener noreferrer" aria-label="Watch Chef Jeni’s YouTube live">Watch Chef Jeni in action</a></div></div>
 <div class="chef-profile"><a class="chef-profile-visual" href="https://www.youtube.com/live/TSZFW12DaaY?si=xEsoOqEdAOYtrZsm" target="_blank" rel="noopener noreferrer" aria-label="Watch Chef Maya’s YouTube live"><img src="https://img.youtube.com/vi/TSZFW12DaaY/mqdefault.jpg" alt="Chef Maya in a YouTube live" loading="lazy"></a><div class="chef-profile-copy"><p><strong>Chef Maya</strong><br>Maya’s softer, steady and nurturing delivery suited international and lighter cooking, health-minded adaptations of heavier dishes, and useful home tips. Her role was closer to a guide helping viewers make balanced choices than simply demonstrating a recipe.</p><a class="chef-watch-link" href="https://www.youtube.com/live/TSZFW12DaaY?si=xEsoOqEdAOYtrZsm" target="_blank" rel="noopener noreferrer" aria-label="Watch Chef Maya’s YouTube live">Watch Chef Maya in action</a></div></div>
 <div class="chef-profile"><a class="chef-profile-visual" href="https://www.youtube.com/live/FFv58m1xLw0?si=FofKCcvsVBRwasBi" target="_blank" rel="noopener noreferrer" aria-label="Watch Chef Rakhi’s YouTube live"><img src="https://img.youtube.com/vi/FFv58m1xLw0/mqdefault.jpg" alt="Chef Rakhi in a YouTube live" loading="lazy"></a><div class="chef-profile-copy"><p><strong>Chef Rakhi</strong><br>Rakhi’s precise, technical delivery suited bakery-led topics and structured culinary teaching: cookies, cakes, less-common bakes and the “why this works” behind a method.</p><a class="chef-watch-link" href="https://www.youtube.com/live/FFv58m1xLw0?si=FofKCcvsVBRwasBi" target="_blank" rel="noopener noreferrer" aria-label="Watch Chef Rakhi’s YouTube live">Watch Chef Rakhi in action</a></div></div>
-<p>Casting was intentional: trust and authenticity with Sneha; high-energy savoury and street food with Jeni; health and fusion-led guidance with Maya; and bakery technique with Rakhi.</p>
-</section><section class="section swad-doodle-patch" id="strategy">
+<p>That meant authentic recipes and practical tips for Sneha; street-style and snack topics for Jeni; lighter, health-minded cooking for Maya; and bakery technique for Rakhi.</p>
+</section>
+<section class="section swad-doodle-patch" id="strategy">
 <p class="section-label">Strategy</p>
 <h2>Familiar topics, repeatable formats</h2>
-<p>I moved beyond recipe-only calendars by suggesting practical, non-recipe topics that gave viewers useful answers and prompted positive responses. The editorial principle was to take a familiar subject people thought they knew, then offer a clearer method, shortcut or detail they may have missed. The ghee-making live put that thinking into practice with an easier method for a common household task.</p>
-<p><strong>How to Store</strong> turned everyday questions—what belongs in the fridge or outside, what can be frozen, and how to keep ingredients fresh for longer—into a repeatable series. <strong>Monday Mistake</strong> gave common, easily overlooked kitchen errors a recurring weekly-style format. The two series moved the channel beyond isolated recipe uploads and gave viewers useful reasons to return.</p>
-<p><strong>Kitchen tools and cookware</strong> was a separate basic-but-deep live, not a How to Store episode. It started with which utensils to use and went further into materials, what to limit and a healthier everyday kitchen setup. Not every topic was chosen only for maximum reach; clear teaching could hold the right viewers without relying only on loud hooks.</p>
-<p>For course-facing support, a humour-led Basic Cooking Reel added one short-form, shareable promotion.</p>
-</section><section class="section" id="outputs">
+<p>I also suggested topics beyond recipes. The ghee-making live is one example: it took a familiar household task and showed viewers an easier method.</p>
+<p><strong>How to Store</strong> became a repeatable series around everyday questions: what to refrigerate, what to freeze and how to keep ingredients fresh for longer. <strong>Monday Mistake</strong> brought common kitchen errors into a recurring series. Both gave the channel formats beyond individual recipe uploads.</p>
+<p>The kitchen tools and cookware live was a separate topic. It covered which utensils to use, differences in materials and what to consider when setting up a healthier everyday kitchen. For Basic Cooking course promotion, I also used a humour-led Reel as a short, shareable entry point.</p>
+</section>
+<section class="section" id="role">
+<p class="section-label">My role &amp; execution</p>
+<h2>From observing the chefs to shaping the content plan</h2>
+<p>I spent time understanding how each chef presented on camera, then suggested live topics that suited their strengths. I also proposed the How to Store and Monday Mistake formats, selected practical questions for the series, and looked for familiar topics where a simpler or clearer method could make the video useful. The Basic Cooking Reel supported the course with a shorter, shareable format.</p>
+</section>
+<section class="section" id="outputs">
 <p class="section-label">Work output</p>
 <h2>Selected output</h2>
-<p class="section-intro">Formats in practice: chef–topic fit, How to Store examples, a standalone tools live, ghee as a clearer method, Monday Mistake as a recurring series, and one course Reel.</p>
+<p class="section-intro">Selected videos from the chef-led lives and recurring formats.</p>
 <div class="output-carousel" data-output-carousel>
 <button type="button" class="carousel-btn prev" aria-label="Previous">&#8592;</button>
 <div class="output-carousel-track">
@@ -130,7 +142,10 @@
 </div>
 <button type="button" class="carousel-btn next" aria-label="Next">&#8594;</button>
 </div>
-<h3>Evidence in practice</h3>
+</section>
+<section class="section swad-doodle-patch" id="evidence">
+<p class="section-label">Evidence in practice</p>
+<h2>How the formats worked on the channel</h2>
 <div class="case02-evidence">
 <div class="case02-evidence-main">
 <div class="case02-evidence-lead">
@@ -163,7 +178,7 @@
 </a>
 </div>
 </div>
-<p class="section-intro">Open the full series and supporting content:</p>
+<p class="section-intro">Explore the recurring series:</p>
 <div class="case02-playlist-anchors">
 <figure class="student-livestream-anchor">
 <a href="https://youtube.com/playlist?list=PLxc6zX4m_IJCL4HWTQe80DUOZ5ugmlDIZ&amp;si=e7CdX17S5o0nELy0" target="_blank" rel="noopener noreferrer" aria-label="Open the Monday Mistake playlist">
@@ -171,14 +186,15 @@
 </a>
 <figcaption>Monday Mistake · Watch the series playlist</figcaption>
 </figure>
-<figure class="student-livestream-anchor">
-<a href="https://youtube.com/playlist?list=PLxc6zX4m_IJCQoiXBOrGtONQb-6KrqAbI&amp;si=yTN3iyQK9CDwJ-qS" target="_blank" rel="noopener noreferrer" aria-label="Open the members-only content playlist">
-<img src="../../media/swad/memberonlylive.png" alt="Members-only content playlist preview" loading="lazy">
-</a>
-<figcaption>Members-only content · Watch the playlist</figcaption>
-</figure>
 </div>
-</section><nav class="page-nav nav-trio" aria-label="Case navigation">
+<p class="case02-evidence-foot">The view counts shown are the figures recorded at the time of this work.</p>
+</section>
+<section class="section" id="takeaway">
+<p class="section-label">Takeaway</p>
+<h2>Match the host, make the format repeatable</h2>
+<p>The work was about more than choosing the next recipe. Matching topics to each chef made the lives feel more natural, while How to Store and Monday Mistake turned useful everyday questions into recurring content.</p>
+</section>
+<nav class="page-nav nav-trio" aria-label="Case navigation">
 <a class="back" href="01-diploma-and-student-livestreams.html">← Prev</a>
 <a class="back" href="index.html">Hub</a>
 <a class="primary" href="03-farewell-diwali-livestream.html">Next →</a>
