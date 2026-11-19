@@ -139,3 +139,28 @@ nav.breadcrumb{display:block!important;background:transparent!important;border:0
 @media(max-width:560px){
   .swad-doodle-patch{padding:1.15rem .95rem}
 }
+
+
+/* Student livestream strategy anchor */
+.student-livestream-anchor{
+  margin:1.35rem 0 1.5rem;
+  overflow:hidden;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:var(--surface);
+  box-shadow:var(--shadow);
+}
+.student-livestream-anchor a{display:block;line-height:0}
+.student-livestream-anchor img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+}
+.student-livestream-anchor figcaption{
+  padding:.75rem 1rem;
+  color:var(--muted);
+  font-size:.8rem;
+  line-height:1.5;
+}
