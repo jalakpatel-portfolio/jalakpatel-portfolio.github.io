@@ -50,7 +50,7 @@ footer{border-top:1px solid var(--border);padding:1.75rem 1.5rem;text-align:cent
 a.btn-primary,.btn-primary{display:inline-flex!important;align-items:center;justify-content:center;padding:.7rem 1.35rem!important;border-radius:999px!important;font-weight:700!important;font-size:.9rem!important;text-decoration:none!important;color:#fff!important;background:linear-gradient(135deg,var(--cta1),var(--cta2))!important;border:none!important}
 a.btn-secondary,.btn-secondary{display:inline-flex!important;align-items:center;justify-content:center;padding:.65rem 1.25rem!important;border-radius:999px!important;font-weight:700!important;font-size:.9rem!important;text-decoration:none!important;color:#141414!important;background:#fff!important;border:1.5px solid var(--border)!important}
 .output-carousel{position:relative;margin:1.25rem 0 .5rem;padding:0 2.5rem}
-.output-carousel-track{display:flex;gap:.85rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:.25rem 0 .75rem}
+.output-carousel-track{display:flex;align-items:flex-start;gap:.85rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:.25rem 0 .75rem}
 .output-carousel-track::-webkit-scrollbar{display:none}
 .output-card{flex:0 0 min(70%,260px);scroll-snap-align:start;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:var(--surface);text-decoration:none;color:inherit}
 .output-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#f0ebe3}
