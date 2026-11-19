@@ -276,3 +276,33 @@ nav.breadcrumb{display:block!important;background:transparent!important;border:0
   .case01-reel-copy span{font-size:.64rem}
 }
 @media(prefers-reduced-motion:reduce){.case01-reel-card{transition:none}}
+
+
+/* Shared Swad identity watermark across all case-study title areas */
+.swad-case-hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+.swad-case-hero::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  pointer-events:none;
+  top:50%;
+  right:2%;
+  width:clamp(150px,23vw,280px);
+  height:clamp(110px,15vw,180px);
+  transform:translateY(-50%);
+  background:url("../../media/logos/swad-logo.png") center/contain no-repeat;
+  opacity:.035;
+  filter:grayscale(1);
+}
+@media(max-width:560px){
+  .swad-case-hero::before{
+    right:0;
+    width:clamp(125px,42vw,190px);
+    height:110px;
+    opacity:.025;
+  }
+}
