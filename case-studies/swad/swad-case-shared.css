@@ -197,7 +197,7 @@ nav.breadcrumb{display:block!important;background:transparent!important;border:0
   z-index:-1;
   background:url("../../media/swad.jpeg") center/220px auto repeat;
   filter:invert(1);
-  opacity:.045;
+  opacity:.07;
   mix-blend-mode:multiply;
   pointer-events:none;
 }
