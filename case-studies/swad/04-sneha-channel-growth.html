@@ -141,6 +141,74 @@ if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');
 n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
 })();
 </script>
+
+<script>
+/* Swad output carousel: slow seamless loop with a 10-second interaction pause. */
+(function(){
+  var carousel=document.querySelector('[data-output-carousel]');
+  if(!carousel) return;
+  var track=carousel.querySelector('.output-carousel-track');
+  if(!track) return;
+
+  var reduceMotion=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduceMotion) return;
+
+  var originals=Array.prototype.slice.call(track.children);
+  if(originals.length<2) return;
+
+  var clones=document.createDocumentFragment();
+  originals.forEach(function(card){
+    var clone=card.cloneNode(true);
+    clone.setAttribute('aria-hidden','true');
+    clone.setAttribute('tabindex','-1');
+    clone.querySelectorAll('a,button,[tabindex]').forEach(function(el){
+      el.setAttribute('tabindex','-1');
+    });
+    clones.appendChild(clone);
+  });
+  track.appendChild(clones);
+
+  track.style.scrollSnapType='none';
+  track.style.scrollBehavior='auto';
+
+  var firstClone=track.children[originals.length];
+  var loopDistance=firstClone.offsetLeft-track.children[0].offsetLeft;
+  var pausedUntil=0;
+  var lastTime=0;
+  var speed=18;
+  var pauseDuration=10000;
+
+  function pauseForInteraction(){
+    pausedUntil=performance.now()+pauseDuration;
+  }
+
+  carousel.addEventListener('pointerdown',pauseForInteraction,true);
+  carousel.addEventListener('click',pauseForInteraction,true);
+  carousel.addEventListener('focusin',pauseForInteraction,true);
+  carousel.addEventListener('keydown',pauseForInteraction,true);
+
+  document.addEventListener('visibilitychange',function(){
+    lastTime=0;
+  });
+
+  function animate(now){
+    if(!lastTime) lastTime=now;
+    var elapsed=Math.min(now-lastTime,50);
+    lastTime=now;
+
+    if(!document.hidden && now>=pausedUntil && loopDistance>0){
+      track.scrollLeft+=elapsed*speed/1000;
+      if(track.scrollLeft>=loopDistance){
+        track.scrollLeft-=loopDistance;
+      }
+    }
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+})();
+</script>
+
 <script src="lightbox.js" defer></script>
 <script src="../../media/portfolio-animate.js" defer></script>
 </body>
