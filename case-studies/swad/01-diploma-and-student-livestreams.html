@@ -230,6 +230,7 @@ n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(
   originals.forEach(function(card){
     var clone=card.cloneNode(true);
     clone.setAttribute('aria-hidden','true');
+    clone.setAttribute('tabindex','-1');
     clone.querySelectorAll('a,button,[tabindex]').forEach(function(el){
       el.setAttribute('tabindex','-1');
     });
