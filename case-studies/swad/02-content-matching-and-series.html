@@ -14,14 +14,40 @@
 <meta property="og:image" content="https://img.youtube.com/vi/TSZFW12DaaY/hqdefault.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <style>
-.evidence-table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
-.evidence-table{min-width:620px}
 .case02-playlist-anchors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;align-items:start}
 .case02-playlist-anchors .student-livestream-anchor{margin:1rem 0}
 .chef-watch-link{display:inline-flex;align-items:center;gap:.65rem;margin:.15rem 0 1.1rem;padding:.72rem 1rem;border:1px solid rgba(157,78,58,.38);border-radius:999px;background:linear-gradient(110deg,rgba(190,104,78,.16),rgba(232,190,151,.28));color:var(--ink,#34251f);font-weight:700;text-decoration:none;box-shadow:0 5px 16px rgba(92,54,38,.08);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
 .chef-watch-link::before{content:"▶";display:grid;place-items:center;width:1.65rem;height:1.65rem;border-radius:50%;background:#9d4e3a;color:#fff;font-size:.68rem}
 .chef-watch-link::after{content:"↗";font-size:1rem;color:#9d4e3a}
 .chef-watch-link:hover,.chef-watch-link:focus-visible{transform:translateY(-2px);border-color:#9d4e3a;box-shadow:0 9px 22px rgba(92,54,38,.15);outline-offset:3px}
+
+/* Case 02 evidence: editorial split-panel, inspired by Case 05's recovery layout */
+.case02-evidence{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;padding:26px;border:1px solid rgba(157,78,58,.18);border-radius:20px;background:linear-gradient(115deg,rgba(194,65,12,.09),rgba(157,58,114,.10) 68%,rgba(255,255,255,.72))}
+.case02-evidence::before{content:"";position:absolute;inset:0;z-index:-1;background:url("../../media/swad.jpeg") center/220px auto repeat;filter:invert(1);opacity:.055;mix-blend-mode:multiply;pointer-events:none}
+.case02-evidence-main{display:flex;flex-direction:column;gap:14px;min-width:0}
+.case02-evidence-lead{padding:23px;border:1px solid rgba(157,78,58,.18);border-radius:16px;background:rgba(255,255,255,.78)}
+.case02-evidence-lead .section-label{margin-bottom:9px}
+.case02-evidence-lead h3{margin:0 0 8px;font-size:clamp(22px,3vw,30px)}
+.case02-evidence-lead p{margin:0;color:var(--muted,#5a5a5a);font-size:14px;line-height:1.65}
+.case02-evidence-total{display:flex;align-items:baseline;gap:8px;margin-top:17px}
+.case02-evidence-total strong{font:clamp(42px,6vw,58px)/.9 "Bebas Neue",sans-serif;color:var(--cta1,#c2410c)}
+.case02-evidence-total span{font-size:12px;color:var(--muted,#5a5a5a)}
+.case02-proof-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.case02-proof-card{min-width:0;padding:15px;border:1px solid rgba(157,78,58,.16);border-radius:13px;background:rgba(255,255,255,.86)}
+.case02-proof-card span{display:block;color:var(--muted,#6b625c);font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+.case02-proof-card strong{display:block;margin:7px 0 4px;font:27px/1 "Bebas Neue",sans-serif;color:var(--cta1,#c2410c)}
+.case02-proof-card p{margin:0;font-size:12px;line-height:1.45}
+.case02-evidence-side{display:flex;flex-direction:column;gap:10px;min-width:0}
+.case02-evidence-side h3{margin:2px 0 4px;font-size:20px}
+.case02-evidence-item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;padding:15px 16px;border:1px solid rgba(157,78,58,.16);border-radius:13px;background:rgba(255,255,255,.86);color:inherit;text-decoration:none;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.case02-evidence-item:hover,.case02-evidence-item:focus-visible{transform:translateY(-2px);border-color:rgba(157,78,58,.55);box-shadow:0 8px 18px rgba(92,54,38,.09);outline-offset:3px}
+.case02-evidence-item small{display:block;margin-bottom:4px;color:var(--muted,#75685f);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.case02-evidence-item strong{display:block;font-size:14px;line-height:1.35}
+.case02-evidence-item em{display:block;margin-top:4px;color:var(--muted,#6b625c);font-size:11px;font-style:normal}
+.case02-evidence-arrow{align-self:center;color:var(--cta1,#c2410c);font-size:18px}
+.case02-evidence-foot{margin:14px 0 0;color:var(--muted,#6b625c);font-size:12px;line-height:1.5}
+@media(max-width:760px){.case02-evidence{grid-template-columns:1fr;padding:17px;gap:16px}.case02-evidence-lead{padding:19px}.case02-evidence-item{padding:13px}.case02-proof-card{padding:13px}}
+@media(max-width:390px){.case02-proof-grid{grid-template-columns:1fr}.case02-evidence-item{grid-template-columns:minmax(0,1fr) auto;gap:8px}}
 @media(max-width:700px){.case02-playlist-anchors{grid-template-columns:1fr}.chef-watch-link{max-width:100%;font-size:.92rem}}
 </style>
 </head>
@@ -98,20 +124,39 @@
 </div>
 <button type="button" class="carousel-btn next" aria-label="Next">&#8594;</button>
 </div>
-<h3>Selected evidence</h3>
-<div class="evidence-table-wrap"><table class="evidence-table">
-<thead><tr><th>Type</th><th>Example</th><th>Notes</th></tr></thead>
-<tbody>
-<tr><td>Host fit · Sneha</td><td><a href="https://www.youtube.com/watch?v=XFrYxCHxDaY" target="_blank" rel="noopener noreferrer">Kitchen tools &amp; cookware ↗</a></td><td>~115K views at the time</td></tr>
-<tr><td>How to Store</td><td><a href="https://www.youtube.com/watch?v=AECAXMC11Xk" target="_blank" rel="noopener noreferrer">Mangoes / freeze / pulp ↗</a></td><td>~359K views at the time</td></tr>
-<tr><td>How to Store</td><td><a href="https://www.youtube.com/watch?v=SCvVo1BwsJo" target="_blank" rel="noopener noreferrer">Dry masala ↗</a></td><td>~233K views at the time</td></tr>
-<tr><td>How to Store</td><td><a href="https://www.youtube.com/watch?v=TtQs5bkTtyw" target="_blank" rel="noopener noreferrer">Green chilli paste / lemon juice / peas ↗</a></td><td>~208K views at the time</td></tr>
-<tr><td>How to Store</td><td><a href="https://www.youtube.com/watch?v=Of_AL5sR9rU" target="_blank" rel="noopener noreferrer">Green leaves / mint ↗</a></td><td>~133K views at the time</td></tr>
-<tr><td>Clearer method</td><td><a href="https://www.youtube.com/live/TSZFW12DaaY" target="_blank" rel="noopener noreferrer">Ghee-making live ↗</a></td><td>Familiar topic, easier method</td></tr>
-<tr><td>Series</td><td><a href="https://www.youtube.com/watch?v=QV0aMwU_iSg&amp;list=PLxc6zX4m_IJCL4HWTQe80DUOZ5ugmlDIZ" target="_blank" rel="noopener noreferrer">Monday Mistake playlist ↗</a></td><td>Recurring series on common kitchen mistakes</td></tr>
-<tr><td>Short-form promo</td><td><a href="https://www.instagram.com/reel/DGQccY9qiIe/" target="_blank" rel="noopener noreferrer">Basic Cooking Reel ↗</a></td><td>Humour-led course-facing support</td></tr>
-</tbody>
-</table></div>
+<h3>Evidence in practice</h3>
+<div class="case02-evidence">
+<div class="case02-evidence-main">
+<div class="case02-evidence-lead">
+<p class="section-label">Repeatable format · How to Store</p>
+<h3>Everyday questions, useful answers</h3>
+<p>Four examples from the series show how familiar kitchen questions became practical, repeatable videos.</p>
+<div class="case02-evidence-total"><strong>359K</strong><span>highest views among these examples · at the time</span></div>
+</div>
+<div class="case02-proof-grid">
+<div class="case02-proof-card"><span>How to Store</span><strong>359K</strong><p>Mangoes, freezing and pulp</p></div>
+<div class="case02-proof-card"><span>How to Store</span><strong>233K</strong><p>Dry masala</p></div>
+<div class="case02-proof-card"><span>How to Store</span><strong>208K</strong><p>Green chilli paste, lemon juice and peas</p></div>
+<div class="case02-proof-card"><span>How to Store</span><strong>133K</strong><p>Green leaves and mint</p></div>
+</div>
+<p class="case02-evidence-foot">View counts are approximate and reflect the figures recorded at the time of this work.</p>
+</div>
+<div class="case02-evidence-side">
+<h3>Other formats, in action</h3>
+<a class="case02-evidence-item" href="https://www.youtube.com/watch?v=XFrYxCHxDaY" target="_blank" rel="noopener noreferrer">
+<span><small>Host fit · Chef Sneha</small><strong>Kitchen tools &amp; cookware</strong><em>Standalone practical live · ~115K views at the time</em></span><span class="case02-evidence-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="case02-evidence-item" href="https://www.youtube.com/live/TSZFW12DaaY" target="_blank" rel="noopener noreferrer">
+<span><small>Clearer method</small><strong>Ghee-making live</strong><em>A familiar topic, explained through an easier method</em></span><span class="case02-evidence-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="case02-evidence-item" href="https://www.youtube.com/watch?v=QV0aMwU_iSg&amp;list=PLxc6zX4m_IJCL4HWTQe80DUOZ5ugmlDIZ" target="_blank" rel="noopener noreferrer">
+<span><small>Recurring series</small><strong>Monday Mistake</strong><em>Common kitchen mistakes, brought into a repeatable format</em></span><span class="case02-evidence-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="case02-evidence-item" href="https://www.instagram.com/reel/DGQccY9qiIe/" target="_blank" rel="noopener noreferrer">
+<span><small>Short-form promo</small><strong>Basic Cooking Reel</strong><em>Humour-led, course-facing support</em></span><span class="case02-evidence-arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
 <p class="section-intro">Open the full series and supporting content:</p>
 <div class="case02-playlist-anchors">
 <figure class="student-livestream-anchor">
