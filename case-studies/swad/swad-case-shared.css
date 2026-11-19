@@ -164,3 +164,16 @@ nav.breadcrumb{display:block!important;background:transparent!important;border:0
   font-size:.8rem;
   line-height:1.5;
 }
+
+
+/* YouTube output carousel badge */
+.youtube-badge{
+  display:inline-block;
+  font-size:.65rem;
+  font-weight:700;
+  padding:.1rem .35rem;
+  border-radius:4px;
+  background:#c00;
+  color:#fff;
+  margin-right:.25rem;
+}
