@@ -113,3 +113,29 @@ nav.breadcrumb{display:block!important;background:transparent!important;border:0
 .case-teaser:hover,.next-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(20,20,20,.09)}
 .output-card{transition:transform .25s ease,box-shadow .25s ease}
 .output-card:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(20,20,20,.08)}
+
+
+/* Swad editorial highlight patch — shared treatment, matching Case 05 */
+.swad-doodle-patch{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:linear-gradient(115deg,rgba(194,65,12,.10),rgba(157,58,114,.12) 68%,rgba(255,255,255,.68))!important;
+  border:1px solid rgba(157,58,114,.18)!important;
+  border-radius:20px;
+  padding:1.5rem 1.35rem;
+}
+.swad-doodle-patch::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:url("../../media/swad.jpeg") center/220px auto repeat;
+  filter:invert(1);
+  opacity:.07;
+  mix-blend-mode:multiply;
+  pointer-events:none;
+}
+@media(max-width:560px){
+  .swad-doodle-patch{padding:1.15rem .95rem}
+}
