@@ -154,7 +154,21 @@
 
 
 /* Final visual polish: keep the Swad watermark, remove decorative circle motifs. */
-.case06-page .case-hero:before,
+.case06-page .case-hero.swad-case-hero:before{
+  content:"";
+  display:block;
+  position:absolute;
+  z-index:-1;
+  pointer-events:none;
+  top:50%;
+  right:2%;
+  width:clamp(150px,23vw,280px);
+  height:clamp(110px,15vw,180px);
+  transform:translateY(-50%);
+  background:url("../../media/logos/swad-logo.png") center/contain no-repeat;
+  opacity:.035;
+  filter:grayscale(1);
+}
 .case06-page .case06-snapshot-item:after,
 .case06-page .case06-recommendation:after{
   content:none;
