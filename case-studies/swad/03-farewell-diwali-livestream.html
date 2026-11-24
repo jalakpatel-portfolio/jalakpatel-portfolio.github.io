@@ -16,23 +16,31 @@
 .video-fallback img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:.55}
 .video-fallback span{position:relative;z-index:1;font-weight:700;font-size:.95rem;background:rgba(0,0,0,.55);padding:.55rem 1rem;border-radius:999px}
 
-/* Case 03: one focused editorial patch with a single Swad doodle */
-.case03-production-patch{position:relative;isolation:isolate;overflow:hidden;margin:1.2rem 0 1.4rem;padding:1.35rem;border-radius:20px;background:linear-gradient(115deg,rgba(194,65,12,.10),rgba(157,58,114,.12) 68%,rgba(255,255,255,.72));border:1px solid rgba(157,58,114,.2)}
-.case03-production-patch:before{content:"";position:absolute;z-index:-1;right:1rem;top:50%;width:clamp(100px,16vw,170px);height:clamp(100px,16vw,170px);transform:translateY(-50%);background:url("../../media/swad.jpeg") center/contain no-repeat;opacity:.10;filter:invert(1);pointer-events:none}
-.case03-production-patch .case03-patch-title{margin:0 0 .35rem;max-width:720px}
-.case03-production-patch .case03-patch-intro{margin:0 0 1rem;max-width:720px;color:var(--muted);font-size:.9rem;line-height:1.55}
-.case03-production-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.55rem;position:relative}
-.case03-production-stage{position:relative;min-width:0;padding:.8rem .7rem;background:rgba(255,255,255,.82);border:1px solid rgba(157,78,58,.18);border-radius:12px}
-.case03-production-stage:not(:last-child):after{content:"";position:absolute;z-index:2;right:-.43rem;top:1.25rem;width:.42rem;height:.42rem;border-top:1.5px solid var(--cta2);border-right:1.5px solid var(--cta2);transform:rotate(45deg)}
-.case03-production-stage small{display:block;margin-bottom:.45rem;color:var(--cta1);font-size:.62rem;font-weight:700;letter-spacing:.1em}
-.case03-production-stage strong{display:block;margin-bottom:.35rem;font-size:.78rem;line-height:1.3}
-.case03-production-stage span{display:block;color:var(--muted);font-size:.68rem;line-height:1.45}
-.case03-menu-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:1.1rem 0 1.25rem}
-.case03-menu-card{min-width:0;padding:1rem 1.05rem;border:1px solid rgba(157,78,58,.17);border-radius:14px;background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(248,239,231,.82))}
-.case03-menu-card strong{display:block;margin-bottom:.45rem;color:var(--cta1);font-size:.85rem}
-.case03-menu-card p{margin:0;font-size:.82rem;line-height:1.65}
-.case03-menu-card:last-child{grid-column:1/-1;background:linear-gradient(110deg,rgba(194,65,12,.08),rgba(157,58,114,.10))}
-@media(max-width:760px){.case03-production-flow{grid-template-columns:1fr;gap:.5rem}.case03-production-stage{padding:.75rem .85rem}.case03-production-stage:not(:last-child):after{right:auto;left:1.15rem;top:auto;bottom:-.34rem;transform:rotate(135deg)}.case03-production-patch:before{right:.35rem;top:.8rem;transform:none;width:90px;height:90px;opacity:.07}.case03-menu-board{grid-template-columns:1fr}.case03-menu-card:last-child{grid-column:auto}}
+/* Case 03 refinements: preserve Swad theme, one fitted doodle, restrained motion */
+.case03-production-patch{position:relative;margin:1.2rem 0 1.4rem}
+.case03-production-patch.swad-doodle-patch::before{inset:auto 1.2rem 1rem auto;width:clamp(105px,15vw,150px);height:clamp(105px,15vw,150px);background:url("../../media/swad.jpeg") right bottom/contain no-repeat;opacity:.09;filter:invert(1);mix-blend-mode:multiply}
+.case03-patch-title{position:relative;max-width:620px;margin:0 0 .35rem;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.35rem,2.5vw,1.75rem);line-height:1.15}
+.case03-patch-intro{position:relative;max-width:620px;margin:0 0 1.2rem;color:var(--muted);font-size:.9rem;line-height:1.55}
+.case03-production-flow{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;position:relative}
+.case03-production-stage{position:relative;min-width:0;padding:.9rem 1rem;background:rgba(255,255,255,.82);border:1px solid rgba(157,78,58,.18);border-radius:12px;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.case03-production-stage:hover{transform:translateY(-2px);border-color:rgba(194,65,12,.36);box-shadow:0 8px 20px rgba(20,20,20,.05)}
+.case03-production-stage:last-child{grid-column:1/-1;background:rgba(255,255,255,.9);border-left:3px solid var(--cta2)}
+.case03-production-stage small{display:block;margin-bottom:.4rem;color:var(--cta1);font-size:.65rem;font-weight:700;letter-spacing:.1em}
+.case03-production-stage strong{display:block;margin-bottom:.3rem;font-size:.88rem;line-height:1.3}
+.case03-production-stage span{display:block;max-width:34rem;color:var(--muted);font-size:.78rem;line-height:1.5}
+.case03-menu-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:1.1rem 0 1.25rem;align-items:stretch}
+.case03-menu-card{min-width:0;padding:1.05rem 1.1rem;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.82);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.case03-menu-card:hover{transform:translateY(-2px);border-color:rgba(194,65,12,.32);box-shadow:0 8px 20px rgba(20,20,20,.05)}
+.case03-menu-card strong{display:block;margin-bottom:.55rem;padding-bottom:.45rem;border-bottom:1px solid rgba(157,78,58,.16);color:var(--cta1);font-size:.82rem;letter-spacing:.02em}
+.case03-menu-card p{margin:0;font-size:.82rem;line-height:1.7}
+.case03-menu-card:last-child{grid-column:1/-1;background:linear-gradient(110deg,rgba(194,65,12,.08),rgba(157,58,114,.10));border-color:rgba(157,58,114,.2)}
+.case03-menu-card:last-child strong{border-color:rgba(157,58,114,.22)}
+.case03-menu-card:last-child p{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:.02em}
+.case03-subheading{font-family:'Space Grotesk',system-ui,sans-serif;font-size:.9rem;font-weight:700;margin:1.1rem 0 .35rem;color:var(--text)}
+.case03-video-note{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;margin:.4rem 0 1rem;padding:.8rem 1rem;background:#f7f3ec;border:1px solid var(--border);border-radius:12px;font-size:.82rem;color:var(--muted)}
+.case03-video-note strong{color:var(--text)}
+@media(max-width:620px){.case03-production-flow,.case03-menu-board{grid-template-columns:1fr}.case03-production-stage:last-child,.case03-menu-card:last-child{grid-column:auto}.case03-production-patch.swad-doodle-patch::before{right:.5rem;bottom:.5rem;width:82px;height:82px;opacity:.07}}
+@media(prefers-reduced-motion:reduce){.case03-production-stage,.case03-menu-card{transition:none}.case03-production-stage:hover,.case03-menu-card:hover{transform:none;box-shadow:none}}
 
 </style>
 </head>
@@ -72,19 +80,22 @@
 <section class="section">
 <p class="section-label">Execution</p>
 <h2>Turning separate ideas into one live format</h2>
+<p class="section-intro">I shaped the menu and running order before the event, then coordinated the flow from behind the camera once the stream began.</p>
 <div class="case03-production-patch swad-doodle-patch" aria-label="Five stages of the Diwali livestream production">
 <h3 class="case03-patch-title">From separate chef ideas to one continuous live</h3>
 <p class="case03-patch-intro">The production moved through five connected stages. I coordinated the editorial plan and live flow with the chefs and wider team.</p>
 <div class="case03-production-flow">
-<div class="case03-production-stage"><small>01 · PLAN</small><strong>Menu development</strong><span>Recipe pool, primary and backup dishes, no repeats, chef strengths and festive fit.</span></div>
-<div class="case03-production-stage"><small>02 · STRUCTURE</small><strong>Run-of-show</strong><span>Course order, balanced screen time, chef timers and handoff buffers.</span></div>
-<div class="case03-production-stage"><small>03 · PREPARE</small><strong>Pre-live readiness</strong><span>Kitchen mise en place, social stories, broadcast path, thumbnail and title.</span></div>
-<div class="case03-production-stage"><small>04 · DIRECT</small><strong>Live coordination</strong><span>Chef order, transitions and team support across the stream setup.</span></div>
-<div class="case03-production-stage"><small>05 · CONNECT</small><strong>Audience and recovery</strong><span>Live-chat questions, kitchen communication and an unexpected host change.</span></div>
+<div class="case03-production-stage fade-up"><small>01 · PLAN</small><strong>Menu development</strong><span>Recipe pool, primary and backup dishes, no repeats, chef strengths and festive fit.</span></div>
+<div class="case03-production-stage fade-up"><small>02 · STRUCTURE</small><strong>Run-of-show</strong><span>Course order, balanced screen time, chef timers and handoff buffers.</span></div>
+<div class="case03-production-stage fade-up"><small>03 · PREPARE</small><strong>Pre-live readiness</strong><span>Kitchen mise en place, social stories, broadcast path, thumbnail and title.</span></div>
+<div class="case03-production-stage fade-up"><small>04 · DIRECT</small><strong>Live coordination</strong><span>Chef order, transitions and team support across the stream setup.</span></div>
+<div class="case03-production-stage fade-up"><small>05 · CONNECT</small><strong>Audience and recovery</strong><span>Live-chat questions, kitchen communication and an unexpected host change.</span></div>
 </div>
 </div>
+<h3 class="case03-subheading">Planning the menu and running order</h3>
 <p>I gathered a wider pool of dish ideas, then planned a primary recipe and a backup with each chef. I checked for repeated dishes, Diwali and YouTube fit, and negotiated changes when ideas clashed.</p>
 <p>I built the run-of-show around variety and attention across a long session. I balanced screen time, placed starters and smaller plates before desserts, and set a timer for each chef. On the day, I directed the order of appearances and handoffs. We planned to start in the early afternoon, and the live ran about 35 minutes longer than planned.</p>
+<h3 class="case03-subheading">Directing the live and connecting the audience</h3>
 <p>I prepared the pre-live promotion across the broadcast path and social stories, and worked on the thumbnail and title. Behind the camera, I stayed as the bridge between the kitchen and live chat, answering common questions during mixing, cooking and waiting time and passing relevant ones to the chef on screen.</p>
 <p>The live operations were a team effort. I supported the setup across the phone stream, MacBook, power, cooling and microphone rather than treating the technical side as a solo job.</p>
 <p>One segment needed a change in the moment. It was Chef Siddhant's first appearance on Swad's YouTube channel, and we had planned it with Chef Rakhi to help him settle in. Rakhi had to leave midway through the recipe. I supported Siddhant by explaining the method and handling viewer questions using my bakery knowledge, so the segment could continue.</p>
@@ -93,12 +104,12 @@
 <p class="section-label">Menu</p>
 <h2>A full festive grazing-table menu</h2>
 <div class="case03-menu-board" aria-label="Diwali menu grouped by chef">
-<div class="case03-menu-card"><strong>Chef Sneha</strong><p>Mushroom and water chestnut vol-au-vent<br>Smoky chilli cheese spinach vol-au-vent<br>Kunafa vol-au-vent with pistachio matcha drink<br>Lemon rice and cheesy curry cups</p></div>
-<div class="case03-menu-card"><strong>Chef Maya</strong><p>Mushroom ricotta phyllo cups<br>Paneer molletes<br>Avocado coconut mousse</p></div>
-<div class="case03-menu-card"><strong>Chef Jeni</strong><p>Broccoli paneer kebabs with cheesy sauce<br>Cheesy Schezwan fritters on tostadas<br>Tandoori chole khichiya bites<br>Paan shots</p></div>
-<div class="case03-menu-card"><strong>Chef Rakhi and Chef Siddhant</strong><p>Chocolate chip cookie sticks<br>Churros<br>Dessert dips: salted caramel, coffee chocolate, pistachio and berry cream</p></div>
-<div class="case03-menu-card"><strong>Chef Vinay</strong><p>Paneer Changezi cones<br>Labneh balls</p></div>
-<div class="case03-menu-card"><strong>Finale</strong><p>Full Indian grazing-table assembly and close</p></div>
+<div class="case03-menu-card fade-up"><strong>01 / Chef Sneha</strong><p>Mushroom and water chestnut vol-au-vent<br>Smoky chilli cheese spinach vol-au-vent<br>Kunafa vol-au-vent with pistachio matcha drink<br>Lemon rice and cheesy curry cups</p></div>
+<div class="case03-menu-card fade-up"><strong>02 / Chef Maya</strong><p>Mushroom ricotta phyllo cups<br>Paneer molletes<br>Avocado coconut mousse</p></div>
+<div class="case03-menu-card fade-up"><strong>03 / Chef Jeni</strong><p>Broccoli paneer kebabs with cheesy sauce<br>Cheesy Schezwan fritters on tostadas<br>Tandoori chole khichiya bites<br>Paan shots</p></div>
+<div class="case03-menu-card fade-up"><strong>04 / Chefs Rakhi and Siddhant</strong><p>Chocolate chip cookie sticks<br>Churros<br>Dessert dips: salted caramel, coffee chocolate, pistachio and berry cream</p></div>
+<div class="case03-menu-card fade-up"><strong>05 / Chef Vinay</strong><p>Paneer Changezi cones<br>Labneh balls</p></div>
+<div class="case03-menu-card fade-up"><strong>06 / Finale</strong><p>Full Indian grazing-table assembly and close</p></div>
 </div>
 <p>Dish assignments also followed each chef's strengths. Vinay and Siddhant were newer faces for the Swad YouTube audience, so the format gave viewers a chance to see more of the teaching team.</p>
 </section>
@@ -109,7 +120,8 @@
 <iframe src="https://www.youtube.com/embed/iq4zUfLHD1I" title="Swad Diwali multi-chef livestream, 15 October 2025" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
 </div>
 <p style="margin-top:.5rem"><a href="https://www.youtube.com/watch?v=iq4zUfLHD1I" target="_blank" rel="noopener noreferrer">Watch the full Diwali livestream on YouTube →</a></p>
-<p>The archived stream has about 70K views and 1,164 likes. The live format brought six chefs together for more than five hours, with the menu moving from savoury party plates to desserts and the final grazing-table assembly.</p>
+<div class="case03-video-note"><span><strong>15 October 2025</strong> · Published livestream</span><span><strong>~70K views</strong></span><span><strong>~1,164 likes</strong></span></div>
+<p>The live format brought six chefs together for more than five hours, with the menu moving from savoury party plates to desserts and the final grazing-table assembly.</p>
 </section>
 <section class="section">
 <p class="section-label">Takeaway</p>
