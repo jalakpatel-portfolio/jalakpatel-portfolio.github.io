@@ -16,30 +16,38 @@
 .video-fallback img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:.55}
 .video-fallback span{position:relative;z-index:1;font-weight:700;font-size:.95rem;background:rgba(0,0,0,.55);padding:.55rem 1rem;border-radius:999px}
 
-/* Case 03 refinements: preserve Swad theme, one fitted doodle, restrained motion */
-.case03-production-patch{position:relative;margin:1.2rem 0 1.4rem}
-.case03-production-patch.swad-doodle-patch::before{inset:auto 1.2rem 1rem auto;width:clamp(105px,15vw,150px);height:clamp(105px,15vw,150px);background:url("../../media/swad.jpeg") right bottom/contain no-repeat;opacity:.09;filter:invert(1);mix-blend-mode:multiply}
-.case03-patch-title{position:relative;max-width:620px;margin:0 0 .35rem;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.35rem,2.5vw,1.75rem);line-height:1.15}
-.case03-patch-intro{position:relative;max-width:620px;margin:0 0 1.2rem;color:var(--muted);font-size:.9rem;line-height:1.55}
-.case03-production-flow{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;position:relative}
-.case03-production-stage{position:relative;min-width:0;padding:.9rem 1rem;background:rgba(255,255,255,.82);border:1px solid rgba(157,78,58,.18);border-radius:12px;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
-.case03-production-stage:hover{transform:translateY(-2px);border-color:rgba(194,65,12,.36);box-shadow:0 8px 20px rgba(20,20,20,.05)}
-.case03-production-stage:last-child{grid-column:1/-1;background:rgba(255,255,255,.9);border-left:3px solid var(--cta2)}
-.case03-production-stage small{display:block;margin-bottom:.4rem;color:var(--cta1);font-size:.65rem;font-weight:700;letter-spacing:.1em}
-.case03-production-stage strong{display:block;margin-bottom:.3rem;font-size:.88rem;line-height:1.3}
-.case03-production-stage span{display:block;max-width:34rem;color:var(--muted);font-size:.78rem;line-height:1.5}
-.case03-menu-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:1.1rem 0 1.25rem;align-items:stretch}
-.case03-menu-card{min-width:0;padding:1.05rem 1.1rem;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.82);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
-.case03-menu-card:hover{transform:translateY(-2px);border-color:rgba(194,65,12,.32);box-shadow:0 8px 20px rgba(20,20,20,.05)}
-.case03-menu-card strong{display:block;margin-bottom:.55rem;padding-bottom:.45rem;border-bottom:1px solid rgba(157,78,58,.16);color:var(--cta1);font-size:.82rem;letter-spacing:.02em}
-.case03-menu-card p{margin:0;font-size:.82rem;line-height:1.7}
-.case03-menu-card:last-child{grid-column:1/-1;background:linear-gradient(110deg,rgba(194,65,12,.08),rgba(157,58,114,.10));border-color:rgba(157,58,114,.2)}
-.case03-menu-card:last-child strong{border-color:rgba(157,58,114,.22)}
-.case03-menu-card:last-child p{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:.02em}
+/* Case 03: live-production pathway, visible fitted doodle and editorial menu */
+.case03-production-patch{position:relative;margin:1.2rem 0 1.4rem;isolation:isolate}
+.case03-production-patch.swad-doodle-patch::before{content:"";position:absolute;z-index:0;inset:auto 1.1rem .8rem auto;width:clamp(155px,23vw,220px);height:clamp(155px,23vw,220px);background:url("../../media/swad.jpeg") right bottom/contain no-repeat;opacity:.17;filter:invert(1);mix-blend-mode:multiply;pointer-events:none}
+.case03-patch-title,.case03-patch-intro,.case03-production-flow{position:relative;z-index:1}
+.case03-patch-title{max-width:620px;margin:0 0 .35rem;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.35rem,2.5vw,1.75rem);line-height:1.15}
+.case03-patch-intro{max-width:620px;margin:0 0 1.2rem;color:var(--muted);font-size:.9rem;line-height:1.55}
+.case03-production-flow{display:grid;grid-template-columns:1fr;gap:.7rem;padding-left:2.1rem}
+.case03-production-flow::before{content:"";position:absolute;left:.79rem;top:1.1rem;bottom:1.1rem;width:2px;background:linear-gradient(180deg,var(--cta1),var(--cta2));opacity:.48}
+.case03-production-stage{position:relative;min-width:0;padding:.9rem 1rem .95rem 1.15rem;background:rgba(255,255,255,.88);border:1px solid rgba(157,78,58,.2);border-radius:13px;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.case03-production-stage::before{content:"";position:absolute;left:-1.91rem;top:1.05rem;width:13px;height:13px;border:3px solid #F7F4EF;border-radius:50%;background:var(--cta1);box-shadow:0 0 0 1px rgba(194,65,12,.3)}
+.case03-production-stage:nth-child(2)::before{background:#bd5a32}
+.case03-production-stage:nth-child(3)::before{background:#ad4b58}
+.case03-production-stage:nth-child(4)::before{background:#a04468}
+.case03-production-stage:nth-child(5)::before{background:var(--cta2)}
+.case03-production-stage:hover{transform:translateX(3px);border-color:rgba(194,65,12,.4);box-shadow:0 8px 20px rgba(20,20,20,.06)}
+.case03-production-stage small{display:block;margin-bottom:.35rem;color:var(--cta1);font-size:.65rem;font-weight:700;letter-spacing:.1em}
+.case03-production-stage strong{display:block;margin-bottom:.25rem;font-size:.9rem;line-height:1.3}
+.case03-production-stage span{display:block;max-width:38rem;color:var(--muted);font-size:.8rem;line-height:1.55}
+.case03-production-stage:last-child{border-left:3px solid var(--cta2);background:rgba(255,255,255,.94)}
+.case03-menu-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:1.1rem 0 1.25rem;align-items:stretch}
+.case03-menu-card{position:relative;min-width:0;padding:1.05rem 1.1rem 1.1rem;border:1px solid var(--border);border-radius:15px;background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(255,255,255,.78));transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.case03-menu-card:hover{transform:translateY(-2px);border-color:rgba(194,65,12,.36);box-shadow:0 8px 20px rgba(20,20,20,.06)}
+.case03-menu-card strong{display:flex;align-items:center;gap:.55rem;margin-bottom:.65rem;padding-bottom:.55rem;border-bottom:1px solid rgba(157,78,58,.18);color:var(--text);font-size:.84rem;letter-spacing:.01em}
+.case03-menu-card strong::first-letter{color:var(--cta1)}
+.case03-menu-card p{margin:0;font-size:.82rem;line-height:1.75;color:var(--muted)}
+.case03-menu-card:last-child{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1.25rem;background:linear-gradient(110deg,rgba(194,65,12,.10),rgba(157,58,114,.13));border-color:rgba(157,58,114,.24)}
+.case03-menu-card:last-child strong{flex:0 0 auto;margin:0;padding:0;border:0;color:var(--cta1)}
+.case03-menu-card:last-child p{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.1rem,2vw,1.4rem);letter-spacing:.025em;color:var(--text)}
 .case03-subheading{font-family:'Space Grotesk',system-ui,sans-serif;font-size:.9rem;font-weight:700;margin:1.1rem 0 .35rem;color:var(--text)}
 .case03-video-note{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;margin:.4rem 0 1rem;padding:.8rem 1rem;background:#f7f3ec;border:1px solid var(--border);border-radius:12px;font-size:.82rem;color:var(--muted)}
 .case03-video-note strong{color:var(--text)}
-@media(max-width:620px){.case03-production-flow,.case03-menu-board{grid-template-columns:1fr}.case03-production-stage:last-child,.case03-menu-card:last-child{grid-column:auto}.case03-production-patch.swad-doodle-patch::before{right:.5rem;bottom:.5rem;width:82px;height:82px;opacity:.07}}
+@media(max-width:620px){.case03-production-patch.swad-doodle-patch::before{right:.15rem;bottom:.35rem;width:125px;height:125px;opacity:.13}.case03-production-flow{padding-left:1.75rem}.case03-production-flow::before{left:.65rem}.case03-production-stage::before{left:-1.6rem}.case03-menu-board{grid-template-columns:1fr}.case03-menu-card:last-child{grid-column:auto;display:block}.case03-menu-card:last-child strong{margin-bottom:.4rem}.case03-menu-card:last-child p{font-size:1.2rem}}
 @media(prefers-reduced-motion:reduce){.case03-production-stage,.case03-menu-card{transition:none}.case03-production-stage:hover,.case03-menu-card:hover{transform:none;box-shadow:none}}
 
 </style>
@@ -83,7 +91,7 @@
 <p class="section-intro">I shaped the menu and running order before the event, then coordinated the flow from behind the camera once the stream began.</p>
 <div class="case03-production-patch swad-doodle-patch" aria-label="Five stages of the Diwali livestream production">
 <h3 class="case03-patch-title">From separate chef ideas to one continuous live</h3>
-<p class="case03-patch-intro">The production moved through five connected stages. I coordinated the editorial plan and live flow with the chefs and wider team.</p>
+<p class="case03-patch-intro">The production moved through five connected stages, from the first menu decisions to live audience support. I coordinated the editorial plan and live flow with the chefs and wider team.</p>
 <div class="case03-production-flow">
 <div class="case03-production-stage fade-up"><small>01 · PLAN</small><strong>Menu development</strong><span>Recipe pool, primary and backup dishes, no repeats, chef strengths and festive fit.</span></div>
 <div class="case03-production-stage fade-up"><small>02 · STRUCTURE</small><strong>Run-of-show</strong><span>Course order, balanced screen time, chef timers and handoff buffers.</span></div>
