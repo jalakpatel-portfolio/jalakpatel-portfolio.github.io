@@ -114,6 +114,30 @@
 }
 @media(prefers-reduced-motion:reduce){.case04-hero-image img{scroll-behavior:auto}}
 
+
+/* Small real-upload thumbnails add visual evidence to the middle strategy section. */
+#strategy .strategy-card{min-width:0}
+#strategy .strategy-thumb,#strategy .strategy-thumb-pair img{
+ display:block;width:112px;height:68px;object-fit:cover;border:1px solid var(--border);
+ border-radius:3px;background:#eee8df;box-shadow:3px 3px 0 rgba(194,65,12,.08)
+}
+#strategy .strategy-card:not(:nth-child(2)) .strategy-thumb{float:right;margin:.1rem 0 .55rem .8rem}
+#strategy .strategy-thumb-pair{display:flex;gap:.4rem;grid-column:1;grid-row:3;margin:.35rem 0 .55rem}
+#strategy .strategy-thumb-pair img{width:calc(50% - .2rem);height:62px}
+#strategy .strategy-card:nth-child(2) .strategy-number{grid-row:1}
+#strategy .strategy-card:nth-child(2) h3{grid-row:2}
+#strategy .strategy-card:nth-child(2) .calendar-steps{grid-column:2;grid-row:1/4;align-self:center}
+#evidence .photo-grid{grid-template-columns:minmax(0,560px);justify-content:start}
+#evidence .photo-grid img{aspect-ratio:16/9}
+@media(max-width:700px){
+ #strategy .strategy-thumb{width:96px;height:60px}
+ #strategy .strategy-thumb-pair{grid-column:1;grid-row:auto}
+ #strategy .strategy-card:nth-child(2) .calendar-steps{grid-column:1;grid-row:auto}
+}
+@media(max-width:560px){
+ #evidence .photo-grid{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
@@ -179,21 +203,25 @@
 <p class="section-intro">Four decisions shaped how we planned, packaged and produced the channel’s recorded catalogue.</p>
 <div class="strategy-grid">
 <article class="strategy-card">
+<img class="strategy-thumb" src="https://img.youtube.com/vi/Y4zSzxL2uw8/hqdefault.jpg" alt="White dhokla recipe video thumbnail" loading="lazy">
 <p class="strategy-number">01</p>
 <h3>Metadata as a system</h3>
 <p>I rebuilt titles, descriptions, tags and Hindi ingredient language, then improved them video by video. Early descriptions leaned on long keyword titles and bilingual ingredient lists. Later uploads used a clearer structure: a short about line, ingredients and method in parts, chef tips, a cleaner keyword block and hashtags.</p>
 </article>
 <article class="strategy-card">
+<div class="strategy-thumb-pair"><img src="https://img.youtube.com/vi/GS8HxGT2KLo/hqdefault.jpg" alt="Weekly meal planning Part 1 video thumbnail" loading="lazy"><img src="https://img.youtube.com/vi/iVIVdAZr0hc/hqdefault.jpg" alt="Weekly meal planning Part 2 video thumbnail" loading="lazy"></div>
 <p class="strategy-number">02</p>
 <h3>Calendar in advance</h3>
 <p class="calendar-steps"><span>At first we chose a recipe, shot and uploaded in the same week.</span><span>That was too tight. We moved to a one-month bank,</span><span>then to about two months of scheduled content so shoots and other work did not collide.</span></p>
 </article>
 <article class="strategy-card">
+<img class="strategy-thumb" src="https://img.youtube.com/vi/bx1Gr03WbKM/hqdefault.jpg" alt="Bombay ice halwa recipe video thumbnail" loading="lazy">
 <p class="strategy-number">03</p>
 <h3>A simple monthly mix</h3>
 <p>Across a month we aimed for one bakery or sweet, one authentic or basic recipe, one fried or snack item, and one unique piece or a recipe linked to an older upload. Season, festival and trend guided the choices.</p>
 </article>
 <article class="strategy-card">
+<img class="strategy-thumb" src="https://img.youtube.com/vi/l-6iYDeGOhk/hqdefault.jpg" alt="Tomato ketchup recipe video thumbnail" loading="lazy">
 <p class="strategy-number">04</p>
 <h3>Direction after the system held</h3>
 <p>Publishing and metadata came first. After about two to three months, when the Friday rhythm was stable, direction on set became part of every shoot. I focused on speech, angles, extra coverage, food presentation and final packaging.</p>
@@ -254,10 +282,6 @@
 <figure class="figure">
 <img class="zoom-trigger" src="../../media/swad/IMG-20250901-WA0002.jpg" alt="Production still from a Sneha channel shoot" loading="lazy">
 <figcaption>On-set production coverage during a recipe shoot.</figcaption>
-</figure>
-<figure class="figure">
-<img class="zoom-trigger" src="../../media/swad/DSC02610.JPG" alt="Studio kitchen production still" loading="lazy">
-<figcaption>Studio kitchen setup for recorded recipe production.</figcaption>
 </figure>
 </div>
 <p class="chip-row">
