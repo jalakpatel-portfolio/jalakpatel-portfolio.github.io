@@ -46,7 +46,7 @@
   border-bottom:1px solid var(--border);
 }
 .case04-hero-copy{min-width:0}
-.case04-hero h1{font-size:clamp(2.55rem,6.1vw,4.55rem);line-height:.94;max-width:11ch;letter-spacing:-.0.2px;margin:.35rem 0 1.15rem}
+.case04-hero h1{font-size:clamp(2.55rem,6.1vw,4.55rem);line-height:.94;max-width:11ch;letter-spacing:-.02em;margin:.35rem 0 1.15rem}
 .case04-hero .lede{font-size:1rem;line-height:1.72;max-width:38rem}
 .case04-hero .metric-row{gap:.45rem;margin-top:1.25rem}
 .case04-hero .metric-pill{border-radius:5px;background:rgba(255,255,255,.55);font-size:.73rem;padding:.42rem .62rem}
@@ -67,6 +67,9 @@
 #strategy .strategy-number{font-size:2.45rem;color:var(--cta1);opacity:.9}
 #strategy .strategy-card h3{font:1.55rem/1.05 'Bebas Neue',sans-serif;margin:.35rem 0 .6rem}
 #strategy .strategy-card p:last-child{font-size:.9rem;line-height:1.7}
+#strategy .calendar-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin:.2rem 0 0;max-width:none}
+#strategy .calendar-steps span{position:relative;display:block;padding:.8rem .75rem .15rem 0;border-top:2px solid rgba(194,65,12,.45);font-size:.83rem;line-height:1.55;color:var(--muted)}
+#strategy .calendar-steps span::before{content:"";position:absolute;top:-5px;left:0;width:8px;height:8px;border-radius:50%;background:var(--cta1)}
 #execution .phase-grid{gap:1.5rem;margin:1.4rem 0}
 #execution .phase-card{border:0;border-top:2px solid var(--cta1);border-radius:0;background:rgba(255,255,255,.42);padding:1.1rem 1.2rem}
 #execution .phase-card:nth-child(2){border-top-color:var(--cta2)}
@@ -76,9 +79,7 @@
 #evidence .figure{margin:1.2rem 0 1.6rem}
 #evidence .figure img{border:1px solid var(--border);border-radius:3px;box-shadow:0 12px 32px rgba(20,20,20,.07)}
 #evidence .photo-grid{grid-template-columns:1.15fr .85fr;align-items:start;gap:1rem;margin-top:1.3rem}
-#evidence .photo-grid figure:first-child{grid-row:span 2}
 #evidence .photo-grid img{aspect-ratio:4/3;border-radius:3px;object-fit:cover}
-#evidence .photo-grid figure:first-child img{aspect-ratio:3/4}
 #evidence figcaption{font-size:.74rem;line-height:1.5;color:var(--muted);padding:.55rem .1rem}
 #outputs .output-carousel{padding:0 2.5rem;margin-top:1.5rem}
 #outputs .output-card{border-radius:4px 4px 14px 4px;box-shadow:none}
@@ -95,6 +96,9 @@
  #strategy .strategy-card:nth-child(2){grid-template-columns:1fr;gap:.1rem;padding:1.05rem}
  #strategy .strategy-card:nth-child(2) .strategy-number,#strategy .strategy-card:nth-child(2) h3,#strategy .strategy-card:nth-child(2) p:last-child{grid-column:1;grid-row:auto}
  #strategy .strategy-card:nth-child(2) p:last-child{margin-top:.45rem}
+ #strategy .calendar-steps{grid-template-columns:1fr;gap:.6rem}
+ #strategy .calendar-steps span{padding:.45rem .2rem .1rem .9rem;border-top:0;border-left:2px solid rgba(194,65,12,.45)}
+ #strategy .calendar-steps span::before{top:.55rem;left:-5px}
 }
 @media(max-width:560px){
  #context .channel-compare{grid-template-columns:1fr}
@@ -182,7 +186,7 @@
 <article class="strategy-card">
 <p class="strategy-number">02</p>
 <h3>Calendar in advance</h3>
-<p>At first we chose a recipe, shot and uploaded in the same week. That was too tight. We moved to a one-month bank, then to about two months of scheduled content so shoots and other work did not collide.</p>
+<p class="calendar-steps"><span>At first we chose a recipe, shot and uploaded in the same week.</span><span>That was too tight. We moved to a one-month bank,</span><span>then to about two months of scheduled content so shoots and other work did not collide.</span></p>
 </article>
 <article class="strategy-card">
 <p class="strategy-number">03</p>
