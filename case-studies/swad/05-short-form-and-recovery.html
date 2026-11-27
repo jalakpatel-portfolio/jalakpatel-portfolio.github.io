@@ -13,10 +13,11 @@
 <style>
 /* Case 05: restore the approved editorial gradient and use the doodle as a quiet texture */
 .case05-doodle,.case05-patch{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(115deg,rgba(194,65,12,.10),rgba(157,58,114,.12) 68%,rgba(255,255,255,.68));border:1px solid rgba(157,58,114,.18);border-radius:20px}
-.case05-doodle::before,.case05-patch::before{content:"";position:absolute;inset:0;z-index:-1;background:url("../../media/swad.jpeg") center/100% 100% no-repeat;filter:invert(1);opacity:.07;mix-blend-mode:multiply;pointer-events:none}
+.case05-doodle::before,.case05-patch::before{content:"";position:absolute;inset:0;z-index:-1;background:url("../../media/swad.jpeg") center/100% 100% no-repeat;filter:invert(1);opacity:.035;mix-blend-mode:multiply;pointer-events:none}
 .case05-patch{margin:0 0 26px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:22px}
 .case05-patch h2{margin:0;max-width:620px}
 .case05-patch p{margin:0;max-width:330px;color:var(--muted,#5a5a5a);font-size:14px}
+.case05-doodle p:not(.section-label),.case05-patch p{color:#49413D;font-weight:500}
 .case05-doodle{padding:34px 30px}
 .case05-recovery{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:stretch}
 .case05-recovery-left{display:flex;flex-direction:column;gap:0}
