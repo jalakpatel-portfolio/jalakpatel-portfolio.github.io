@@ -132,13 +132,15 @@ nav.breadcrumb{display:block!important;background:transparent!important;border:0
   z-index:-1;
   background:url("../../media/swad.jpeg") center/100% 100% no-repeat;
   filter:invert(1);
-  opacity:.07;
+  opacity:.035;
   mix-blend-mode:multiply;
   pointer-events:none;
 }
 @media(max-width:560px){
   .swad-doodle-patch{padding:1.15rem .95rem}
 }
+.swad-doodle-patch p:not(.section-label),.swad-doodle-patch .section-intro{color:#49413D;font-weight:500}
+.case01-instagram-heading p{color:#49413D;font-weight:500}
 
 
 /* Student livestream strategy anchor */
@@ -197,7 +199,7 @@ nav.breadcrumb{display:block!important;background:transparent!important;border:0
   z-index:-1;
   background:url("../../media/swad.jpeg") center/100% 100% no-repeat;
   filter:invert(1);
-  opacity:.07;
+  opacity:.035;
   mix-blend-mode:multiply;
   pointer-events:none;
 }
