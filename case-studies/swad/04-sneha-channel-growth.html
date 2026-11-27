@@ -182,6 +182,77 @@
  #strategy .strategy-thumb,#strategy .strategy-thumb-pair img,#evidence .photo-grid img{transition:none!important}
 }
 
+
+/* Case 04 design patch: owner-channel direction and dual-format publishing */
+.case04-container{max-width:1120px}
+.case04-hero{grid-template-columns:minmax(0,1.05fr) minmax(290px,.78fr);gap:clamp(1.4rem,3vw,2.8rem);align-items:start}
+.case04-hero-copy{min-width:0}
+.case04-hero h1{max-width:14ch}
+.case04-hero .lede{max-width:43rem}
+.case04-hero-image{width:100%;align-items:stretch}
+.case04-hero-image img{width:100%;height:auto;max-height:none;aspect-ratio:3/4;object-fit:cover;object-position:center 38%}
+.case04-hero-image figcaption{font-size:.76rem;line-height:1.5}
+.case04-hero .metric-row{gap:.55rem}
+.case04-hero .metric-pill{padding:.52rem .78rem;border:1px solid rgba(194,65,12,.28);border-radius:6px;background:rgba(255,255,255,.72);color:var(--text);font-size:.77rem;font-weight:700}
+#context .channel-card-heading{display:flex;align-items:center;gap:.8rem;min-height:56px;margin-bottom:.65rem}
+#context .channel-card-heading .editorial-kicker{margin:0}
+#context .channel-logo{width:52px;height:52px;flex:0 0 52px;display:block;border-radius:50%;object-fit:cover;border:1px solid var(--border);background:#fff}
+#strategy .strategy-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+#strategy .strategy-card,#strategy .strategy-card:nth-child(2){grid-column:auto;display:flex;flex-direction:column;align-items:stretch;min-width:0;padding:1.1rem 1.15rem 1.2rem;border:1px solid var(--border);border-radius:4px 14px 4px 4px;background:rgba(255,255,255,.48)}
+#strategy .strategy-card:nth-child(2){background:linear-gradient(145deg,rgba(194,65,12,.065),rgba(157,58,114,.035));border-color:rgba(194,65,12,.2)}
+#strategy .strategy-card:nth-child(2)::after{content:none}
+#strategy .strategy-card .strategy-thumb,#strategy .strategy-card .strategy-thumb-pair{float:none;order:0;margin:.1rem 0 .7rem}
+#strategy .strategy-card .strategy-number{order:1;margin:.1rem 0 .35rem}
+#strategy .strategy-card h3{order:2;margin:.25rem 0 .65rem}
+#strategy .strategy-card>p:last-child{order:3;max-width:none;margin:0;font-size:.92rem;line-height:1.68}
+#strategy .strategy-card .calendar-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem;width:100%;max-width:none;margin:.65rem 0 0}
+#strategy .calendar-steps span{padding:.75rem .65rem .1rem 0;border-top:2px solid rgba(194,65,12,.45);border-left:0;font-size:.84rem;line-height:1.55}
+#strategy .calendar-steps span::before{top:-5px;left:0}
+#execution .phase-grid{align-items:stretch;gap:1rem;margin:1.2rem 0 .75rem}
+#execution .phase-card{height:100%;border:1px solid var(--border);border-top:3px solid rgba(194,65,12,.35);border-radius:4px 14px 4px 4px;background:rgba(255,255,255,.4);padding:1.1rem 1.2rem}
+#execution .phase-card:nth-child(2){border-color:rgba(157,58,114,.28);border-top-color:var(--cta2);background:rgba(255,255,255,.7)}
+#execution .execution-ribbon{margin:.7rem 0;padding:.8rem 1rem}
+#execution .role-note{margin:.7rem 0 .9rem;padding:.55rem 1rem}
+#execution>h3{font:1.55rem/1.05 'Bebas Neue',sans-serif;margin:1rem 0 .45rem}
+#execution>p,#execution .role-note p{max-width:58rem}
+#evidence .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:1rem;margin-top:1rem}
+#evidence .photo-grid figure{height:100%;min-width:0;display:flex;flex-direction:column;align-items:stretch;padding:.75rem;border:1px solid var(--border);border-radius:4px 14px 4px 4px;background:rgba(255,255,255,.42)}
+#evidence .photo-grid figure img,#evidence .photo-grid figure .production-video{width:100%;height:340px;max-height:none;object-fit:cover;margin:0}
+#evidence .photo-grid figure .production-video{object-fit:contain;background:#171411}
+#evidence .photo-grid figcaption{width:100%;margin-top:auto;padding:.65rem .1rem .1rem;font-weight:600}
+#outputs .output-card{flex:0 0 min(70%,300px)}
+#outputs .output-card.is-short{flex:0 0 min(42%,176px);align-self:flex-start}
+#outputs .output-card.is-short .output-short-frame{display:flex;aspect-ratio:9/16;align-items:center;justify-content:center;padding:1rem;text-align:center;background:linear-gradient(155deg,#efe3d5,#f8f4ed 58%,#e8d6ce);border-bottom:1px solid var(--border)}
+#outputs .output-short-inner{display:flex;flex-direction:column;gap:.6rem;align-items:center}
+#outputs .output-short-mark{display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(194,65,12,.4);border-radius:50%;font-size:1.15rem;color:var(--cta1)}
+#outputs .output-short-title{font:1.45rem/1 'Bebas Neue',sans-serif;color:var(--text)}
+#outputs .output-short-sub{font-size:.68rem;line-height:1.45;color:var(--muted)}
+#takeaway>p{max-width:58rem}
+@media(max-width:700px){
+ .case04-hero{grid-template-columns:minmax(0,1fr) minmax(235px,.78fr);gap:1rem;align-items:start}
+ .case04-hero-image{width:100%;margin:.2rem 0 0}
+ .case04-hero-image img{aspect-ratio:3/4;object-fit:cover;max-height:none}
+ #strategy .calendar-steps{grid-template-columns:1fr;gap:.55rem}
+ #strategy .calendar-steps span{padding:.45rem .2rem .1rem .9rem;border-top:0;border-left:2px solid rgba(194,65,12,.45)}
+ #strategy .calendar-steps span::before{top:.55rem;left:-5px}
+ #evidence .photo-grid{gap:.75rem}
+ #evidence .photo-grid figure{padding:.55rem}
+ #evidence .photo-grid figure img,#evidence .photo-grid figure .production-video{height:260px}
+}
+@media(max-width:560px){
+ .case04-hero{grid-template-columns:1fr;gap:1.2rem}
+ .case04-hero-image{width:min(100%,420px);margin:.2rem auto 0}
+ .case04-hero-image img{aspect-ratio:3/4;object-fit:cover}
+ #strategy .strategy-grid{grid-template-columns:1fr;gap:.7rem}
+ #strategy .strategy-card:nth-child(2){grid-column:auto}
+ #evidence .photo-grid{grid-template-columns:1fr}
+ #evidence .photo-grid figure img,#evidence .photo-grid figure .production-video{height:320px}
+ #outputs .output-card.is-short{flex-basis:44%}
+}
+@media(prefers-reduced-motion:reduce){
+ #strategy .calendar-steps span{animation:none!important;opacity:1;transform:none}
+}
+
 </style>
 </head>
 <body>
@@ -213,7 +284,7 @@
 </div>
 <figure class="case04-hero-image">
 <img src="../../media/swad/director-with-camera.jpg" alt="Jalak directing with the front camera during a Sneha channel shoot" width="965" height="1536" fetchpriority="high">
-<figcaption>Front-camera setup during a Sneha channel shoot.</figcaption>
+<figcaption>Jalak directing with the front camera during a Sneha Thakkar Recipes shoot</figcaption>
 </figure>
 </section>
 
@@ -223,22 +294,18 @@
 <p>Swad Institute ran lives and recipe uploads through the week, with no Sunday slot. Sneha Thakkar Recipes was built as a recorded catalogue with a Friday publish day. The owner channel stayed recipe-led. Course promotion stayed on the institute side.</p>
 <div class="channel-compare">
 <div class="editorial-panel">
-<p class="editorial-kicker">Swad Cooking Institute</p>
+<div class="channel-card-heading"><img class="channel-logo" src="../../media/swad/logo-swad-circle.png" alt="Swad Cooking Institute logo" width="52" height="52"><p class="editorial-kicker">Swad Cooking Institute</p></div>
 <h3>Teaching and course activity</h3>
 <p>Lives and recipe uploads through the week. Friday lives were stopped so the owner channel had a clearer weekly space.</p>
 </div>
 <div class="editorial-panel">
-<p class="editorial-kicker">Sneha Thakkar Recipes</p>
+<div class="channel-card-heading"><img class="channel-logo" src="../../media/swad/logo-sneha-circle.png" alt="Sneha Thakkar Recipes logo" width="52" height="52"><p class="editorial-kicker">Sneha Thakkar Recipes</p></div>
 <h3>A recorded recipe catalogue</h3>
 <p>Friday publishing, focused on recipes. No course promotion on this channel.</p>
 </div>
 </div>
 <p>Friday-only publishing was the company’s idea. I stopped Friday lives on the institute channel so the owner channel had a clearer weekly space and the recipe calendar was less stretched.</p>
 <p>The first full metadata pass under my system was the white dhokla upload, the same video featured below as the first system upload. In the first 24 hours it reached about 30,000 views. That response set the pattern for how we treated titles, descriptions and packaging after that.</p>
-<div class="case-pointer">
-<p><strong>Scope of this case</strong></p>
-<p>This page covers the owner-channel publishing system and selected production decisions. The fuller analytical read of Swad Institute and Sneha Thakkar Recipes sits in Case 07.</p>
-</div>
 </section>
 
 <section class="section fade-up" id="strategy">
@@ -350,6 +417,7 @@ Your browser does not support the video element.
 <button type="button" class="carousel-btn prev" aria-label="Previous">←</button>
 <div class="output-carousel-track">
 <a class="output-card" href="https://youtu.be/Y4zSzxL2uw8" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/Y4zSzxL2uw8/hqdefault.jpg" alt="White dhokla recipe, first full metadata-template upload" loading="lazy"><span class="output-cap">First system upload · White dhokla · About 30K views in 24 hours</span></a>
+<a class="output-card is-short" href="https://www.youtube.com/@snehathakkarrecipes/shorts" target="_blank" rel="noopener noreferrer"><div class="output-short-frame"><div class="output-short-inner"><span class="output-short-mark" aria-hidden="true">↗</span><span class="output-short-title">Sneha Thakkar Recipes</span><span class="output-short-sub">Open the channel Shorts shelf</span></div></div><span class="output-cap">Short-form channel shelf · Vertical examples</span></a>
 <a class="output-card" href="https://www.youtube.com/watch?v=l-6iYDeGOhk" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/l-6iYDeGOhk/hqdefault.jpg" alt="Tomato ketchup recipe" loading="lazy"><span class="output-cap">First directed shoot · Tomato ketchup · Speech notes and multi-angle suggestions</span></a>
 <a class="output-card" href="https://www.youtube.com/watch?v=bx1Gr03WbKM" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/bx1Gr03WbKM/hqdefault.jpg" alt="Bombay ice halwa recipe" loading="lazy"><span class="output-cap">Bombay ice halwa · Hook, speech, angles, plating and promo reel</span></a>
 <a class="output-card" href="https://www.youtube.com/watch?v=jPnBLlGj5xg" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/jPnBLlGj5xg/hqdefault.jpg" alt="Nankhatai recipe" loading="lazy"><span class="output-cap">Nankhatai · Origin and history built into the recipe film</span></a>
