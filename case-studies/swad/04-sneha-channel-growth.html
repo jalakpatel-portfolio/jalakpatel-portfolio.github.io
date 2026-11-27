@@ -9,11 +9,172 @@
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="swad-case-shared.css">
-<link rel="stylesheet" href="case04-editorial.css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Owner Channel Publishing Strategy | Swad | Jalak Patel">
 <meta property="og:image" content="https://jalakpatel-portfolio.github.io/media/swad/sneha-thakkar-recipes.png">
 <meta name="twitter:card" content="summary_large_image">
+<style>
+.chip-row{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.channel-compare,.strategy-grid,.phase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.2rem 0}
+.editorial-panel,.strategy-card,.phase-card{padding:1.15rem;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.62)}
+.editorial-panel h3,.strategy-card h3,.phase-card h3{margin:.15rem 0 .55rem}
+.editorial-kicker{font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--muted);margin:0 0 .45rem}
+.strategy-card .strategy-number{font-family:'Bebas Neue',sans-serif;font-size:2rem;line-height:1;color:var(--accent,#b76552);margin:0 0 .35rem}
+.strategy-card p:last-child,.phase-card p:last-child,.editorial-panel p:last-child{margin-bottom:0}
+.phase-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.phase-card ul{padding-left:1.1rem;margin:.65rem 0 0}
+.phase-card li{margin:.3rem 0}
+.role-note{padding:1rem 1.15rem;border-left:3px solid var(--accent,#b76552);background:rgba(255,255,255,.55);border-radius:0 12px 12px 0;margin:1rem 0}
+.role-note p:last-child{margin-bottom:0}
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.85rem;margin:1.15rem 0}
+.photo-grid figure{margin:0}
+.photo-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid var(--border);display:block;cursor:zoom-in}
+.link-chip{display:inline-block;padding:.45rem .85rem;border-radius:999px;border:1px solid var(--border);background:#fff;font-size:.78rem;font-weight:600;text-decoration:none;color:#141414}
+.link-chip:hover{background:#f7f3ec;border-color:#d4cfc4}
+.case-pointer{padding:1rem 1.15rem;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.55);margin:1rem 0}
+.case-pointer p:last-child{margin-bottom:0}
+@media(max-width:680px){.channel-compare,.strategy-grid,.phase-grid{grid-template-columns:1fr}.editorial-panel,.strategy-card,.phase-card{padding:1rem}}
+
+
+/* Case 04 — editorial production notebook visual system */
+.case04-hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(260px,.82fr);
+  gap:clamp(1.5rem,4vw,3.2rem);
+  align-items:center;
+  padding:2.15rem 0 2.5rem;
+  border-bottom:1px solid var(--border);
+}
+.case04-hero-copy{min-width:0}
+.case04-hero h1{font-size:clamp(2.55rem,6.1vw,4.55rem);line-height:.94;max-width:11ch;letter-spacing:-.02em;margin:.35rem 0 1.15rem}
+.case04-hero .lede{font-size:1rem;line-height:1.72;max-width:38rem}
+.case04-hero .metric-row{gap:.45rem;margin-top:1.25rem}
+.case04-hero .metric-pill{border-radius:5px;background:rgba(255,255,255,.55);font-size:.73rem;padding:.42rem .62rem}
+.case04-hero-image{margin:0;position:relative;min-width:0}
+.case04-hero-image img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;border-radius:4px 4px 4px 34px;border:1px solid var(--border);box-shadow:12px 12px 0 rgba(194,65,12,.10)}
+.case04-hero-image figcaption{font-size:.72rem;color:var(--muted);padding:.75rem .15rem 0;letter-spacing:.015em}
+#context .channel-compare{gap:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:1.5rem 0 1.35rem}
+#context .editorial-panel{border:0;border-radius:0;background:transparent;padding:1.3rem 1.4rem 1.35rem 0}
+#context .editorial-panel+ .editorial-panel{border-left:1px solid var(--border);padding-left:1.5rem}
+#context .editorial-panel h3{font:1.65rem/1.05 'Bebas Neue',sans-serif;max-width:16ch;margin:.35rem 0 .65rem}
+#context .editorial-kicker{color:var(--cta1);font-size:.65rem;letter-spacing:.13em}
+#strategy .strategy-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin-top:1.45rem}
+#strategy .strategy-card{position:relative;border:0;border-top:1px solid var(--border);border-radius:0;background:transparent;padding:1.05rem .9rem 1.15rem 0}
+#strategy .strategy-card:nth-child(2){grid-column:1/-1;display:grid;grid-template-columns:minmax(150px,.38fr) 1fr;column-gap:1.5rem;align-items:start;padding:1.35rem 1.4rem;background:linear-gradient(110deg,rgba(194,65,12,.075),rgba(157,58,114,.055));border:1px solid rgba(194,65,12,.18);border-radius:4px 22px 4px 4px}
+#strategy .strategy-card:nth-child(2) .strategy-number{grid-column:1;grid-row:1}
+#strategy .strategy-card:nth-child(2) h3{grid-column:1;grid-row:2;font:1.8rem/1.02 'Bebas Neue',sans-serif;margin:.25rem 0}
+#strategy .strategy-card:nth-child(2) p:last-child{grid-column:2;grid-row:1/3;align-self:center;margin:0;max-width:38rem}
+#strategy .strategy-number{font-size:2.45rem;color:var(--cta1);opacity:.9}
+#strategy .strategy-card h3{font:1.55rem/1.05 'Bebas Neue',sans-serif;margin:.35rem 0 .6rem}
+#strategy .strategy-card p:last-child{font-size:.9rem;line-height:1.7}
+#strategy .calendar-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin:.2rem 0 0;max-width:none}
+#strategy .calendar-steps span{position:relative;display:block;padding:.8rem .75rem .15rem 0;border-top:2px solid rgba(194,65,12,.45);font-size:.83rem;line-height:1.55;color:var(--muted)}
+#strategy .calendar-steps span::before{content:"";position:absolute;top:-5px;left:0;width:8px;height:8px;border-radius:50%;background:var(--cta1)}
+#execution .phase-grid{gap:1.5rem;margin:1.4rem 0}
+#execution .phase-card{border:0;border-top:2px solid var(--cta1);border-radius:0;background:rgba(255,255,255,.42);padding:1.1rem 1.2rem}
+#execution .phase-card:nth-child(2){border-top-color:var(--cta2)}
+#execution .phase-card h3{font:1.7rem/1.05 'Bebas Neue',sans-serif;margin:.3rem 0 .75rem}
+#execution .phase-card li{font-size:.9rem;color:var(--muted);padding-left:.1rem}
+#execution .role-note{background:transparent;border-left:2px solid var(--cta2);border-radius:0;padding:.65rem 1rem;margin:1.25rem 0}
+#evidence .figure{margin:1.2rem 0 1.6rem}
+#evidence .figure img{border:1px solid var(--border);border-radius:3px;box-shadow:0 12px 32px rgba(20,20,20,.07)}
+#evidence .photo-grid{grid-template-columns:1.15fr .85fr;align-items:start;gap:1rem;margin-top:1.3rem}
+#evidence .photo-grid img{aspect-ratio:4/3;border-radius:3px;object-fit:cover}
+#evidence figcaption{font-size:.74rem;line-height:1.5;color:var(--muted);padding:.55rem .1rem}
+#outputs .output-carousel{padding:0 2.5rem;margin-top:1.5rem}
+#outputs .output-card{border-radius:4px 4px 14px 4px;box-shadow:none}
+#outputs .output-card:first-child{flex-basis:min(78%,340px);border-color:rgba(194,65,12,.35);box-shadow:0 8px 24px rgba(194,65,12,.09)}
+#outputs .output-card:first-child img{aspect-ratio:16/9}
+#outputs .output-card:first-child .output-cap{color:var(--cta1);background:rgba(194,65,12,.045)}
+#takeaway{border-top:1px solid var(--border);margin-top:1rem;padding-top:2rem}
+#takeaway h2{font-size:2.1rem}
+@media(max-width:700px){
+ .case04-hero{grid-template-columns:1fr;gap:1.25rem;padding:1.4rem 0 1.8rem}
+ .case04-hero h1{font-size:clamp(2.65rem,13vw,4rem);max-width:12ch}
+ .case04-hero-image{width:min(100%,520px);margin:.2rem auto 0}
+ .case04-hero-image img{aspect-ratio:16/10;border-radius:3px 3px 3px 24px;box-shadow:7px 7px 0 rgba(194,65,12,.10)}
+ #strategy .strategy-card:nth-child(2){grid-template-columns:1fr;gap:.1rem;padding:1.05rem}
+ #strategy .strategy-card:nth-child(2) .strategy-number,#strategy .strategy-card:nth-child(2) h3,#strategy .strategy-card:nth-child(2) p:last-child{grid-column:1;grid-row:auto}
+ #strategy .strategy-card:nth-child(2) p:last-child{margin-top:.45rem}
+ #strategy .calendar-steps{grid-template-columns:1fr;gap:.6rem}
+ #strategy .calendar-steps span{padding:.45rem .2rem .1rem .9rem;border-top:0;border-left:2px solid rgba(194,65,12,.45)}
+ #strategy .calendar-steps span::before{top:.55rem;left:-5px}
+}
+@media(max-width:560px){
+ #context .channel-compare{grid-template-columns:1fr}
+ #context .editorial-panel{padding:1rem 0}
+ #context .editorial-panel+ .editorial-panel{border-left:0;border-top:1px solid var(--border);padding-left:0}
+ #strategy .strategy-grid{grid-template-columns:1fr;gap:.35rem}
+ #strategy .strategy-card:nth-child(2){grid-column:auto}
+ #evidence .photo-grid{grid-template-columns:1fr 1fr;gap:.65rem}
+ #evidence .photo-grid figure:first-child{grid-column:1/-1;grid-row:auto}
+ #evidence .photo-grid figure:first-child img{aspect-ratio:16/10}
+ #outputs .output-carousel{padding:0 1.9rem}
+ #outputs .output-card:first-child{flex-basis:82%}
+}
+@media(prefers-reduced-motion:reduce){.case04-hero-image img{scroll-behavior:auto}}
+
+
+/* Small real-upload thumbnails add visual evidence to the middle strategy section. */
+#strategy .strategy-card{min-width:0}
+#strategy .strategy-thumb,#strategy .strategy-thumb-pair img{
+ display:block;width:112px;height:68px;object-fit:cover;border:1px solid var(--border);
+ border-radius:3px;background:#eee8df;box-shadow:3px 3px 0 rgba(194,65,12,.08)
+}
+#strategy .strategy-card:not(:nth-child(2)) .strategy-thumb{float:right;margin:.1rem 0 .55rem .8rem}
+#strategy .strategy-thumb-pair{display:flex;gap:.4rem;grid-column:1;grid-row:3;margin:.35rem 0 .55rem}
+#strategy .strategy-thumb-pair img{width:calc(50% - .2rem);height:62px}
+#strategy .strategy-card:nth-child(2) .strategy-number{grid-row:1}
+#strategy .strategy-card:nth-child(2) h3{grid-row:2}
+#strategy .strategy-card:nth-child(2) p.calendar-steps{grid-column:2;grid-row:1/4;align-self:center}
+#evidence .photo-grid{grid-template-columns:minmax(0,560px);justify-content:start}
+#evidence .photo-grid img{aspect-ratio:16/9}
+@media(max-width:700px){
+ #strategy .strategy-thumb{width:96px;height:60px}
+ #strategy .strategy-thumb-pair{grid-column:1;grid-row:auto}
+ #strategy .strategy-card:nth-child(2) p.calendar-steps{grid-column:1;grid-row:auto}
+}
+@media(max-width:560px){
+ #evidence .photo-grid{grid-template-columns:1fr}
+}
+
+
+/* Case 04 finishing pass: natural photo ratios, notebook details and restrained motion */
+.case04-hero-image img{aspect-ratio:965/1536;height:auto;object-fit:contain;object-position:center}
+#evidence .photo-grid{grid-template-columns:minmax(0,1fr);max-width:720px}
+#evidence .photo-grid img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:rgba(20,20,20,.035)}
+#strategy .strategy-card{padding-top:1.2rem}
+#strategy .strategy-thumb,#strategy .strategy-thumb-pair img{width:136px;height:84px;transition:transform .35s ease,box-shadow .35s ease}
+#strategy .strategy-card:hover .strategy-thumb,#strategy .strategy-card:hover .strategy-thumb-pair img{transform:scale(1.025);box-shadow:4px 5px 0 rgba(194,65,12,.12)}
+#strategy .strategy-card:nth-child(2){position:relative;overflow:hidden}
+#strategy .strategy-card:nth-child(2)::after{content:"";position:absolute;right:1rem;top:.8rem;width:76px;height:54px;opacity:.09;pointer-events:none;background:url("../../media/swad.jpeg") center/contain no-repeat;filter:grayscale(1)}
+#strategy .calendar-steps span{transform-origin:left center;animation:case04-calendar-in .65s both;animation-play-state:paused}
+#strategy .calendar-steps span:nth-child(2){animation-delay:.12s}
+#strategy .calendar-steps span:nth-child(3){animation-delay:.24s}
+#strategy.is-in .calendar-steps span{animation-play-state:running}
+@keyframes case04-calendar-in{from{opacity:.25;transform:translateX(-9px)}to{opacity:1;transform:translateX(0)}}
+.execution-ribbon{display:flex;align-items:center;justify-content:space-between;gap:.45rem;margin:1.25rem 0;padding:.9rem 1rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(255,255,255,.32)}
+.execution-ribbon span{font-size:.76rem;font-weight:700;line-height:1.35;color:var(--text)}
+.execution-ribbon i{display:block;flex:0 0 18px;height:1px;background:var(--cta1);position:relative}
+.execution-ribbon i::after{content:"";position:absolute;right:0;top:-3px;width:6px;height:6px;border-top:1px solid var(--cta1);border-right:1px solid var(--cta1);transform:rotate(45deg)}
+#evidence .photo-grid figure{min-width:0}
+#evidence .photo-grid img{transition:transform .35s ease,box-shadow .35s ease}
+#evidence .photo-grid img:hover{transform:translateY(-2px);box-shadow:0 15px 34px rgba(20,20,20,.10)}
+#evidence .production-video{width:min(100%,360px);height:auto;display:block;aspect-ratio:9/16;object-fit:contain;background:#171411;border:1px solid var(--border);border-radius:3px;box-shadow:0 12px 32px rgba(20,20,20,.07)}
+#evidence .photo-grid figure+figure{margin-top:.35rem}
+@media(max-width:700px){
+ .case04-hero-image{width:min(100%,420px)}
+ .case04-hero-image img{aspect-ratio:965/1536}
+ .execution-ribbon{display:grid;grid-template-columns:1fr 1fr;gap:.65rem .8rem}
+ .execution-ribbon i{display:none}
+ #strategy .strategy-thumb,#strategy .strategy-thumb-pair img{width:112px;height:70px}
+}
+@media(prefers-reduced-motion:reduce){
+ #strategy .calendar-steps span{animation:none!important;opacity:1;transform:none}
+ #strategy .strategy-thumb,#strategy .strategy-thumb-pair img,#evidence .photo-grid img{transition:none!important}
+}
+
+</style>
 </head>
 <body>
 <a class="skip-link" href="#context">Skip to content</a>
@@ -48,7 +209,7 @@
 </figure>
 </section>
 
-<section class="section fade-up case04-illustrated case04-context-art" id="context">
+<section class="section fade-up" id="context">
 <p class="section-label">Context</p>
 <h2>A channel with a different job</h2>
 <p>Swad Institute ran lives and recipe uploads through the week, with no Sunday slot. Sneha Thakkar Recipes was built as a recorded catalogue with a Friday publish day. The owner channel stayed recipe-led. Course promotion stayed on the institute side.</p>
@@ -72,7 +233,7 @@
 </div>
 </section>
 
-<section class="section fade-up case04-illustrated case04-strategy-art" id="strategy">
+<section class="section fade-up" id="strategy">
 <p class="section-label">Strategy</p>
 <h2>Publishing rules for an owner catalogue</h2>
 <p class="section-intro">Four decisions shaped how we planned, packaged and produced the channel’s recorded catalogue.</p>
@@ -105,7 +266,7 @@
 <p>Shorts were not a fixed count per long video. Output depended on the recipe and what the shoot could support. Dual horizontal and vertical capture was reserved for heavier days.</p>
 </section>
 
-<section class="section fade-up case04-illustrated case04-execution-art" id="execution">
+<section class="section fade-up" id="execution">
 <p class="section-label">Execution</p>
 <h2>From metadata to every shoot</h2>
 <div class="phase-grid">
@@ -140,7 +301,7 @@
 <p>On larger shoot days we used two cinematographers when needed: one path for the long video and one for vertical reels. The weekly meal-planning shoot ran from morning into the evening. The script grew while we shot, and we split the final piece into two parts so the runtime stayed usable. Keeping the team and the chef moving through that day was part of the job.</p>
 </section>
 
-<section class="section fade-up case04-illustrated case04-evidence-art" id="evidence">
+<section class="section fade-up" id="evidence">
 <p class="section-label">Evidence</p>
 <h2>Proof surface</h2>
 <h3>Analytics glimpse</h3>
