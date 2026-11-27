@@ -130,7 +130,7 @@ nav.breadcrumb{display:block!important;background:transparent!important;border:0
   position:absolute;
   inset:0;
   z-index:-1;
-  background:url("../../media/swad.jpeg") center/220px auto repeat;
+  background:url("../../media/swad.jpeg") center/100% 100% no-repeat;
   filter:invert(1);
   opacity:.07;
   mix-blend-mode:multiply;
@@ -195,7 +195,7 @@ nav.breadcrumb{display:block!important;background:transparent!important;border:0
   position:absolute;
   inset:0;
   z-index:-1;
-  background:url("../../media/swad.jpeg") center/220px auto repeat;
+  background:url("../../media/swad.jpeg") center/100% 100% no-repeat;
   filter:invert(1);
   opacity:.07;
   mix-blend-mode:multiply;
