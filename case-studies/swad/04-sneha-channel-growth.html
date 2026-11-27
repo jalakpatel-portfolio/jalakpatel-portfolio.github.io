@@ -138,6 +138,40 @@
  #evidence .photo-grid{grid-template-columns:1fr}
 }
 
+
+/* Case 04 finishing pass: natural photo ratios, notebook details and restrained motion */
+.case04-hero-image img{aspect-ratio:965/1536;height:auto;object-fit:contain;object-position:center}
+#evidence .photo-grid{grid-template-columns:minmax(0,1fr);max-width:720px}
+#evidence .photo-grid img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:rgba(20,20,20,.035)}
+#strategy .strategy-card{padding-top:1.2rem}
+#strategy .strategy-thumb,#strategy .strategy-thumb-pair img{width:136px;height:84px;transition:transform .35s ease,box-shadow .35s ease}
+#strategy .strategy-card:hover .strategy-thumb,#strategy .strategy-card:hover .strategy-thumb-pair img{transform:scale(1.025);box-shadow:4px 5px 0 rgba(194,65,12,.12)}
+#strategy .strategy-card:nth-child(2){position:relative;overflow:hidden}
+#strategy .strategy-card:nth-child(2)::after{content:"";position:absolute;right:1rem;top:.8rem;width:76px;height:54px;opacity:.09;pointer-events:none;background:url("../../media/swad.jpeg") center/contain no-repeat;filter:grayscale(1)}
+#strategy .calendar-steps span{transform-origin:left center;animation:case04-calendar-in .65s both;animation-play-state:paused}
+#strategy .calendar-steps span:nth-child(2){animation-delay:.12s}
+#strategy .calendar-steps span:nth-child(3){animation-delay:.24s}
+#strategy .strategy-card.is-in .calendar-steps span{animation-play-state:running}
+@keyframes case04-calendar-in{from{opacity:.25;transform:translateX(-9px)}to{opacity:1;transform:translateX(0)}}
+.execution-ribbon{display:flex;align-items:center;justify-content:space-between;gap:.45rem;margin:1.25rem 0;padding:.9rem 1rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(255,255,255,.32)}
+.execution-ribbon span{font-size:.76rem;font-weight:700;line-height:1.35;color:var(--text)}
+.execution-ribbon i{display:block;flex:0 0 18px;height:1px;background:var(--cta1);position:relative}
+.execution-ribbon i::after{content:"";position:absolute;right:0;top:-3px;width:6px;height:6px;border-top:1px solid var(--cta1);border-right:1px solid var(--cta1);transform:rotate(45deg)}
+#evidence .photo-grid figure{min-width:0}
+#evidence .photo-grid img{transition:transform .35s ease,box-shadow .35s ease}
+#evidence .photo-grid img:hover{transform:translateY(-2px);box-shadow:0 15px 34px rgba(20,20,20,.10)}
+@media(max-width:700px){
+ .case04-hero-image{width:min(100%,420px)}
+ .case04-hero-image img{aspect-ratio:965/1536}
+ .execution-ribbon{display:grid;grid-template-columns:1fr 1fr;gap:.65rem .8rem}
+ .execution-ribbon i{display:none}
+ #strategy .strategy-thumb,#strategy .strategy-thumb-pair img{width:112px;height:70px}
+}
+@media(prefers-reduced-motion:reduce){
+ #strategy .calendar-steps span{animation:none!important;opacity:1;transform:none}
+ #strategy .strategy-thumb,#strategy .strategy-thumb-pair img,#evidence .photo-grid img{transition:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -168,12 +202,12 @@
 </div>
 </div>
 <figure class="case04-hero-image">
-<img src="../../media/swad/director-with-camera.jpg" alt="Jalak directing with the front camera during a Sneha channel shoot" width="1200" height="900" fetchpriority="high">
+<img src="../../media/swad/director-with-camera.jpg" alt="Jalak directing with the front camera during a Sneha channel shoot" width="965" height="1536" fetchpriority="high">
 <figcaption>Front-camera setup during a Sneha channel shoot.</figcaption>
 </figure>
 </section>
 
-<section class="section" id="context">
+<section class="section fade-up" id="context">
 <p class="section-label">Context</p>
 <h2>A channel with a different job</h2>
 <p>Swad Institute ran lives and recipe uploads through the week, with no Sunday slot. Sneha Thakkar Recipes was built as a recorded catalogue with a Friday publish day. The owner channel stayed recipe-led. Course promotion stayed on the institute side.</p>
@@ -197,7 +231,7 @@
 </div>
 </section>
 
-<section class="section" id="strategy">
+<section class="section fade-up" id="strategy">
 <p class="section-label">Strategy</p>
 <h2>Publishing rules for an owner catalogue</h2>
 <p class="section-intro">Four decisions shaped how we planned, packaged and produced the channel’s recorded catalogue.</p>
@@ -230,7 +264,7 @@
 <p>Shorts were not a fixed count per long video. Output depended on the recipe and what the shoot could support. Dual horizontal and vertical capture was reserved for heavier days.</p>
 </section>
 
-<section class="section" id="execution">
+<section class="section fade-up" id="execution">
 <p class="section-label">Execution</p>
 <h2>From metadata to every shoot</h2>
 <div class="phase-grid">
@@ -256,6 +290,7 @@
 </ul>
 </article>
 </div>
+<div class="execution-ribbon" aria-label="Production workflow"><span>Planning &amp; metadata</span><i aria-hidden="true"></i><span>Publishing &amp; scheduling</span><i aria-hidden="true"></i><span>On-set direction</span><i aria-hidden="true"></i><span>Final edit approval</span></div>
 <div class="role-note">
 <p><strong>How the production team worked</strong></p>
 <p>The cinematographer handled gimbal close-ups, movement and extra footage. The editor cut the videos. I reviewed and improved the edit, then made the final decision after the direction phase began.</p>
@@ -264,7 +299,7 @@
 <p>On larger shoot days we used two cinematographers when needed: one path for the long video and one for vertical reels. The weekly meal-planning shoot ran from morning into the evening. The script grew while we shot, and we split the final piece into two parts so the runtime stayed usable. Keeping the team and the chef moving through that day was part of the job.</p>
 </section>
 
-<section class="section" id="evidence">
+<section class="section fade-up" id="evidence">
 <p class="section-label">Evidence</p>
 <h2>Proof surface</h2>
 <h3>Analytics glimpse</h3>
@@ -290,7 +325,7 @@
 </p>
 </section>
 
-<section class="section" id="outputs">
+<section class="section fade-up" id="outputs">
 <p class="section-label">Work output</p>
 <h2>Selected uploads</h2>
 <p class="section-intro">These examples show the publishing system and selected direction decisions. They are not a claim that every upload used the same process.</p>
@@ -310,7 +345,7 @@
 <p class="section-intro">The last scheduled upload was not the end of the recipe calendar. Further recipes were already planned beyond it.</p>
 </section>
 
-<section class="section" id="takeaway">
+<section class="section fade-up" id="takeaway">
 <p class="section-label">Takeaway</p>
 <h2>What this case shows</h2>
 <p>Case 02 and Case 06 describe institute systems. This case is the owner channel only.</p>
