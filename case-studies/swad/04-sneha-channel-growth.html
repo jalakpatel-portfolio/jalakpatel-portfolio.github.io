@@ -254,9 +254,8 @@
 }
 
 
-/* Case 04 polish: full Swad doodle bands, portrait monitoring and mobile strategy */
-#strategy,#execution{position:relative;isolation:isolate}
-#strategy::before,#execution::before{content:"";position:absolute;z-index:0;inset:0;background:url("../../media/swad.jpeg") center/cover no-repeat;opacity:.055;filter:invert(1);mix-blend-mode:multiply;pointer-events:none}
+/* Case 04 polish: reuse the shared full-bleed Swad tiled patch on Strategy and Execution */
+#strategy.swad-doodle-patch,#execution.swad-doodle-patch{position:relative;isolation:isolate}
 #strategy>* ,#execution>*{position:relative;z-index:1}
 #strategy .strategy-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 #strategy .strategy-card{min-width:0}
@@ -268,7 +267,7 @@
 #outputs .output-card.is-short img{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;object-position:center;background:#eee5d9}
 #outputs .output-card.is-short .output-cap{min-height:3.4rem}
 @media(max-width:768px){
- #strategy{padding:.95rem 0 1.15rem}
+ #strategy{padding:.95rem .95rem 1.15rem}
  #strategy>.section-label{font-size:.65rem;letter-spacing:1px;margin-bottom:.3rem}
  #strategy>h2{font-size:clamp(1.35rem,5.2vw,1.65rem);line-height:1.02;margin-bottom:.45rem}
  #strategy>.section-intro{font-size:.88rem;line-height:1.5;margin-bottom:.7rem}
@@ -346,7 +345,7 @@
 <p>The first full metadata pass under my system was the white dhokla upload, the same video featured below as the first system upload. In the first 24 hours it reached about 30,000 views. That response set the pattern for how we treated titles, descriptions and packaging after that.</p>
 </section>
 
-<section class="section fade-up" id="strategy">
+<section class="section fade-up swad-doodle-patch" id="strategy">
 <p class="section-label">Strategy</p>
 <h2>Publishing rules for an owner catalogue</h2>
 <p class="section-intro">Four decisions shaped how we planned, packaged and produced the channel’s recorded catalogue.</p>
@@ -379,7 +378,7 @@
 <p>Shorts were not a fixed count per long video. Output depended on the recipe and what the shoot could support. Dual horizontal and vertical capture was reserved for heavier days.</p>
 </section>
 
-<section class="section fade-up" id="execution">
+<section class="section fade-up swad-doodle-patch" id="execution">
 <p class="section-label">Execution</p>
 <h2>From metadata to every shoot</h2>
 <div class="phase-grid">
