@@ -253,6 +253,44 @@
  #strategy .calendar-steps span{animation:none!important;opacity:1;transform:none}
 }
 
+
+/* Case 04 polish: full Swad doodle bands, portrait monitoring and mobile strategy */
+#strategy,#execution{position:relative;isolation:isolate}
+#strategy::before,#execution::before{content:"";position:absolute;z-index:0;inset:0;background:url("../../media/swad.jpeg") center/cover no-repeat;opacity:.055;filter:invert(1);mix-blend-mode:multiply;pointer-events:none}
+#strategy>* ,#execution>*{position:relative;z-index:1}
+#strategy .strategy-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+#strategy .strategy-card{min-width:0}
+#evidence .photo-grid{grid-template-columns:repeat(2,minmax(0,360px));justify-content:center;align-items:stretch;gap:1.25rem}
+#evidence .photo-grid figure{height:auto;min-width:0}
+#evidence .photo-grid figure img,#evidence .photo-grid figure .production-video{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;max-height:none}
+#evidence .photo-grid figure .production-video{object-fit:cover;background:#171411}
+#outputs .output-card.is-short{flex:0 0 168px;align-self:stretch}
+#outputs .output-card.is-short img{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;object-position:center;background:#eee5d9}
+#outputs .output-card.is-short .output-cap{min-height:3.4rem}
+@media(max-width:768px){
+ #strategy{padding:.95rem 0 1.15rem}
+ #strategy>.section-label{font-size:.65rem;letter-spacing:1px;margin-bottom:.3rem}
+ #strategy>h2{font-size:clamp(1.35rem,5.2vw,1.65rem);line-height:1.02;margin-bottom:.45rem}
+ #strategy>.section-intro{font-size:.88rem;line-height:1.5;margin-bottom:.7rem}
+ #strategy .strategy-grid{grid-template-columns:minmax(0,1fr);gap:.65rem;margin-top:.8rem}
+ #strategy .strategy-card,#strategy .strategy-card:nth-child(2){width:100%;padding:.8rem .9rem .9rem;gap:0}
+ #strategy .strategy-card .strategy-thumb{width:92px;height:58px;object-fit:cover;margin:0 0 .5rem;align-self:flex-start}
+ #strategy .strategy-card .strategy-thumb-pair{display:flex;gap:.35rem;margin:0 0 .5rem;align-self:flex-start}
+ #strategy .strategy-card .strategy-thumb-pair img{width:84px;height:54px;object-fit:cover}
+ #strategy .strategy-card .strategy-number{font-size:.72rem;margin:.05rem 0 .2rem}
+ #strategy .strategy-card h3{font-size:1.25rem;line-height:1.05;margin:.15rem 0 .4rem}
+ #strategy .strategy-card>p:last-child{width:100%;max-width:none;font-size:.88rem;line-height:1.58;margin:0;overflow-wrap:anywhere}
+ #strategy .strategy-card .calendar-steps{grid-template-columns:minmax(0,1fr);gap:.35rem;width:100%;margin:.35rem 0 0}
+ #strategy .calendar-steps span{min-width:0;width:100%;padding:.3rem .2rem .3rem .8rem;border:0;border-left:2px solid rgba(194,65,12,.42);font-size:.86rem;line-height:1.5;overflow-wrap:anywhere}
+ #strategy .calendar-steps span::before{top:.55rem;left:-5px}
+ #evidence .photo-grid{gap:.85rem}
+ #evidence .photo-grid figure img,#evidence .photo-grid figure .production-video{aspect-ratio:3/4;height:auto}
+}
+@media(max-width:560px){
+ #evidence .photo-grid{grid-template-columns:minmax(0,360px);justify-content:center}
+ #outputs .output-card.is-short{flex-basis:152px}
+}
+
 </style>
 </head>
 <body>
@@ -284,7 +322,7 @@
 </div>
 <figure class="case04-hero-image">
 <img src="../../media/swad/director-with-camera.jpg" alt="Jalak directing with the front camera during a Sneha channel shoot" width="965" height="1536" fetchpriority="high">
-<figcaption>Jalak directing with the front camera during a Sneha Thakkar Recipes shoot</figcaption>
+<figcaption>Directing with the front camera on a Sneha Thakkar Recipes shoot</figcaption>
 </figure>
 </section>
 
@@ -396,11 +434,11 @@
 <figcaption>Camera setup on a Sneha channel shoot. This is a tighter crop of an existing production photograph.</figcaption>
 </figure>
 <figure class="figure">
-<video class="production-video" controls playsinline preload="metadata" aria-label="Short behind-the-scenes clip from a Sneha channel shoot">
+<video class="production-video monitoring-video" controls playsinline preload="metadata" aria-label="Short behind-the-scenes clip from a Sneha channel shoot">
 <source src="../../media/swad/swadcase4v.mp4" type="video/mp4">
 Your browser does not support the video element.
 </video>
-<figcaption>A short on-set moment showing the shoot environment and monitoring during a take.</figcaption>
+<figcaption>On-set monitoring during a take</figcaption>
 </figure>
 </div>
 <p class="chip-row">
@@ -417,12 +455,23 @@ Your browser does not support the video element.
 <button type="button" class="carousel-btn prev" aria-label="Previous">←</button>
 <div class="output-carousel-track">
 <a class="output-card" href="https://youtu.be/Y4zSzxL2uw8" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/Y4zSzxL2uw8/hqdefault.jpg" alt="White dhokla recipe, first full metadata-template upload" loading="lazy"><span class="output-cap">First system upload · White dhokla · About 30K views in 24 hours</span></a>
-<a class="output-card is-short" href="https://www.youtube.com/@snehathakkarrecipes/shorts" target="_blank" rel="noopener noreferrer"><div class="output-short-frame"><div class="output-short-inner"><span class="output-short-mark" aria-hidden="true">↗</span><span class="output-short-title">Sneha Thakkar Recipes</span><span class="output-short-sub">Open the channel Shorts shelf</span></div></div><span class="output-cap">Short-form channel shelf · Vertical examples</span></a>
+<a class="output-card is-short" href="https://www.youtube.com/shorts/HfXPIphVlRQ" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/HfXPIphVlRQ/hqdefault.jpg" alt="Holi Special Shrikhand Recipe Short" loading="lazy"><span class="output-cap">Video promotion · Holi Special Shrikhand Recipe</span></a>
+<a class="output-card is-short" href="https://www.youtube.com/shorts/ZAuKUmaRjIw" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/ZAuKUmaRjIw/hqdefault.jpg" alt="Perfect Potato Wafers Recipe Short" loading="lazy"><span class="output-cap">Video promotion · Perfect Potato Wafers Recipe</span></a>
+
 <a class="output-card" href="https://www.youtube.com/watch?v=l-6iYDeGOhk" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/l-6iYDeGOhk/hqdefault.jpg" alt="Tomato ketchup recipe" loading="lazy"><span class="output-cap">First directed shoot · Tomato ketchup · Speech notes and multi-angle suggestions</span></a>
+<a class="output-card is-short" href="https://www.youtube.com/shorts/0IKIS5k7ChQ" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/0IKIS5k7ChQ/hqdefault.jpg" alt="How to Make Tomato Ketchup At Home Short" loading="lazy"><span class="output-cap">Video promotion · How to Make Tomato Ketchup At Home?</span></a>
 <a class="output-card" href="https://www.youtube.com/watch?v=bx1Gr03WbKM" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/bx1Gr03WbKM/hqdefault.jpg" alt="Bombay ice halwa recipe" loading="lazy"><span class="output-cap">Bombay ice halwa · Hook, speech, angles, plating and promo reel</span></a>
+<a class="output-card is-short" href="https://www.youtube.com/shorts/HitdVpwiex0" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/HitdVpwiex0/hqdefault.jpg" alt="Bombay Halwa Recipe Short" loading="lazy"><span class="output-cap">Video promotion · Bombay Halwa Recipe</span></a>
 <a class="output-card" href="https://www.youtube.com/watch?v=jPnBLlGj5xg" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/jPnBLlGj5xg/hqdefault.jpg" alt="Nankhatai recipe" loading="lazy"><span class="output-cap">Nankhatai · Origin and history built into the recipe film</span></a>
+<a class="output-card is-short" href="https://www.youtube.com/shorts/rJhkYtuyD6o" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/rJhkYtuyD6o/hqdefault.jpg" alt="Cooking tip Short" loading="lazy"><span class="output-cap">Cooking tip · Short</span></a>
+<a class="output-card is-short" href="https://www.youtube.com/shorts/YWpCi1IL9Cg" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/YWpCi1IL9Cg/hqdefault.jpg" alt="Cooking tip Short" loading="lazy"><span class="output-cap">Cooking tip · Short</span></a>
+<a class="output-card is-short" href="https://www.youtube.com/shorts/5sfkkIqNrHg" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/5sfkkIqNrHg/hqdefault.jpg" alt="Cooking tip Short" loading="lazy"><span class="output-cap">Cooking tip · Short</span></a>
+<a class="output-card is-short" href="https://www.youtube.com/shorts/5-9GvuMRBhU" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/5-9GvuMRBhU/hqdefault.jpg" alt="Cooking tip Short" loading="lazy"><span class="output-cap">Cooking tip · Short</span></a>
 <a class="output-card" href="https://www.youtube.com/watch?v=GS8HxGT2KLo" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/GS8HxGT2KLo/hqdefault.jpg" alt="Weekly meal planning, Part 1" loading="lazy"><span class="output-cap">Weekly meal planning · Part 1 · Long shoot and dual capture</span></a>
 <a class="output-card" href="https://www.youtube.com/watch?v=iVIVdAZr0hc" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/iVIVdAZr0hc/hqdefault.jpg" alt="Weekly meal planning, Part 2" loading="lazy"><span class="output-cap">Weekly meal planning · Part 2 · Joint decision to split the film</span></a>
+<a class="output-card is-short" href="https://www.youtube.com/shorts/ttbDyjUXanY" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/ttbDyjUXanY/hqdefault.jpg" alt="Meal planning Short" loading="lazy"><span class="output-cap">Meal planning · Short</span></a>
+<a class="output-card is-short" href="https://www.youtube.com/shorts/_1fwG106-Ik" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/_1fwG106-Ik/hqdefault.jpg" alt="Meal planning Short" loading="lazy"><span class="output-cap">Meal planning · Short</span></a>
+<a class="output-card is-short" href="https://www.youtube.com/shorts/gJXRGQ6UIlQ" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/gJXRGQ6UIlQ/hqdefault.jpg" alt="Meal planning Short" loading="lazy"><span class="output-cap">Meal planning · Short</span></a>
 <a class="output-card" href="https://youtu.be/oDUUE1328t0" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/oDUUE1328t0/hqdefault.jpg" alt="Last video scheduled during the stated tenure" loading="lazy"><span class="output-cap">End-of-tenure marker · Last video I scheduled</span></a>
 </div>
 <button type="button" class="carousel-btn next" aria-label="Next">→</button>
